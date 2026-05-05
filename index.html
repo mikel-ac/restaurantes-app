@@ -9,23 +9,13 @@
   <meta name="apple-mobile-web-app-title" content="Gastro">
   <title>Mi Gastro</title>
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="assets/css/style.css?v=7">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
   <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
-
-  <!--
-    Google Maps se carga aquí directamente.
-    IMPORTANTE: reemplaza TU_API_KEY_AQUI por tu API Key real.
-    El callback 'initMapsApi' se llama automáticamente cuando Maps está listo.
-  -->
   <script>
     function initMapsApi() {
       window.__mapsApiReady = true;
       if (window.__mapsApiCallback) window.__mapsApiCallback();
     }
-  </script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC7drA3_1vuz5cLiAcHSIWg-EoVf8YDFM&libraries=places&callback=initMapsApi&loading=async"
-    async defer>
   </script>
 </head>
 <body>
@@ -61,7 +51,7 @@
     </div>
   </div>
 
-  <!-- CHIPS -->
+  <!-- CHIPS + FILTROS — GLOBALES (visibles en todas las vistas) -->
   <div class="chips-row">
     <div class="chip" data-chip="muy local">Muy local</div>
     <div class="chip" data-chip="desayuno">Desayuno</div>
@@ -70,20 +60,20 @@
     <div class="chip" data-chip="nocturno">Nocturno</div>
     <div class="chip" data-chip="menú">Menú del día</div>
   </div>
+  <div class="filter-bar">
+    <div class="filter-pill" data-filter="barrio">
+      <span class="pill-label" data-default="Barrio">Barrio</span> ▾
+    </div>
+    <div class="filter-pill" data-filter="cocina">
+      <span class="pill-label" data-default="Cocina">Cocina</span> ▾
+    </div>
+    <div class="filter-pill" data-filter="precio">
+      <span class="pill-label" data-default="Precio">Precio</span> ▾
+    </div>
+  </div>
 
   <!-- VISTA LISTA -->
   <div id="view-lista" class="view active">
-    <div class="filter-bar">
-      <div class="filter-pill" data-filter="barrio">
-        <span class="pill-label" data-default="Barrio">Barrio</span> ▾
-      </div>
-      <div class="filter-pill" data-filter="cocina">
-        <span class="pill-label" data-default="Cocina">Cocina</span> ▾
-      </div>
-      <div class="filter-pill" data-filter="precio">
-        <span class="pill-label" data-default="Precio">Precio</span> ▾
-      </div>
-    </div>
     <div class="results-header">
       <span id="results-count" class="results-count">cargando...</span>
       <button id="sort-btn" class="sort-btn">↕ Más cercanos</button>
@@ -174,17 +164,32 @@
           <div id="check-menu" class="check-item">📋 Menú</div>
         </div>
         <div class="section-title">Mis notas</div>
-        <textarea id="ficha-notes" class="notes-area"
-          placeholder="Añade una nota..."></textarea>
+        <textarea id="ficha-notes" class="notes-area" placeholder="Añade una nota..."></textarea>
         <button id="notes-save-btn" class="notes-save-btn">Guardar nota</button>
-        <button id="ficha-wsp-btn" class="wsp-btn">
-          ↗ Compartir por WhatsApp
-        </button>
+
+        <!-- Acciones usuario — editar/eliminar solo para restaurantes añadidos a mano -->
+        <div id="ficha-user-actions" style="display:none">
+          <div class="section-title">Gestionar</div>
+          <div class="user-actions-row">
+            <button id="ficha-edit-btn" class="user-action-btn edit">✎ Editar</button>
+            <button id="ficha-delete-btn" class="user-action-btn delete">✕ Eliminar</button>
+          </div>
+        </div>
+
+        <!-- Botones inferiores: compartir + cerrar -->
+        <div class="ficha-bottom-btns">
+          <button id="ficha-wsp-btn" class="ficha-bottom-btn share">
+            ↗ Compartir
+          </button>
+          <button id="ficha-close-btn" class="ficha-bottom-btn close">
+            ✕ Cerrar
+          </button>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- PANEL PREVIEW MAPA (reemplaza InfoWindow) -->
+  <!-- PANEL PREVIEW MAPA -->
   <div id="map-preview" style="display:none">
     <div id="map-preview-content"></div>
     <button id="map-preview-close">✕</button>
@@ -214,21 +219,15 @@
   <div id="add-sheet" class="sheet">
     <div class="sheet-handle"></div>
     <div class="sheet-title">Añadir restaurante</div>
-
     <div id="add-phase-search">
-      <p class="sheet-desc">
-        Escribe el nombre del restaurante o pega el link largo de Google Maps
-        (el de la barra del navegador, no el link corto de compartir).
-      </p>
-      <input id="add-url" type="text" class="sheet-input"
-        placeholder="Nombre del restaurante o URL de Maps...">
+      <p class="sheet-desc">Escribe el nombre del restaurante o pega el link largo de Google Maps.</p>
+      <input id="add-url" type="text" class="sheet-input" placeholder="Nombre o URL de Maps...">
       <div id="add-error" class="add-error"></div>
       <div class="sheet-actions">
         <button id="add-cancel-btn" class="sheet-btn-sec">Cancelar</button>
         <button id="add-search-btn" class="sheet-btn-pri">Buscar →</button>
       </div>
     </div>
-
     <div id="add-phase-confirm" style="display:none">
       <div id="add-preview" class="add-preview"></div>
       <div class="add-label">Emoji</div>
@@ -245,8 +244,7 @@
         <div class="precio-opt" data-p="€€€€">€€€€</div>
       </div>
       <div class="add-label">Notas personales</div>
-      <textarea id="add-notes" class="notes-area" style="min-height:60px"
-        placeholder="Lo que quieras recordar..."></textarea>
+      <textarea id="add-notes" class="notes-area" style="min-height:60px" placeholder="Lo que quieras recordar..."></textarea>
       <div class="sheet-actions">
         <button id="add-back-btn" class="sheet-btn-sec">← Atrás</button>
         <button id="add-save-btn" class="sheet-btn-pri">Guardar ✓</button>
@@ -254,13 +252,40 @@
     </div>
   </div>
 
+  <!-- Sheet editar restaurante -->
+  <div id="edit-sheet" class="sheet">
+    <div class="sheet-handle"></div>
+    <div class="sheet-title">Editar restaurante</div>
+    <div class="add-label">Nombre</div>
+    <input id="edit-nombre" class="sheet-input-sm" placeholder="Nombre">
+    <div class="add-label">Emoji</div>
+    <input id="edit-emoji" class="sheet-input-sm" maxlength="4" placeholder="🍽️">
+    <div class="add-label">Barrio</div>
+    <input id="edit-barrio" class="sheet-input-sm" placeholder="Barrio">
+    <div class="add-label">Tipo de cocina</div>
+    <input id="edit-cocina" class="sheet-input-sm" placeholder="Tipo de cocina">
+    <div class="add-label">Precio</div>
+    <div class="precio-row" id="edit-precio-row">
+      <div class="precio-opt" data-p="€">€</div>
+      <div class="precio-opt" data-p="€€">€€</div>
+      <div class="precio-opt" data-p="€€€">€€€</div>
+      <div class="precio-opt" data-p="€€€€">€€€€</div>
+    </div>
+    <div class="add-label">Descripción</div>
+    <textarea id="edit-desc" class="notes-area" style="min-height:80px" placeholder="Descripción..."></textarea>
+    <div class="sheet-actions">
+      <button id="edit-cancel-btn" class="sheet-btn-sec">Cancelar</button>
+      <button id="edit-save-btn" class="sheet-btn-pri">Guardar ✓</button>
+    </div>
+  </div>
+
 </div><!-- /sheets -->
 
 <div id="toast" class="toast"></div>
 
-<script src="js/storage.js?v=7"></script>
-<script src="js/filters.js?v=7"></script>
-<script src="js/maps.js?v=7"></script>
-<script src="js/app.js?v=7"></script>
+<script src="js/storage.js?v=8"></script>
+<script src="js/filters.js?v=8"></script>
+<script src="js/maps.js?v=8"></script>
+<script src="js/app.js?v=8"></script>
 </body>
 </html>
