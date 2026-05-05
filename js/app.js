@@ -604,14 +604,16 @@ async function initMap() {
     const el = $('map');
     const container = $('map-container');
 
-    // Forzar altura explícita basada en el espacio disponible
-    const availableHeight = window.innerHeight
-      - document.querySelector('.top-nav').offsetHeight
-      - document.querySelector('.chips-row').offsetHeight
-      - document.querySelector('.bottom-nav').offsetHeight;
+    // Calcular altura disponible restando todos los elementos fijos
+    const topNav    = document.querySelector('.top-nav')?.offsetHeight || 0;
+    const chipsRow  = document.querySelector('.chips-row')?.offsetHeight || 0;
+    const filterBar = document.querySelector('.filter-bar')?.offsetHeight || 0;
+    const bottomNav = document.querySelector('.bottom-nav')?.offsetHeight || 60;
+    const h = Math.max(window.innerHeight - topNav - chipsRow - filterBar - bottomNav, 200);
 
-    container.style.height = availableHeight + 'px';
-    el.style.height = availableHeight + 'px';
+    container.style.height = h + 'px';
+    el.style.position = 'absolute';
+    el.style.inset = '0';
 
     try {
       await Maps.init('map', r => openFicha(r.id));
