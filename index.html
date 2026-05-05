@@ -9,7 +9,7 @@
   <meta name="apple-mobile-web-app-title" content="Gastro">
   <title>Mi Gastro</title>
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="assets/css/style.css?v=6">
+  <link rel="stylesheet" href="assets/css/style.css?v=7">
   <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
 
   <!--
@@ -24,7 +24,7 @@
     }
   </script>
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW6pyW3oid6Fvz87JBSVSdYnH_sDd-rw8&libraries=places&callback=initMapsApi&loading=async"
+    src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY_AQUI&libraries=places&callback=initMapsApi&loading=async"
     async defer>
   </script>
 </head>
@@ -184,6 +184,12 @@
     </div>
   </div>
 
+  <!-- PANEL PREVIEW MAPA (reemplaza InfoWindow) -->
+  <div id="map-preview" style="display:none">
+    <div id="map-preview-content"></div>
+    <button id="map-preview-close">✕</button>
+  </div>
+
 </div><!-- /#app -->
 
 <!-- SHEETS -->
@@ -252,9 +258,9 @@
 
 <div id="toast" class="toast"></div>
 
-<script src="js/storage.js?v=6"></script>
-<script src="js/filters.js?v=6"></script>
-<script src="js/maps.js?v=6"></script>
-<script src="js/app.js?v=6"></script>
+<script src="js/storage.js?v=7"></script>
+<script src="js/filters.js?v=7"></script>
+<script src="js/maps.js?v=7"></script>
+<script src="js/app.js?v=7"></script>
 </body>
 </html>
