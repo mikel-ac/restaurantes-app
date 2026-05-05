@@ -86,7 +86,10 @@ input, textarea { font-family:var(--font); }
 .search-bar input {
   flex:1; background:none; border:none; outline:none;
   font-size:15px; color:var(--text);
+  -webkit-appearance:none;
 }
+.search-bar input::-webkit-search-cancel-button { display:none; }
+.search-bar input::-webkit-search-decoration { display:none; }
 .search-bar input::placeholder { color:var(--text3); }
 .search-icon { color:var(--text3); font-size:16px; flex-shrink:0; }
 .search-clear { color:var(--text3); font-size:14px; cursor:pointer; padding:2px 4px; display:none; }
@@ -95,10 +98,11 @@ input, textarea { font-family:var(--font); }
 /* Sugerencia añadir */
 .add-suggestion {
   display:flex; align-items:center; justify-content:space-between;
-  margin-top:10px; padding:10px 14px;
+  margin-top:10px; padding:11px 14px;
   background:var(--bg3); border-radius:var(--r);
-  border:1px dashed var(--border2);
-  font-size:13px; color:var(--text3);
+  border:1px solid var(--border2);
+  font-size:13px; color:var(--text2);
+  gap:10px;
 }
 .add-suggestion-btn {
   font-size:13px; font-weight:600; color:var(--green-hi);
@@ -481,3 +485,19 @@ input, textarea { font-family:var(--font); }
 
 @keyframes pulse { 0%,100%{transform:scale(1);opacity:.7} 50%{transform:scale(1.08);opacity:1} }
 @keyframes slideUp { from{transform:translateY(8px);opacity:0} to{transform:translateY(0);opacity:1} }
+
+/* ── X POPUP MAPA más visible ── */
+.gm-style-iw-chr button {
+  width: 28px !important;
+  height: 28px !important;
+  background: rgba(50,50,50,0.9) !important;
+  border-radius: 50% !important;
+  top: 8px !important;
+  right: 8px !important;
+}
+.gm-style-iw-chr button span {
+  width: 16px !important;
+  height: 16px !important;
+  margin: 6px !important;
+  filter: invert(1) !important;
+}
