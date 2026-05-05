@@ -1,8 +1,8 @@
 /**
- * Mi Gastro — app.js v5
+ * Mi Gastro — app.js v5b
  */
 
-window.MAPS_API_KEY = 'AIzaSyAhP-FhgqtwNByQJSY9HqpmjouEBDpr0Og';
+window.MAPS_API_KEY = 'TU_API_KEY_AQUI';
 
 const State = {
   allRests: [], ciudades: {}, currentCiudad: null,
@@ -46,7 +46,7 @@ const getCurrent = () =>
   State.currentCiudad ? (State.ciudades[State.currentCiudad]||[]) : State.allRests;
 
 // ── SORT ──
-const SORT_CYCLE = ['proximidad','rating','votos'];
+const SORT_CYCLE  = ['proximidad','rating','votos'];
 const SORT_LABELS = { proximidad:'↕ Más cercanos', rating:'↕ Mejor rating', votos:'↕ Más valorados' };
 
 function sortedList(list) {
@@ -79,24 +79,37 @@ function cyclSort() {
   }
 }
 
+// ── SUGERENCIA AÑADIR ──
+// Siempre visible en la barra inferior de la top nav
+// Se activa visualmente cuando hay búsqueda sin resultados
+function updateAddSuggestion(totalResults) {
+  const hasQuery = State.filters.query.trim().length > 0;
+  const el = $('add-suggestion');
+  if (hasQuery && totalResults === 0) {
+    el.style.display = 'flex';
+    el.querySelector('span').textContent = `"${State.filters.query}" no está en tu lista.`;
+  } else if (hasQuery) {
+    el.style.display = 'flex';
+    el.querySelector('span').textContent = '¿No está lo que buscas?';
+  } else {
+    el.style.display = 'none';
+  }
+}
+
 // ── RENDER LISTA ──
 function renderLista() {
   let items = Filters.apply(getCurrent(), State.filters, Storage);
   items = sortedList(items);
 
   $('results-count').textContent = `${items.length} restaurante${items.length!==1?'s':''}`;
-
-  // Mostrar/ocultar sugerencia añadir
-  const hasQuery = State.filters.query.length > 0;
-  const noResults = items.length === 0 && hasQuery;
-  $('add-suggestion').style.display = (hasQuery || noResults) ? 'flex' : 'none';
+  updateAddSuggestion(items.length);
 
   const list = $('cards-list');
   if (!items.length) {
     list.innerHTML = `<div class="empty-state">
       <div class="empty-icon">🍽️</div>
       <div class="empty-title">Sin resultados</div>
-      <div class="empty-sub">Prueba con otros filtros o añade el restaurante desde Google Maps</div>
+      <div class="empty-sub">Prueba otros filtros o añádelo desde Google Maps</div>
     </div>`;
     return;
   }
@@ -180,7 +193,7 @@ function fillFicha(r) {
 
   $('ficha-emoji').textContent = Storage.getEmoji(r.id) || r.emoji || '🍽️';
   $('ficha-fav-btn').className  = `ficha-icon-btn${fav  ? ' fav-on'  : ''}`;
-  $('ficha-fav-btn').textContent = fav  ? '♥' : '♡';
+  $('ficha-fav-btn').textContent = fav ? '♥' : '♡';
   $('ficha-wish-btn').className  = `ficha-icon-btn${wish ? ' wish-on' : ''}`;
 
   $('ficha-name').textContent = r.nombre;
@@ -300,12 +313,16 @@ function openAddSheet() {
   $('add-preview').style.display = 'none';
   $('add-phase-search').style.display = 'block';
   $('add-phase-confirm').style.display = 'none';
+  // Pre-rellenar buscador si hay texto
+  if (State.filters.query.trim()) {
+    $('add-url').value = State.filters.query.trim();
+  }
   openSheet('add-sheet');
 }
 
 async function searchPlace() {
   const input = $('add-url').value.trim();
-  if (!input) { showAddError('Escribe un nombre o pega un link de Google Maps'); return; }
+  if (!input) { showAddError('Escribe el nombre del restaurante o pega un link de Google Maps'); return; }
 
   $('add-search-btn').textContent = 'Buscando...';
   $('add-search-btn').disabled = true;
@@ -325,10 +342,9 @@ async function searchPlace() {
     $('add-emoji').value = '🍽️';
     $('add-barrio').value = '';
     $('add-cocina').value = '';
-    // Guardar datos temporalmente
     $('add-phase-confirm').dataset.place = JSON.stringify(data);
   } catch(e) {
-    showAddError(e.message || 'No se encontró. Prueba escribiendo solo el nombre del restaurante.');
+    showAddError(e.message || 'No se encontró. Prueba escribiendo solo el nombre.');
   } finally {
     $('add-search-btn').textContent = 'Buscar →';
     $('add-search-btn').disabled = false;
@@ -455,40 +471,62 @@ function switchView(view) {
 }
 
 // ── MAPA ──
+// Usamos una variable para saber si ya está inicializado
 let mapReady = false;
+
 async function initMap() {
+  // Si ya está listo, solo actualizar marcadores
   if (mapReady) {
     Maps.setMarkers(getCurrent(), Storage.isFav);
     return;
   }
-  try {
-    await Maps.init('map', r => openFicha(r.id));
-    Maps.setMarkers(getCurrent(), Storage.isFav);
-    mapReady = true;
-  } catch(e) {
-    console.error('Error iniciando mapa:', e);
-  }
+
+  // El contenedor necesita tener tamaño real antes de inicializar
+  // Usamos requestAnimationFrame para esperar al siguiente frame de render
+  requestAnimationFrame(async () => {
+    const el = $('map');
+    const container = $('map-container');
+
+    // Forzar altura explícita basada en el espacio disponible
+    const availableHeight = window.innerHeight
+      - document.querySelector('.top-nav').offsetHeight
+      - document.querySelector('.chips-row').offsetHeight
+      - document.querySelector('.bottom-nav').offsetHeight;
+
+    container.style.height = availableHeight + 'px';
+    el.style.height = availableHeight + 'px';
+
+    try {
+      await Maps.init('map', r => openFicha(r.id));
+      Maps.setMarkers(getCurrent(), Storage.isFav);
+      mapReady = true;
+    } catch(e) {
+      console.error('Error iniciando mapa:', e);
+      $('map-loading').innerHTML = `
+        <div style="text-align:center;padding:24px;color:var(--text3)">
+          <div style="font-size:32px;margin-bottom:12px">◎</div>
+          <div style="font-size:14px">Error cargando el mapa</div>
+          <div style="font-size:12px;margin-top:6px">Comprueba tu conexión</div>
+        </div>`;
+    }
+  });
 }
 
 // ── GEOLOCALIZACIÓN ──
 function requestLocation() {
   if (!navigator.geolocation) {
-    showToast('Geolocalización no disponible');
     State.sort = 'rating';
     $('sort-btn').textContent = SORT_LABELS[State.sort];
     renderLista();
     return;
   }
-  showToast('Obteniendo ubicación...');
   navigator.geolocation.getCurrentPosition(
     pos => {
       State.userLat = pos.coords.latitude;
       State.userLng = pos.coords.longitude;
       renderLista();
-      showToast('📍 Ordenado por proximidad');
     },
     () => {
-      showToast('Sin ubicación — mostrando por rating');
       State.sort = 'rating';
       $('sort-btn').textContent = SORT_LABELS[State.sort];
       renderLista();
@@ -511,45 +549,42 @@ async function init() {
   await loadData();
   if (State.currentCiudad) $('city-name').textContent = State.currentCiudad.split('/').pop();
 
-  // Pedir geolocalización al arrancar
   requestLocation();
   renderLista();
 
-  // Precargar Google Maps en background para que esté listo
-  setTimeout(() => Maps.preload(), 2000);
+  // Precargar Google Maps en segundo plano
+  setTimeout(() => Maps.preload(), 3000);
 
-  setTimeout(() => $('loading-screen').classList.add('hidden'), 600);
+  setTimeout(() => $('loading-screen').classList.add('hidden'), 500);
 
-  // Navegación tabs
+  // ── Tabs navegación ──
   $$('.nav-tab').forEach(tab => tab.addEventListener('click', () => switchView(tab.dataset.view)));
 
-  // Búsqueda
+  // ── Búsqueda ──
   $('search-input').addEventListener('input', function() {
     State.filters.query = this.value;
     $('search-clear').classList.toggle('visible', this.value.length > 0);
     renderLista();
   });
-  $('search-input').addEventListener('focus', () => {
-    $('add-suggestion').style.display = 'flex';
-  });
   $('search-clear').addEventListener('click', () => {
-    $('search-input').value = ''; State.filters.query = '';
+    $('search-input').value = '';
+    State.filters.query = '';
     $('search-clear').classList.remove('visible');
     $('add-suggestion').style.display = 'none';
     renderLista();
   });
 
-  // Sugerencia añadir
+  // ── Sugerencia añadir ──
   $('add-suggestion-btn').addEventListener('click', openAddSheet);
 
-  // Solo favs
+  // ── Solo favs ──
   $('fav-only-btn').addEventListener('click', () => {
     State.filters.favOnly = !State.filters.favOnly;
     $('fav-only-btn').classList.toggle('active', State.filters.favOnly);
     renderLista();
   });
 
-  // Chips
+  // ── Chips ──
   $$('.chip').forEach(chip => {
     chip.addEventListener('click', () => {
       const k = chip.dataset.chip, idx = State.filters.chips.indexOf(k);
@@ -559,19 +594,21 @@ async function init() {
     });
   });
 
-  // Filter pills
+  // ── Filter pills ──
   $$('.filter-pill[data-filter]').forEach(p => p.addEventListener('click', () => openFilterSheet(p.dataset.filter)));
   $('filter-apply-btn').addEventListener('click', applyFilter);
   $('filter-clear-btn').addEventListener('click', clearFilter);
 
-  // Overlay cerrar
-  $('sheet-overlay').addEventListener('click', e => { if (e.target === $('sheet-overlay')) closeSheet(); });
+  // ── Overlay cerrar ──
+  $('sheet-overlay').addEventListener('click', e => {
+    if (e.target === $('sheet-overlay')) closeSheet();
+  });
 
-  // Sort
+  // ── Sort ──
   $('sort-btn').textContent = SORT_LABELS[State.sort];
   $('sort-btn').addEventListener('click', cyclSort);
 
-  // Ciudad selector
+  // ── Ciudad selector ──
   $('city-selector').addEventListener('click', () => {
     const keys = Object.keys(State.ciudades);
     if (keys.length <= 1) return;
@@ -592,12 +629,13 @@ async function init() {
     openSheet('city-sheet');
   });
 
-  // Añadir restaurante
+  // ── Añadir restaurante ──
   $('add-cancel-btn').addEventListener('click', closeSheet);
   $('add-search-btn').addEventListener('click', searchPlace);
   $('add-back-btn').addEventListener('click', () => {
     $('add-phase-search').style.display = 'block';
     $('add-phase-confirm').style.display = 'none';
+    $('add-preview').style.display = 'none';
   });
   $('add-save-btn').addEventListener('click', saveRestaurant);
   $$('.precio-opt').forEach(o => o.addEventListener('click', () => {
@@ -605,7 +643,7 @@ async function init() {
     o.classList.add('selected');
   }));
 
-  // Ficha — eventos
+  // ── Ficha ──
   $('ficha-back').addEventListener('click', closeFicha);
   $('ficha-fav-btn').addEventListener('click', () => { if (State.fichaId) toggleFav(State.fichaId); });
   $('ficha-wish-btn').addEventListener('click', () => { if (State.fichaId) toggleWish(State.fichaId); });
@@ -640,7 +678,7 @@ async function init() {
   $('ficha-notes').addEventListener('blur', saveNote);
   $('notes-save-btn').addEventListener('click', saveNote);
 
-  // Favs tabs
+  // ── Favs tabs ──
   $$('.favs-tab').forEach(tab => {
     tab.addEventListener('click', () => {
       State.favTab = tab.dataset.tab;
@@ -649,26 +687,16 @@ async function init() {
     });
   });
 
-  // Swipe back en ficha
+  // ── Swipe back en ficha ──
   let tx = 0;
   $('ficha-view').addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive:true });
-  $('ficha-view').addEventListener('touchend',   e => {
+  $('ficha-view').addEventListener('touchend', e => {
     if (e.changedTouches[0].clientX - tx > 80 && tx < 60) closeFicha();
   }, { passive:true });
 
-  // Service Worker
+  // ── Service Worker ──
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').then(reg => {
-      // Forzar actualización si hay nueva versión esperando
-      reg.addEventListener('updatefound', () => {
-        const newWorker = reg.installing;
-        newWorker.addEventListener('statechange', () => {
-          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            showToast('Nueva versión disponible — recarga la página');
-          }
-        });
-      });
-    }).catch(() => {});
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
   }
 }
 
