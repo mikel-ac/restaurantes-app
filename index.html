@@ -11,6 +11,22 @@
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+
+  <!--
+    Google Maps se carga aquí directamente.
+    IMPORTANTE: reemplaza TU_API_KEY_AQUI por tu API Key real.
+    El callback 'initMapsApi' se llama automáticamente cuando Maps está listo.
+  -->
+  <script>
+    function initMapsApi() {
+      window.__mapsApiReady = true;
+      if (window.__mapsApiCallback) window.__mapsApiCallback();
+    }
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY_AQUI&libraries=places&callback=initMapsApi&loading=async"
+    async defer>
+  </script>
 </head>
 <body>
 
@@ -31,7 +47,7 @@
       <button id="fav-only-btn" class="fav-only-btn">♥ Favs</button>
     </div>
     <div class="search-wrap">
-      <div class="search-bar" id="search-bar">
+      <div class="search-bar">
         <span class="search-icon">⌕</span>
         <input id="search-input" type="search"
           placeholder="Buscar restaurante o barrio..."
@@ -39,9 +55,8 @@
         <span id="search-clear" class="search-clear">✕</span>
       </div>
     </div>
-    <!-- Sugerencia añadir — aparece al escribir sin resultados o al tocar el buscador -->
     <div id="add-suggestion" class="add-suggestion" style="display:none">
-      <span>¿No encuentras lo que buscas?</span>
+      <span id="add-suggestion-text">¿No encuentras lo que buscas?</span>
       <button id="add-suggestion-btn" class="add-suggestion-btn">+ Añadir desde Maps</button>
     </div>
   </div>
@@ -80,10 +95,10 @@
 
   <!-- VISTA MAPA -->
   <div id="view-mapa" class="view">
-    <div id="map-container" style="flex:1;position:relative;">
+    <div id="map-container" style="flex:1;position:relative;min-height:0;">
       <div id="map" style="position:absolute;inset:0;"></div>
       <div id="map-loading" class="map-loading">
-        <div class="loading-emoji" style="font-size:36px">◎</div>
+        <div style="font-size:36px;margin-bottom:12px">◎</div>
         <div class="loading-text">Cargando mapa...</div>
       </div>
     </div>
@@ -132,7 +147,9 @@
           <span id="ficha-rating" class="ficha-rating-num"></span>
           <span id="ficha-votes" class="ficha-votes"></span>
         </div>
-        <button id="ficha-maps-btn" class="maps-btn">◎ Ver en Google Maps · fotos y reseñas</button>
+        <button id="ficha-maps-btn" class="maps-btn">
+          ◎ Ver en Google Maps · fotos y reseñas
+        </button>
         <div class="section-title">Descripción</div>
         <div id="ficha-desc" class="ficha-desc"></div>
         <div class="section-title">Platos más pedidos</div>
@@ -157,9 +174,12 @@
           <div id="check-menu" class="check-item">📋 Menú</div>
         </div>
         <div class="section-title">Mis notas</div>
-        <textarea id="ficha-notes" class="notes-area" placeholder="Añade una nota..."></textarea>
+        <textarea id="ficha-notes" class="notes-area"
+          placeholder="Añade una nota..."></textarea>
         <button id="notes-save-btn" class="notes-save-btn">Guardar nota</button>
-        <button id="ficha-wsp-btn" class="wsp-btn">↗ Compartir por WhatsApp</button>
+        <button id="ficha-wsp-btn" class="wsp-btn">
+          ↗ Compartir por WhatsApp
+        </button>
       </div>
     </div>
   </div>
@@ -169,14 +189,12 @@
 <!-- SHEETS -->
 <div id="sheet-overlay" class="sheet-overlay">
 
-  <!-- Ciudad -->
   <div id="city-sheet" class="sheet">
     <div class="sheet-handle"></div>
     <div class="sheet-title">Seleccionar ciudad</div>
     <div id="city-options" class="sheet-options"></div>
   </div>
 
-  <!-- Filtro -->
   <div id="filter-sheet" class="sheet">
     <div class="sheet-handle"></div>
     <div id="filter-title" class="sheet-title">Filtrar</div>
@@ -187,23 +205,17 @@
     </div>
   </div>
 
-  <!-- Añadir restaurante -->
   <div id="add-sheet" class="sheet">
     <div class="sheet-handle"></div>
     <div class="sheet-title">Añadir restaurante</div>
 
-    <!-- FASE 1: buscar -->
     <div id="add-phase-search">
       <p class="sheet-desc">
-        Pega el link de Google Maps desde la barra del navegador, o escribe el nombre del restaurante para buscarlo.
+        Escribe el nombre del restaurante o pega el link largo de Google Maps
+        (el de la barra del navegador, no el link corto de compartir).
       </p>
-      <p class="sheet-desc" style="color:var(--amber);font-size:13px;margin-top:-8px">
-        ⚠ Los links cortos de "Compartir" (maps.app.goo.gl) no funcionan. Usa el link largo de la barra del navegador.
-      </p>
-      <div class="add-input-row">
-        <input id="add-url" type="text" class="sheet-input"
-          placeholder="https://www.google.com/maps/place/... o nombre del restaurante">
-      </div>
+      <input id="add-url" type="text" class="sheet-input"
+        placeholder="Nombre del restaurante o URL de Maps...">
       <div id="add-error" class="add-error"></div>
       <div class="sheet-actions">
         <button id="add-cancel-btn" class="sheet-btn-sec">Cancelar</button>
@@ -211,7 +223,6 @@
       </div>
     </div>
 
-    <!-- FASE 2: confirmar -->
     <div id="add-phase-confirm" style="display:none">
       <div id="add-preview" class="add-preview"></div>
       <div class="add-label">Emoji</div>
@@ -241,7 +252,6 @@
 
 <div id="toast" class="toast"></div>
 
-<!-- Google Maps se carga cuando se necesita desde app.js -->
 <script src="js/storage.js"></script>
 <script src="js/filters.js"></script>
 <script src="js/maps.js"></script>
