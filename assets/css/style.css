@@ -501,3 +501,38 @@ input, textarea { font-family:var(--font); }
   margin: 6px !important;
   filter: invert(1) !important;
 }
+
+/* ── MAP PREVIEW PANEL ── */
+#map-preview {
+  position: absolute;
+  bottom: calc(var(--nav-h) + var(--safe-b) + 12px);
+  left: 12px;
+  right: 12px;
+  background: #1e1e1e;
+  border: 1px solid var(--border2);
+  border-radius: var(--r);
+  padding: 14px 16px;
+  z-index: 50;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  animation: slideUp .2s ease;
+}
+#map-preview-close {
+  position: absolute;
+  top: -14px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg4);
+  border: 1.5px solid var(--border2);
+  color: var(--text2);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+#map-preview-close:hover { background: var(--bg3); color: var(--text); }
