@@ -234,24 +234,24 @@ const Maps = (() => {
   // Estilo oscuro más legible — texto claro, agua azul visible, calles diferenciadas
   const DARK_STYLE = [
     { elementType: 'geometry',            stylers: [{ color: '#212121' }] },
-    { elementType: 'labels.text.stroke',  stylers: [{ color: '#212121' }] },
-    { elementType: 'labels.text.fill',    stylers: [{ color: '#a0a0a0' }] },
+    { elementType: 'labels.text.stroke',  stylers: [{ color: '#1a1a1a' }] },
+    { elementType: 'labels.text.fill',    stylers: [{ color: '#cccccc' }] },
 
     { featureType: 'road',
-      elementType: 'geometry',            stylers: [{ color: '#373737' }] },
+      elementType: 'geometry',            stylers: [{ color: '#3a3a3a' }] },
     { featureType: 'road',
-      elementType: 'labels.text.fill',    stylers: [{ color: '#8a8a8a' }] },
+      elementType: 'labels.text.fill',    stylers: [{ color: '#bbbbbb' }] },
     { featureType: 'road.arterial',
-      elementType: 'geometry',            stylers: [{ color: '#454545' }] },
+      elementType: 'geometry',            stylers: [{ color: '#505050' }] },
     { featureType: 'road.highway',
-      elementType: 'geometry',            stylers: [{ color: '#3c3c3c' }] },
+      elementType: 'geometry',            stylers: [{ color: '#484848' }] },
     { featureType: 'road.highway',
-      elementType: 'labels.text.fill',    stylers: [{ color: '#b0b0b0' }] },
+      elementType: 'labels.text.fill',    stylers: [{ color: '#ffffff' }] },
 
     { featureType: 'water',
-      elementType: 'geometry',            stylers: [{ color: '#1a3a4a' }] },
+      elementType: 'geometry',            stylers: [{ color: '#17374a' }] },
     { featureType: 'water',
-      elementType: 'labels.text.fill',    stylers: [{ color: '#4a8fa8' }] },
+      elementType: 'labels.text.fill',    stylers: [{ color: '#5aadcc' }] },
 
     { featureType: 'landscape',
       elementType: 'geometry',            stylers: [{ color: '#2a2a2a' }] },
