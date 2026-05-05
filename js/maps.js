@@ -127,23 +127,64 @@ const Maps = (() => {
   }
 
   function infoContent(r) {
+    // Estado abierto/cerrado
+    const DAYS = ['domingo','lunes','martes','miercoles','jueves','viernes','sabado'];
+    const today = DAYS[new Date().getDay()];
+    const sched = r.horario?.[today];
+    let statusHtml = '';
+    if (sched) {
+      const now = new Date();
+      const mins = now.getHours() * 60 + now.getMinutes();
+      const [oh, om] = sched.abre.split(':').map(Number);
+      const [ch, cm] = sched.cierra.split(':').map(Number);
+      const open = oh * 60 + om;
+      let close = ch * 60 + cm;
+      if (close < open) close += 24 * 60;
+      const isOpen = mins >= open && mins < close;
+      statusHtml = isOpen
+        ? `<span style="color:#4ECFA0;font-weight:600">Abierto</span> · cierra ${sched.cierra}h`
+        : `<span style="color:#e87070;font-weight:600">Cerrado</span> · abre ${sched.abre}h`;
+    }
+
+    // Tags (máx 2)
+    const tags = (r.tags || []).slice(0, 2).map(t =>
+      `<span style="font-size:11px;padding:2px 8px;border-radius:6px;
+        background:rgba(29,158,117,0.15);color:#4ECFA0;
+        border:1px solid rgba(29,158,117,0.25)">${t}</span>`
+    ).join('');
+
+    // Platos destacados (máx 2)
+    const platos = (r.platos_destacados || []).slice(0, 2).join(', ');
+
     return `<div style="
       font-family:'Inter',sans-serif;
       background:#1e1e1e;
       color:#f0f0f0;
       border-radius:14px;
       padding:14px 16px;
-      min-width:200px;
-      max-width:250px;
-      position:relative;
+      min-width:220px;
+      max-width:270px;
     ">
-      <div style="font-size:26px;margin-bottom:8px;line-height:1">${r.emoji||'🍽️'}</div>
-      <div style="font-size:15px;font-weight:700;line-height:1.3;margin-bottom:3px">${r.nombre}</div>
-      <div style="font-size:12px;color:#777;margin-bottom:6px">${r.barrio} · ${r.precio}</div>
-      <div style="font-size:13px;color:#EF9F27;margin-bottom:12px">
-        ★ ${r.rating}
-        <span style="color:#555;font-size:12px"> · ${(r.votos||0).toLocaleString()} reseñas</span>
+      <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:10px">
+        <div style="font-size:32px;line-height:1;flex-shrink:0">${r.emoji||'🍽️'}</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:15px;font-weight:700;line-height:1.3;margin-bottom:2px;
+            white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${r.nombre}</div>
+          <div style="font-size:12px;color:#777">${r.barrio} · ${r.tipo_cocina||''} · ${r.precio}</div>
+        </div>
       </div>
+
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;flex-wrap:wrap">
+        <span style="font-size:12px;color:#EF9F27">★ ${r.rating}</span>
+        <span style="font-size:12px;color:#555">${(r.votos||0).toLocaleString()} reseñas</span>
+        ${statusHtml ? `<span style="font-size:12px;color:#888">· ${statusHtml}</span>` : ''}
+      </div>
+
+      ${tags ? `<div style="display:flex;gap:5px;margin-bottom:8px;flex-wrap:wrap">${tags}</div>` : ''}
+
+      ${platos ? `<div style="font-size:12px;color:#666;margin-bottom:10px;
+        font-style:italic">🍴 ${platos}</div>` : ''}
+
       <button id="iw-${r.id}" style="
         width:100%;
         background:#1D9E75;
@@ -155,8 +196,7 @@ const Maps = (() => {
         font-weight:600;
         font-family:'Inter',sans-serif;
         cursor:pointer;
-        letter-spacing:0.01em;
-      ">Ver ficha →</button>
+      ">Ver ficha completa →</button>
     </div>`;
   }
 
