@@ -277,7 +277,7 @@ input, textarea { font-family:var(--font); }
 
 /* ── FICHA ── */
 .ficha-view {
-  position:fixed; inset:0; background:var(--bg); z-index:150;
+  position:fixed; inset:0; background:var(--bg); z-index:300;
   display:flex; flex-direction:column;
   transform:translateX(100%); transition:transform .3s cubic-bezier(.4,0,.2,1);
   max-width:480px; left:50%; margin-left:-240px;
@@ -315,7 +315,7 @@ input, textarea { font-family:var(--font); }
 .ficha-icon-btn.fav-on  { color:var(--red);   border-color:rgba(226,75,74,.5);  background:rgba(226,75,74,.12);  }
 .ficha-icon-btn.wish-on { color:var(--amber); border-color:rgba(239,159,39,.5); background:rgba(239,159,39,.12); }
 
-.ficha-scroll { flex:1; overflow-y:auto; -webkit-overflow-scrolling:touch; padding-bottom:40px; }
+.ficha-scroll { flex:1; overflow-y:auto; -webkit-overflow-scrolling:touch; padding-bottom:calc(var(--nav-h) + var(--safe-b) + 24px); }
 .ficha-body { padding:22px 18px; }
 .ficha-name { font-size:26px; font-weight:700; color:var(--text); letter-spacing:-.5px; line-height:1.2; }
 .ficha-badges { display:flex; gap:6px; flex-wrap:wrap; margin-top:10px; }
