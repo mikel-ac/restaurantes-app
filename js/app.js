@@ -2,7 +2,7 @@
  * Mi Gastro — app.js v5
  */
 
-window.MAPS_API_KEY = 'TU_API_KEY_AQUI';
+window.MAPS_API_KEY = 'AIzaSyAhP-FhgqtwNByQJSY9HqpmjouEBDpr0Og';
 
 const State = {
   allRests: [], ciudades: {}, currentCiudad: null,
