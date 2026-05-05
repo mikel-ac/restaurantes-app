@@ -21,6 +21,7 @@ const $$ = sel => document.querySelectorAll(sel);
 async function loadData() {
   const sources = [
     { path:'data/brasil/rio-de-janeiro/restaurantes.json', ciudad:'Río de Janeiro', region:'Río de Janeiro', pais:'Brasil' },
+    { path:'data/brasil/bahia/salvador-de-bahia/restaurantes.json', ciudad:'Salvador de Bahía', region:'Bahía', pais:'Brasil' },
   ];
   for (const s of sources) {
     try {
