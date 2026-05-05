@@ -536,3 +536,42 @@ input, textarea { font-family:var(--font); }
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 #map-preview-close:hover { background: var(--bg3); color: var(--text); }
+
+/* ── BOTONES INFERIORES FICHA ── */
+.ficha-bottom-btns {
+  display:flex; gap:10px; margin-top:16px;
+}
+.ficha-bottom-btn {
+  flex:1; padding:15px; border-radius:var(--r);
+  font-size:15px; font-weight:600; font-family:var(--font);
+  cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px;
+  -webkit-tap-highlight-color:transparent; transition:opacity .15s;
+}
+.ficha-bottom-btn.share {
+  background:var(--bg3); border:1.5px solid var(--border2); color:var(--text2);
+}
+.ficha-bottom-btn.share:active { background:var(--bg4); }
+.ficha-bottom-btn.close {
+  background:var(--bg3); border:1.5px solid var(--border2); color:var(--text3);
+}
+.ficha-bottom-btn.close:active { background:var(--bg4); }
+
+/* ── ACCIONES USUARIO (editar/eliminar) ── */
+.user-actions-row {
+  display:flex; gap:10px; margin-top:4px;
+}
+.user-action-btn {
+  flex:1; padding:12px; border-radius:var(--r-sm);
+  font-size:14px; font-weight:500; font-family:var(--font);
+  cursor:pointer; -webkit-tap-highlight-color:transparent;
+  display:flex; align-items:center; justify-content:center; gap:6px;
+  transition:all .15s;
+}
+.user-action-btn.edit {
+  background:var(--bg3); border:1.5px solid var(--border2); color:var(--text2);
+}
+.user-action-btn.edit:active { background:var(--bg4); }
+.user-action-btn.delete {
+  background:rgba(226,75,74,.08); border:1.5px solid rgba(226,75,74,.3); color:var(--red);
+}
+.user-action-btn.delete:active { background:rgba(226,75,74,.15); }
