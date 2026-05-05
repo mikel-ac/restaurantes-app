@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#141414">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Gastro">
+  <title>Mi Gastro</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+</head>
+<body>
+
+<div id="loading-screen" class="loading-screen">
+  <div class="loading-emoji">🍽️</div>
+  <div class="loading-text">Cargando...</div>
+</div>
+
+<div id="app">
+
+  <!-- TOP NAV -->
+  <div class="top-nav">
+    <div class="nav-row1">
+      <div id="city-selector" class="city-selector">
+        <span id="city-name" class="city-name">Río de Janeiro</span>
+        <span class="city-chevron">▾</span>
+      </div>
+      <button id="fav-only-btn" class="fav-only-btn">♥ Favs</button>
+    </div>
+    <div class="search-wrap">
+      <div class="search-bar" id="search-bar">
+        <span class="search-icon">⌕</span>
+        <input id="search-input" type="search"
+          placeholder="Buscar restaurante o barrio..."
+          autocomplete="off" spellcheck="false">
+        <span id="search-clear" class="search-clear">✕</span>
+      </div>
+    </div>
+    <!-- Sugerencia añadir — aparece al escribir sin resultados o al tocar el buscador -->
+    <div id="add-suggestion" class="add-suggestion" style="display:none">
+      <span>¿No encuentras lo que buscas?</span>
+      <button id="add-suggestion-btn" class="add-suggestion-btn">+ Añadir desde Maps</button>
+    </div>
+  </div>
+
+  <!-- CHIPS -->
+  <div class="chips-row">
+    <div class="chip" data-chip="muy local">Muy local</div>
+    <div class="chip" data-chip="desayuno">Desayuno</div>
+    <div class="chip" data-chip="picar">Picar</div>
+    <div class="chip" data-chip="vistas">Vistas</div>
+    <div class="chip" data-chip="nocturno">Nocturno</div>
+    <div class="chip" data-chip="menú">Menú del día</div>
+  </div>
+
+  <!-- VISTA LISTA -->
+  <div id="view-lista" class="view active">
+    <div class="filter-bar">
+      <div class="filter-pill" data-filter="barrio">
+        <span class="pill-label" data-default="Barrio">Barrio</span> ▾
+      </div>
+      <div class="filter-pill" data-filter="cocina">
+        <span class="pill-label" data-default="Cocina">Cocina</span> ▾
+      </div>
+      <div class="filter-pill" data-filter="precio">
+        <span class="pill-label" data-default="Precio">Precio</span> ▾
+      </div>
+    </div>
+    <div class="results-header">
+      <span id="results-count" class="results-count">cargando...</span>
+      <button id="sort-btn" class="sort-btn">↕ Más cercanos</button>
+    </div>
+    <div class="scroll-content">
+      <div id="cards-list" class="cards-list"></div>
+    </div>
+  </div>
+
+  <!-- VISTA MAPA -->
+  <div id="view-mapa" class="view">
+    <div id="map-container" style="flex:1;position:relative;">
+      <div id="map" style="position:absolute;inset:0;"></div>
+      <div id="map-loading" class="map-loading">
+        <div class="loading-emoji" style="font-size:36px">◎</div>
+        <div class="loading-text">Cargando mapa...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISTA FAVORITOS -->
+  <div id="view-favs" class="view">
+    <div class="favs-header"><div class="favs-title">Mis listas</div></div>
+    <div class="favs-tabs">
+      <div class="favs-tab active" data-tab="favs">♥ Favoritos</div>
+      <div class="favs-tab" data-tab="wish">⊕ Quiero ir</div>
+    </div>
+    <div id="favs-list" class="scroll-content"></div>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <div class="nav-tab active" data-view="lista">
+      <span class="tab-icon">☰</span><span>Lista</span>
+    </div>
+    <div class="nav-tab" data-view="mapa">
+      <span class="tab-icon">◎</span><span>Mapa</span>
+    </div>
+    <div class="nav-tab" data-view="favs">
+      <span class="tab-icon">♡</span><span>Mis listas</span>
+    </div>
+  </nav>
+
+  <!-- FICHA -->
+  <div id="ficha-view" class="ficha-view">
+    <div class="ficha-hero">
+      <div class="ficha-hero-glow"></div>
+      <div id="ficha-emoji" class="ficha-emoji-big">🍽️</div>
+      <button id="ficha-back" class="ficha-back">← Volver</button>
+      <div class="ficha-hero-btns">
+        <button id="ficha-wish-btn" class="ficha-icon-btn">⊕</button>
+        <button id="ficha-fav-btn" class="ficha-icon-btn">♡</button>
+      </div>
+    </div>
+    <div class="ficha-scroll">
+      <div class="ficha-body">
+        <div id="ficha-name" class="ficha-name"></div>
+        <div id="ficha-badges" class="ficha-badges"></div>
+        <div class="ficha-rating-row">
+          <span class="ficha-star">★</span>
+          <span id="ficha-rating" class="ficha-rating-num"></span>
+          <span id="ficha-votes" class="ficha-votes"></span>
+        </div>
+        <button id="ficha-maps-btn" class="maps-btn">◎ Ver en Google Maps · fotos y reseñas</button>
+        <div class="section-title">Descripción</div>
+        <div id="ficha-desc" class="ficha-desc"></div>
+        <div class="section-title">Platos más pedidos</div>
+        <div id="ficha-platos" class="ficha-tags"></div>
+        <div class="section-title">Horario</div>
+        <div id="ficha-horario"></div>
+        <div id="ficha-tip-section">
+          <div class="section-title">Consejo local</div>
+          <div class="tip-box"><div id="ficha-tip" class="tip-text"></div></div>
+        </div>
+        <div id="ficha-review-section">
+          <div class="section-title">Reseña destacada</div>
+          <div class="review-box">
+            <div id="ficha-review" class="review-text"></div>
+            <div class="review-author">— Google Maps</div>
+          </div>
+        </div>
+        <div class="section-title">Estado</div>
+        <div class="checks-row">
+          <div id="check-visited" class="check-item">✓ He estado</div>
+          <div id="check-picar" class="check-item">🍢 Picar</div>
+          <div id="check-menu" class="check-item">📋 Menú</div>
+        </div>
+        <div class="section-title">Mis notas</div>
+        <textarea id="ficha-notes" class="notes-area" placeholder="Añade una nota..."></textarea>
+        <button id="notes-save-btn" class="notes-save-btn">Guardar nota</button>
+        <button id="ficha-wsp-btn" class="wsp-btn">↗ Compartir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /#app -->
+
+<!-- SHEETS -->
+<div id="sheet-overlay" class="sheet-overlay">
+
+  <!-- Ciudad -->
+  <div id="city-sheet" class="sheet">
+    <div class="sheet-handle"></div>
+    <div class="sheet-title">Seleccionar ciudad</div>
+    <div id="city-options" class="sheet-options"></div>
+  </div>
+
+  <!-- Filtro -->
+  <div id="filter-sheet" class="sheet">
+    <div class="sheet-handle"></div>
+    <div id="filter-title" class="sheet-title">Filtrar</div>
+    <div id="filter-options" class="sheet-options"></div>
+    <div class="sheet-actions">
+      <button id="filter-clear-btn" class="sheet-btn-sec">Limpiar</button>
+      <button id="filter-apply-btn" class="sheet-btn-pri">Aplicar</button>
+    </div>
+  </div>
+
+  <!-- Añadir restaurante -->
+  <div id="add-sheet" class="sheet">
+    <div class="sheet-handle"></div>
+    <div class="sheet-title">Añadir restaurante</div>
+
+    <!-- FASE 1: buscar -->
+    <div id="add-phase-search">
+      <p class="sheet-desc">
+        Pega el link de Google Maps desde la barra del navegador, o escribe el nombre del restaurante para buscarlo.
+      </p>
+      <p class="sheet-desc" style="color:var(--amber);font-size:13px;margin-top:-8px">
+        ⚠ Los links cortos de "Compartir" (maps.app.goo.gl) no funcionan. Usa el link largo de la barra del navegador.
+      </p>
+      <div class="add-input-row">
+        <input id="add-url" type="text" class="sheet-input"
+          placeholder="https://www.google.com/maps/place/... o nombre del restaurante">
+      </div>
+      <div id="add-error" class="add-error"></div>
+      <div class="sheet-actions">
+        <button id="add-cancel-btn" class="sheet-btn-sec">Cancelar</button>
+        <button id="add-search-btn" class="sheet-btn-pri">Buscar →</button>
+      </div>
+    </div>
+
+    <!-- FASE 2: confirmar -->
+    <div id="add-phase-confirm" style="display:none">
+      <div id="add-preview" class="add-preview"></div>
+      <div class="add-label">Emoji</div>
+      <input id="add-emoji" class="sheet-input-sm" maxlength="4" placeholder="🍽️">
+      <div class="add-label">Barrio</div>
+      <input id="add-barrio" class="sheet-input-sm" placeholder="Barrio o zona">
+      <div class="add-label">Tipo de cocina</div>
+      <input id="add-cocina" class="sheet-input-sm" placeholder="Brasileña, italiana...">
+      <div class="add-label">Precio</div>
+      <div class="precio-row">
+        <div class="precio-opt" data-p="€">€</div>
+        <div class="precio-opt selected" data-p="€€">€€</div>
+        <div class="precio-opt" data-p="€€€">€€€</div>
+        <div class="precio-opt" data-p="€€€€">€€€€</div>
+      </div>
+      <div class="add-label">Notas personales</div>
+      <textarea id="add-notes" class="notes-area" style="min-height:60px"
+        placeholder="Lo que quieras recordar..."></textarea>
+      <div class="sheet-actions">
+        <button id="add-back-btn" class="sheet-btn-sec">← Atrás</button>
+        <button id="add-save-btn" class="sheet-btn-pri">Guardar ✓</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /sheets -->
+
+<div id="toast" class="toast"></div>
+
+<!-- Google Maps se carga cuando se necesita desde app.js -->
+<script src="js/storage.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/maps.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

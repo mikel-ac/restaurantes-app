@@ -1,0 +1,4599 @@
+[
+  {
+    "id": "rio-001",
+    "nombre": "Aprazível",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Santa Teresa",
+    "tipo_cocina": "Brasileña contemporánea",
+    "precio": "€€€",
+    "precio_medio_brl": 120,
+    "ambiente": [
+      "romántico",
+      "vistas",
+      "terraza",
+      "bohemio"
+    ],
+    "tags": [
+      "vistas",
+      "muy local",
+      "romántico",
+      "terraza",
+      "imprescindible"
+    ],
+    "emoji": "🌿",
+    "rating": 4.7,
+    "votos": 1247,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9186,
+      "lng": -43.1844
+    },
+    "horario": {
+      "lunes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "23:30"
+      },
+      "sabado": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "11:30",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Restaurante icónico encaramado en las laderas de Santa Teresa, con terraza entre árboles y vistas al centro histórico de Río. Cocina carioca elevada con ingredientes del Nordeste. Una de las experiencias más memorables de la ciudad.",
+    "platos_destacados": [
+      "moqueca de peixe",
+      "bobó de camarão",
+      "pão de queijo",
+      "caipirinha de cachaça"
+    ],
+    "tip_local": "Pide mesa en la terraza superior, nivel más alto. Llega antes de las 19h si no tienes reserva — en finde se llena en 20 minutos. El atardecer desde ahí es de otro nivel.",
+    "resena_destacada": "La mejor moqueca que he comido en mi vida. La terraza entre los árboles con esa vista al atardecer es de otro mundo. Sitio imprescindible en cualquier visita a Río.",
+    "google_place_id": "",
+    "web": "aprazivel.com.br",
+    "telefono": "+55 21 2508-9174",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-002",
+    "nombre": "Bar do Mineiro",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Santa Teresa",
+    "tipo_cocina": "Brasileña / Boteco",
+    "precio": "€€",
+    "precio_medio_brl": 55,
+    "ambiente": [
+      "casual",
+      "muy local",
+      "animado"
+    ],
+    "tags": [
+      "muy local",
+      "clásico",
+      "feijoada",
+      "boteco",
+      "imprescindible"
+    ],
+    "emoji": "🍺",
+    "rating": 4.5,
+    "votos": 2100,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9215,
+      "lng": -43.1831
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "domingo": {
+        "abre": "11:00",
+        "cierra": "20:00"
+      }
+    },
+    "descripcion": "Boteco de culto en Santa Teresa, fundado en 1992. La feijoada fue elegida Mejor Feijoada de Río por la Revista Veja Rio dos años seguidos. Ambiente desenfadado, lleno de cariocas de toda la vida. Los cuadros del artista Selarón decoran las paredes.",
+    "platos_destacados": [
+      "feijoada completa",
+      "bolinho de bacalhau",
+      "aipim frito",
+      "coxinha"
+    ],
+    "tip_local": "La feijoada se sirve todos los días, no solo el sábado como es tradición. Llega antes de las 13h porque se agota. Pide el chope Brahma bien frío — está entre los mejor tirados de Río.",
+    "resena_destacada": "El sitio más auténtico de Santa Teresa. La feijoada es espectacular y los camareros tienen un humor y una simpatía que te alegran el día. Precios muy razonables para la calidad.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2221-9227",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-003",
+    "nombre": "Armazém São Thiago",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Santa Teresa",
+    "tipo_cocina": "Boteco / Petiscos",
+    "precio": "€",
+    "precio_medio_brl": 40,
+    "ambiente": [
+      "muy local",
+      "histórico",
+      "casual",
+      "animado"
+    ],
+    "tags": [
+      "muy local",
+      "histórico",
+      "petiscos",
+      "centenario",
+      "boteco"
+    ],
+    "emoji": "🏛️",
+    "rating": 4.6,
+    "votos": 1850,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9199,
+      "lng": -43.1827
+    },
+    "horario": {
+      "lunes": {
+        "abre": "09:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "09:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "09:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "09:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "09:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "09:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "10:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Más de 100 años de historia. Declarado Patrimonio Histórico de Río, conserva la decoración original de almacén de principios del siglo XX. Bebidas, enlatados y conservas conviven con mesas de mármol y una clientela de cariocas de toda la vida.",
+    "platos_destacados": [
+      "aipim com queijo",
+      "bolinho de bacalhau",
+      "torresmo",
+      "chope Brahma"
+    ],
+    "tip_local": "Uno de los bares más fotogénicos de Río. El mejor momento es a media tarde con luz dorada entrando por las puertas de madera. Los lugareños suelen instalarse en las mesitas de la acera.",
+    "resena_destacada": "Un sitio que te transporta al Río de hace 100 años. La cerveza más barata del barrio y el ambiente más auténtico. Los petiscos son sencillos pero todo está muy bueno.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2232-0822",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-004",
+    "nombre": "Adega do Pimenta",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Santa Teresa",
+    "tipo_cocina": "Alemana / Fusión",
+    "precio": "€€",
+    "precio_medio_brl": 65,
+    "ambiente": [
+      "casual",
+      "bohemio",
+      "animado"
+    ],
+    "tags": [
+      "muy local",
+      "alemán",
+      "chopp",
+      "sorpresa",
+      "original"
+    ],
+    "emoji": "🍻",
+    "rating": 4.6,
+    "votos": 980,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9207,
+      "lng": -43.1835
+    },
+    "horario": {
+      "lunes": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      },
+      "martes": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "20:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "18:00"
+      }
+    },
+    "descripcion": "Fundada por Holf Pfeffer, maestro cervecero alemán de la Brahma que tradujo su apellido para bautizar el local. Especialidad en cocina alemana con el mejor chopp Brahma de Santa Teresa. El joelho de porco (codillo) es legendario.",
+    "platos_destacados": [
+      "joelho de porco",
+      "salsicha alemã",
+      "eisbein",
+      "chopp Brahma"
+    ],
+    "tip_local": "El codillo alemão da para 2-3 personas si pedís alguna entrada antes. El chopp es uno de los mejores tirados de Río. Sitio familiar con mucho encanto, ideal a mediodía.",
+    "resena_destacada": "Uno de mis restaurantes favoritos de Santa Teresa. El codillo es increíble y el chopp siempre perfectamente frío. Un alemán en pleno barrio carioca que funciona de maravilla.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2224-1476",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-005",
+    "nombre": "Café do Alto",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Santa Teresa",
+    "tipo_cocina": "Nordestina / Brunch",
+    "precio": "€€",
+    "precio_medio_brl": 50,
+    "ambiente": [
+      "desayuno",
+      "casual",
+      "bohemio",
+      "terraza"
+    ],
+    "tags": [
+      "desayuno",
+      "brunch",
+      "nordestino",
+      "muy local",
+      "terraza"
+    ],
+    "emoji": "☕",
+    "rating": 4.5,
+    "votos": 760,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9193,
+      "lng": -43.184
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "09:00",
+        "cierra": "17:00"
+      },
+      "miercoles": {
+        "abre": "09:00",
+        "cierra": "17:00"
+      },
+      "jueves": {
+        "abre": "09:00",
+        "cierra": "17:00"
+      },
+      "viernes": {
+        "abre": "09:00",
+        "cierra": "17:00"
+      },
+      "sabado": {
+        "abre": "09:00",
+        "cierra": "18:00"
+      },
+      "domingo": {
+        "abre": "09:00",
+        "cierra": "17:00"
+      }
+    },
+    "descripcion": "Café con alma nordestina en el corazón artístico de Santa Teresa. El brunch nórdico-carioca mezcla tapioca, açaí, frutas tropicales y recetas del Nordeste de Brasil. Ambiente acogedor entre plantas y paredes coloridas.",
+    "platos_destacados": [
+      "brunch nordestino",
+      "tapioca",
+      "açaí bowl",
+      "bolo de rolo"
+    ],
+    "tip_local": "Perfecto para empezar el día en Santa Teresa antes de explorar el barrio. Los fines de semana hay cola — llega antes de las 10h. El tapioca con coalho y mel de engenho es imprescindible.",
+    "resena_destacada": "El mejor café de Santa Teresa sin dudas. El brunch nordestino es una revelación para quien no conoce esa cocina. El personal es encantador y el sitio tiene mucho encanto.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 3563-6001",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-006",
+    "nombre": "Garota de Ipanema",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Ipanema",
+    "tipo_cocina": "Brasileña / Boteco",
+    "precio": "€€",
+    "precio_medio_brl": 70,
+    "ambiente": [
+      "histórico",
+      "muy local",
+      "animado",
+      "icónico"
+    ],
+    "tags": [
+      "icónico",
+      "histórico",
+      "muy local",
+      "bossa nova",
+      "picanha"
+    ],
+    "emoji": "🎵",
+    "rating": 4.4,
+    "votos": 3200,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9838,
+      "lng": -43.1997
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:30",
+        "cierra": "00:30"
+      },
+      "martes": {
+        "abre": "11:30",
+        "cierra": "00:30"
+      },
+      "miercoles": {
+        "abre": "11:30",
+        "cierra": "00:30"
+      },
+      "jueves": {
+        "abre": "11:30",
+        "cierra": "00:30"
+      },
+      "viernes": {
+        "abre": "11:30",
+        "cierra": "01:30"
+      },
+      "sabado": {
+        "abre": "11:30",
+        "cierra": "01:30"
+      },
+      "domingo": {
+        "abre": "11:30",
+        "cierra": "00:30"
+      }
+    },
+    "descripcion": "El bar donde Tom Jobim y Vinícius de Moraes compusieron 'Garota de Ipanema' en 1962. Hoy es un clásico imprescindible del barrio, frecuentado por cariocas de toda la vida. La picanha brasileira es su plato estrella — una pieza entera a la plancha para compartir.",
+    "platos_destacados": [
+      "picanha brasileira",
+      "filé de peixe",
+      "feijoada",
+      "caipirinha clásica"
+    ],
+    "tip_local": "Pide la picanha — viene una pieza grande, cortada en láminas, en una sartén caliente con arroz y fritas. Da bien para dos. La caipirinha aquí es de las mejores del barrio. Ambiente muy local, nada de guiris.",
+    "resena_destacada": "Más que un restaurante, es un pedazo de historia de Río. La picanha perfecta, la caipirinha perfecta, y un ambiente que te hace sentir carioca. Uno de mis favoritos de toda la ciudad.",
+    "google_place_id": "",
+    "web": "garotadeipanema.com.br",
+    "telefono": "+55 21 2523-3787",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-007",
+    "nombre": "Adega Perola",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Copacabana",
+    "tipo_cocina": "Portuguesa / Petiscos",
+    "precio": "€€",
+    "precio_medio_brl": 60,
+    "ambiente": [
+      "muy local",
+      "casual",
+      "animado",
+      "terraza"
+    ],
+    "tags": [
+      "muy local",
+      "petiscos",
+      "portugués",
+      "boteco",
+      "chopp"
+    ],
+    "emoji": "🐟",
+    "rating": 4.5,
+    "votos": 1560,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.968,
+      "lng": -43.1815
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "El mejor bar de petiscos de Copacabana, a una manzana del metro Siqueira Campos pero lejos de los circuitos turísticos. Clientela 100% local. Especialidad en petiscos al estilo portugués-carioca: mandioca frita, bolinho de bacalhau, pataniscas.",
+    "platos_destacados": [
+      "mandioca frita",
+      "bolinho de bacalhau",
+      "pataniscas",
+      "chopp gelado"
+    ],
+    "tip_local": "Llegas, te sientas en la barra o en las mesitas de la acera, pides un chopp y la mandioca frita. Así de fácil. Clientela local total — si ves turistas, los reconocerás enseguida porque son minoría.",
+    "resena_destacada": "El bar de toda la vida en Copacabana. Sin pretensiones, sin guiris, con petiscos brutales y el chopp más frío de la zona. La mandioca frita es adictiva.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2255-9449",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-008",
+    "nombre": "Pavão Azul",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Copacabana",
+    "tipo_cocina": "Portuguesa / Brasileña",
+    "precio": "€€",
+    "precio_medio_brl": 65,
+    "ambiente": [
+      "muy local",
+      "casual",
+      "histórico"
+    ],
+    "tags": [
+      "muy local",
+      "portugués",
+      "boteco",
+      "tradicional",
+      "pataniscas"
+    ],
+    "emoji": "🦚",
+    "rating": 4.4,
+    "votos": 1230,
+    "picar": true,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.9694,
+      "lng": -43.1822
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "11:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Boteco tradicional de Copacabana con fuerte influencia portuguesa. Las pataniscas de bacalhau son su plato más famoso. Ambiente de barrio auténtico, mesas en la acera, clientes habituales de toda la vida. Pocas cuadras del Adega Pérola pero con su propio carácter.",
+    "platos_destacados": [
+      "pataniscas de bacalhau",
+      "bifanas",
+      "bolinho de bacalhau",
+      "frango grelhado"
+    ],
+    "tip_local": "Las pataniscas de bacalhau son las mejores de Copacabana. Pide el prato feito del día al mediodía — abundante y baratísimo. Las mesas de la acera son el sitio donde come la gente del barrio.",
+    "resena_destacada": "Entré sin saber nada y salí enamorado. Las pataniscas son extraordinarias y el precio es de otra época. Sitio de barrio puro, los camareros te tratan como si fueras cliente de hace 20 años.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2547-3906",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-009",
+    "nombre": "Galeto Sat's",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Copacabana",
+    "tipo_cocina": "Grelhados / Brasileña",
+    "precio": "€",
+    "precio_medio_brl": 45,
+    "ambiente": [
+      "muy local",
+      "casual",
+      "rápido"
+    ],
+    "tags": [
+      "muy local",
+      "barato",
+      "pollos",
+      "grelhados",
+      "clásico"
+    ],
+    "emoji": "🍗",
+    "rating": 4.5,
+    "votos": 2800,
+    "picar": false,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.9706,
+      "lng": -43.1803
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "martes": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "miercoles": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "11:30",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "11:30",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      }
+    },
+    "descripcion": "Institución carioca desde 1961. Famoso por su pan con ajo y por los pollos y carnes a la brasa. Uno de los mejores cost-benefit de Copacabana. El galeto (pollo joven) al horno con ese pan con ajo recién salido es adictivo.",
+    "platos_destacados": [
+      "galeto assado",
+      "pão de alho",
+      "frango grelhado",
+      "picanha"
+    ],
+    "tip_local": "El pão de alho viene gratis y es brutal — pide más sin problema. El galeto es el plato que pide todo el mundo. Sitio rápido, eficiente, sin glamour pero con mucho sabor.",
+    "resena_destacada": "60 años dando de comer a Copacabana y siguen en forma. El pão de alho solo ya vale la visita. Precios increíbles para lo que ofrece.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2275-6247",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-010",
+    "nombre": "Zazá Bistro Tropical",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Ipanema",
+    "tipo_cocina": "Fusión / Contemporánea",
+    "precio": "€€€",
+    "precio_medio_brl": 110,
+    "ambiente": [
+      "romántico",
+      "bohemio",
+      "animado",
+      "colorido"
+    ],
+    "tags": [
+      "romántico",
+      "creativo",
+      "fusión",
+      "especial",
+      "vistas"
+    ],
+    "emoji": "🌺",
+    "rating": 4.5,
+    "votos": 1890,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9828,
+      "lng": -43.1981
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "19:00",
+        "cierra": "00:00"
+      },
+      "miercoles": {
+        "abre": "19:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "19:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "Casa colonial colorida a dos manzanas de la playa de Ipanema. Cocina orgánica creativa con ingredientes frescos y combinaciones inesperadas. El ambiente bohemio, los cojines coloridos en la terraza del piso superior y la luz de velas lo convierten en el sitio ideal para una noche especial.",
+    "platos_destacados": [
+      "risoto de limão siciliano",
+      "cordeiro especiado",
+      "moqueca vegetariana",
+      "drinks autorais"
+    ],
+    "tip_local": "Reserva mesa en el piso de arriba — tiene la terraza más bonita de Ipanema. El risoto de limão siciliano está en la carta desde siempre por algo. Para una noche especial sin pagar precio de lujo.",
+    "resena_destacada": "El risoto de limón y el cordero estaban increíbles. Ambiente mágico, especialmente en el piso de arriba con las velas y la decoración colorida. Una de las mejores cenas que he tenido en Río.",
+    "google_place_id": "",
+    "web": "zazabistro.com.br",
+    "telefono": "+55 21 2247-9101",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-011",
+    "nombre": "Bar Lagoa",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Ipanema",
+    "tipo_cocina": "Alemana / Brasileña",
+    "precio": "€€",
+    "precio_medio_brl": 70,
+    "ambiente": [
+      "vistas",
+      "histórico",
+      "muy local",
+      "terraza"
+    ],
+    "tags": [
+      "vistas",
+      "laguna",
+      "muy local",
+      "histórico",
+      "alemán"
+    ],
+    "emoji": "🏞️",
+    "rating": 4.4,
+    "votos": 1670,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9808,
+      "lng": -43.2062
+    },
+    "horario": {
+      "lunes": {
+        "abre": "12:00",
+        "cierra": "00:30"
+      },
+      "martes": {
+        "abre": "12:00",
+        "cierra": "00:30"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "00:30"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "00:30"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "01:30"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "01:30"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "00:30"
+      }
+    },
+    "descripcion": "Abierto en 1934, con vistas privilegiadas a la Lagoa Rodrigo de Freitas. Uno de los restaurantes más antiguos en funcionamiento de Río. Especialidad alemana — salchichas, chucrut, schnitzel — con el telón de fondo del Cristo Redentor al fondo.",
+    "platos_destacados": [
+      "salsicha alemã",
+      "schnitzel",
+      "chucrut",
+      "chopp gelado"
+    ],
+    "tip_local": "La mesa junto a la ventana con vistas a la laguna es el objetivo. Llega al atardecer para ver el Cristo con la luz del sol. Mezcla perfecta de cocina alemana con ambiente carioca total.",
+    "resena_destacada": "Llevas décadas viniendo y el sitio nunca defrauda. Las vistas a la laguna son inmejorables y la salchicha alemana sigue siendo la mejor de Río. Un clásico que hay que conocer.",
+    "google_place_id": "",
+    "web": "barlagoa.com.br",
+    "telefono": "+55 21 2523-1135",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-012",
+    "nombre": "Teva",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Ipanema",
+    "tipo_cocina": "Vegetariana / Orgánica",
+    "precio": "€€€",
+    "precio_medio_brl": 95,
+    "ambiente": [
+      "moderno",
+      "sofisticado",
+      "especial"
+    ],
+    "tags": [
+      "vegetariano",
+      "vegano",
+      "orgánico",
+      "creativo",
+      "saludable"
+    ],
+    "emoji": "🥗",
+    "rating": 4.5,
+    "votos": 890,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9836,
+      "lng": -43.1995
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "El mejor restaurante vegetariano/vegano de Río y uno de los más creativos de Ipanema. Carta orgánica de temporada con influencias asiáticas. El carpaccio de portobello con salsa de parmesano y el seitan coreano con Gochujang son ya clásicos de la casa.",
+    "platos_destacados": [
+      "carpaccio de portobello",
+      "seitan coreano",
+      "tapioca com tofu",
+      "cocteles autorales"
+    ],
+    "tip_local": "Aunque no seas vegetariano vale la pena — la cocina aquí es genuinamente creativa y los sabores son potentes. La carta cambia según temporada. El Teva Deli en Copacabana es más relajado para brunch.",
+    "resena_destacada": "El mejor restaurante vegano que he probado en Latinoamérica. El seitan coreano es tan bueno que te olvidas completamente de que no lleva carne. Los cocteles también están al nivel.",
+    "google_place_id": "",
+    "web": "teva.com.br",
+    "telefono": "+55 21 3594-1295",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-013",
+    "nombre": "Baixela",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Copacabana",
+    "tipo_cocina": "Brasileña / Comfort food",
+    "precio": "€€",
+    "precio_medio_brl": 60,
+    "ambiente": [
+      "casual",
+      "muy local",
+      "acogedor"
+    ],
+    "tags": [
+      "muy local",
+      "comfort food",
+      "caseiro",
+      "custo-benefício"
+    ],
+    "emoji": "🍽️",
+    "rating": 4.6,
+    "votos": 1120,
+    "picar": false,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.971,
+      "lng": -43.1842
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:30",
+        "cierra": "22:30"
+      },
+      "martes": {
+        "abre": "11:30",
+        "cierra": "22:30"
+      },
+      "miercoles": {
+        "abre": "11:30",
+        "cierra": "22:30"
+      },
+      "jueves": {
+        "abre": "11:30",
+        "cierra": "22:30"
+      },
+      "viernes": {
+        "abre": "11:30",
+        "cierra": "23:00"
+      },
+      "sabado": {
+        "abre": "11:30",
+        "cierra": "23:00"
+      },
+      "domingo": {
+        "abre": "11:30",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Spot casual en Copacabana que sirve cocina brasileña de alta calidad a precios razonables. El frango à parmegiana es legendario — rebozado crujiente, carne tierna, salsa rica. Lejos del paseo marítimo turístico, clientela 100% local.",
+    "platos_destacados": [
+      "frango à parmegiana",
+      "filé de peixe",
+      "feijoada",
+      "arroz com brócolis"
+    ],
+    "tip_local": "No está en el paseo marítimo así que lo esquivan los turistas. El parmegiana de pollo es de los mejores de Copacabana. Al mediodía hay menú ejecutivo muy bien de precio.",
+    "resena_destacada": "El frango à parmegiana que probé aquí fue la mejor versión que he probado en mi vida. Cocinado perfecto, generoso, y el precio es justo para lo que ofrecen. Lugar muy recomendable.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2547-3411",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-014",
+    "nombre": "Restaurante Adriano",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Brasileña / PF",
+    "precio": "€",
+    "precio_medio_brl": 35,
+    "ambiente": [
+      "muy local",
+      "casual",
+      "rápido",
+      "histórico"
+    ],
+    "tags": [
+      "muy local",
+      "barato",
+      "caseiro",
+      "clásico",
+      "70 años"
+    ],
+    "emoji": "🍚",
+    "rating": 4.5,
+    "votos": 1890,
+    "picar": false,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.9456,
+      "lng": -43.1878
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "16:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "16:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "16:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "16:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "16:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "15:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "Más de 70 años sirviendo el mejor prato feito de Botafogo. Comida caseira auténtica, porciones enormes, precios imbatibles. Solo almuerzo. Clientela de trabajadores y vecinos del barrio. El viradinho à paulista (cerdo, tutu de feijão, huevo, couve y farofa) es el plato mítico.",
+    "platos_destacados": [
+      "viradinho à paulista",
+      "frango ensopado",
+      "filé de peixe",
+      "feijão tropeiro"
+    ],
+    "tip_local": "Solo sirven almuerzo y cierra en cuanto se acaba la comida, a veces antes de las 16h. Llega entre 11h y 13h para no quedarte sin el plato que quieres. No hay carta — preguntas qué hay hoy.",
+    "resena_destacada": "La mejor comida caseira de Botafogo y seguramente del precio más honesto de todo Río. Más de 70 años dando de comer al barrio con la misma calidad. Un tesoro.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2537-3906",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-015",
+    "nombre": "Miam Miam",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Contemporánea / Fusión",
+    "precio": "€€€",
+    "precio_medio_brl": 100,
+    "ambiente": [
+      "colorido",
+      "animado",
+      "moderno",
+      "especial"
+    ],
+    "tags": [
+      "creativo",
+      "comfort food",
+      "moqueca",
+      "especial",
+      "botafogo"
+    ],
+    "emoji": "🌊",
+    "rating": 4.5,
+    "votos": 1340,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9487,
+      "lng": -43.1856
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "10:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "10:00",
+        "cierra": "18:00"
+      }
+    },
+    "descripcion": "Casarão colorido en Botafogo con cocina inventiva de comfort food elevada. La moqueca de peixe e camarão al curry con farofa de coco es el plato que pide todo el mundo. Ambiente vibrante, clientela joven y mixta.",
+    "platos_destacados": [
+      "moqueca de peixe e camarão",
+      "mix de folhas",
+      "sobremesas autorais",
+      "cócteles"
+    ],
+    "tip_local": "Pide la moqueca — es el plato más pedido y con razón. Las mesas de colores y el ambiente festivo lo hacen perfecto para grupos. Los sábados hacen brunch.",
+    "resena_destacada": "La moqueca de camarão al curry es una combinación que no esperas en Río pero que funciona perfectamente. Sitio alegre, lleno de vida y con cocina de calidad real.",
+    "google_place_id": "",
+    "web": "miammiam.com.br",
+    "telefono": "+55 21 2244-0125",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-016",
+    "nombre": "Bar Urca",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Urca",
+    "tipo_cocina": "Boteco / Petiscos",
+    "precio": "€",
+    "precio_medio_brl": 40,
+    "ambiente": [
+      "vistas",
+      "muy local",
+      "casual",
+      "terraza"
+    ],
+    "tags": [
+      "vistas",
+      "muy local",
+      "pao de acucar",
+      "petiscos",
+      "clásico"
+    ],
+    "emoji": "⛰️",
+    "rating": 4.4,
+    "votos": 2560,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9543,
+      "lng": -43.1654
+    },
+    "horario": {
+      "lunes": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "martes": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "miercoles": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "jueves": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "viernes": {
+        "abre": "08:00",
+        "cierra": "23:00"
+      },
+      "sabado": {
+        "abre": "08:00",
+        "cierra": "23:00"
+      },
+      "domingo": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "El boteco más famoso del barrio de Urca, desde 1939. La experiencia auténtica es sentarse en la mureta (el muro junto a la bahía) con una cerveza bien fría y un pastel, mirando el Pão de Açúcar. El interior del restaurante es más caro — el secreto es la mureta.",
+    "platos_destacados": [
+      "pastel frito",
+      "cerveja gelada",
+      "bolinho de bacalhau",
+      "camarão frito"
+    ],
+    "tip_local": "La experiencia local correcta: compras en el bar (cerveja + pastel o bolinho) y te vas a sentar en la mureta de la bahía a ver el Pão de Açúcar. Baratísimo y uno de los mejores momentos posibles en Río.",
+    "resena_destacada": "Sentado en la mureta con una cerveza helada y el Pão de Açúcar delante. Por menos de 5€ tienes una de las mejores experiencias de Río. El interior del restaurante es más caro y menos especial.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2295-8744",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-017",
+    "nombre": "Lapa (Bar do Peixe)",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Lapa",
+    "tipo_cocina": "Frutos del mar / Pé sujo",
+    "precio": "€",
+    "precio_medio_brl": 45,
+    "ambiente": [
+      "muy local",
+      "nocturno",
+      "animado",
+      "casual"
+    ],
+    "tags": [
+      "muy local",
+      "lapa",
+      "nocturno",
+      "pescado",
+      "barato"
+    ],
+    "emoji": "🐠",
+    "rating": 4.3,
+    "votos": 980,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9128,
+      "lng": -43.1795
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Típico 'pé sujo' carioca en el corazón de Lapa — mesas en la acera, sin pretensiones, con platos de pescado y camarão frescos y abundantes a precios muy económicos. Perfecto punto de partida para una noche en la Lapa bohemia.",
+    "platos_destacados": [
+      "peixe grelhado",
+      "camarão frito",
+      "moqueca simples",
+      "cerveja"
+    ],
+    "tip_local": "Ven a cenar aquí antes de recorrer la Lapa. Es el sitio de arrancar la noche — comida sencilla, barata y buena, en mesas en la calle con el ambiente nocturno de la Lapa de fondo.",
+    "resena_destacada": "Sencillo, honesto y sabroso. El camarão frito es abundante y bien cocinado. Precios de otra época en una zona que ya no los tiene muchos. El ambiente nocturno de Lapa lo hace especial.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-018",
+    "nombre": "Balaio do Zé",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Flamengo",
+    "tipo_cocina": "Brasileña / Feijoada",
+    "precio": "€€",
+    "precio_medio_brl": 55,
+    "ambiente": [
+      "muy local",
+      "casual",
+      "animado"
+    ],
+    "tags": [
+      "muy local",
+      "feijoada",
+      "flamengo",
+      "custo-benefício"
+    ],
+    "emoji": "🫘",
+    "rating": 4.4,
+    "votos": 870,
+    "picar": false,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.9364,
+      "lng": -43.1766
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "22:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "22:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "22:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "22:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "domingo": {
+        "abre": "11:00",
+        "cierra": "20:00"
+      }
+    },
+    "descripcion": "Referencia del barrio del Flamengo para la feijoada completa. El sábado la feijoada para dos personas abundante cuesta alrededor de R$90. Pratos executivos durante la semana a menos de R$40. Muy frecuentado por vecinos del barrio.",
+    "platos_destacados": [
+      "feijoada completa",
+      "prato executivo",
+      "arroz com feijão",
+      "costela"
+    ],
+    "tip_local": "La feijoada del sábado es la estrella — abundante, con mucha carne y un precio justo. Entre semana los pratos executivos son una ganga. Sitio tranquilo del barrio, sin aglomeraciones.",
+    "resena_destacada": "La feijoada más generosa de precio que he encontrado en Río. Para dos personas comen los dos bien y sobra. El caldo está muy bien hecho y la carne de calidad. Sitio de barrio auténtico.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2205-4419",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-019",
+    "nombre": "Padaria Bassil",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Centro",
+    "tipo_cocina": "Árabe / Panadería",
+    "precio": "€",
+    "precio_medio_brl": 25,
+    "ambiente": [
+      "histórico",
+      "muy local",
+      "desayuno",
+      "rápido"
+    ],
+    "tags": [
+      "histórico",
+      "árabe",
+      "desayuno",
+      "100 años",
+      "esfiha",
+      "Centro"
+    ],
+    "emoji": "🥙",
+    "rating": 4.5,
+    "votos": 1450,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9035,
+      "lng": -43.1731
+    },
+    "horario": {
+      "lunes": {
+        "abre": "07:00",
+        "cierra": "18:00"
+      },
+      "martes": {
+        "abre": "07:00",
+        "cierra": "18:00"
+      },
+      "miercoles": {
+        "abre": "07:00",
+        "cierra": "18:00"
+      },
+      "jueves": {
+        "abre": "07:00",
+        "cierra": "18:00"
+      },
+      "viernes": {
+        "abre": "07:00",
+        "cierra": "18:00"
+      },
+      "sabado": {
+        "abre": "07:00",
+        "cierra": "14:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "Panadería árabe libanesa con 100 años de historia en el Centro de Río. Las esfirras y quibes son de leyenda, junto a charutinhos (hojas de parra rellenas) y otros clásicos libaneses. Desayuno y almuerzo express para trabajadores del Centro.",
+    "platos_destacados": [
+      "esfiha de carne",
+      "quibe frito",
+      "charutinho",
+      "esfirra de queijo"
+    ],
+    "tip_local": "Una de las mejores esfirras de Río, con 100 años de receta intacta. Ideal para un desayuno o almuerzo rápido en el Centro. Económico y delicioso — los trabajadores del barrio hacen cola.",
+    "resena_destacada": "La esfiha más buena que he probado en Río. 100 años de historia y sigue siendo la mejor. Precio imbatible, tamaño generoso, masa perfecta. Un imprescindible si pasas por el Centro.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2233-7795",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-020",
+    "nombre": "Galeto 183",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Centro",
+    "tipo_cocina": "Grelhados / Portuguesa",
+    "precio": "€",
+    "precio_medio_brl": 40,
+    "ambiente": [
+      "muy local",
+      "casual",
+      "almuerzo"
+    ],
+    "tags": [
+      "muy local",
+      "Centro",
+      "almuerzo",
+      "grelhados",
+      "portugués"
+    ],
+    "emoji": "🍳",
+    "rating": 4.3,
+    "votos": 780,
+    "picar": false,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.9021,
+      "lng": -43.1755
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "16:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "16:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "16:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "16:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "16:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "15:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "Clásico del Centro carioca para almuerzos rápidos y abundantes. Platos de corte lusitano-brasileño: pollos y carnes a la plancha, pastel de nata de postre. Ambiente simple, sin glamour, con trabajadores del Centro llenando las mesas cada día.",
+    "platos_destacados": [
+      "galeto grelhado",
+      "frango à portuguesa",
+      "picanha",
+      "pastel de nata"
+    ],
+    "tip_local": "Solo para almuerzo y en días laborables. Llena rápido entre 12h y 13h30. Para ir al postre, el pastel de nata es una sorpresa agradable en pleno Centro carioca.",
+    "resena_destacada": "El almuerzo más honesto del Centro. Porción enorme, sabor correcto, precio justo. Solo para mediodía y solo en laborables, pero si estás en el Centro es una parada obligatoria.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-021",
+    "nombre": "Espírito Santa",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Santa Teresa",
+    "tipo_cocina": "Amazónica / Nordestina",
+    "precio": "€€€",
+    "precio_medio_brl": 105,
+    "ambiente": [
+      "bohemio",
+      "vistas",
+      "especial",
+      "romántico"
+    ],
+    "tags": [
+      "amazónico",
+      "nordestino",
+      "vistas",
+      "especial",
+      "muy local"
+    ],
+    "emoji": "🌿",
+    "rating": 4.5,
+    "votos": 1100,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.918,
+      "lng": -43.1852
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Casa colonial de Santa Teresa con terraza y vistas al centro de Río. Cocina de influencia amazónica y nordestina — ingredientes como tucupi, jambu, pirarucu y frutas del Amazonas. Uno de los restaurantes más creativos y auténticamente brasileños de la ciudad.",
+    "platos_destacados": [
+      "pato no tucupi",
+      "moqueca de camarão",
+      "arroz de jambu",
+      "cupuaçu de sobremesa"
+    ],
+    "tip_local": "El pato no tucupi es el plato a pedir — una preparación amazónica que no encontrarás en muchos sitios fuera del Norte. La terraza es imprescindible al atardecer. Reserva obligatoria los fines de semana.",
+    "resena_destacada": "Una experiencia gastronómica única. El pato no tucupi es extraordinario y los ingredientes amazónicos te sorprenden en cada bocado. Una de las mejores comidas que recuerdo de Brasil.",
+    "google_place_id": "",
+    "web": "espiritosanta.com.br",
+    "telefono": "+55 21 2508-7095",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-022",
+    "nombre": "Luce Ristorante",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Lapa / Centro",
+    "tipo_cocina": "Italiana contemporánea",
+    "precio": "€€",
+    "precio_medio_brl": 112,
+    "ambiente": [
+      "íntimo",
+      "sofisticado",
+      "especial"
+    ],
+    "tags": [
+      "italiana",
+      "menú degustación",
+      "especial",
+      "Lapa",
+      "custo-benefício"
+    ],
+    "emoji": "🍝",
+    "rating": 4.7,
+    "votos": 650,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9118,
+      "lng": -43.1808
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:30",
+        "cierra": "15:00"
+      },
+      "martes": {
+        "abre": "11:30",
+        "cierra": "22:30"
+      },
+      "miercoles": {
+        "abre": "11:30",
+        "cierra": "22:30"
+      },
+      "jueves": {
+        "abre": "11:30",
+        "cierra": "22:30"
+      },
+      "viernes": {
+        "abre": "11:30",
+        "cierra": "22:30"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "22:30"
+      },
+      "domingo": null
+    },
+    "descripcion": "Joya escondida en un casarón centenario de la Lapa. El chef Lucio Vieira ofrece menú degustación — couvert, entrada, principal y postre — por un precio sorprendentemente accesible. Cocina italiana contemporánea con ingredientes de calidad y presentaciones modernas.",
+    "platos_destacados": [
+      "namorado na brasa",
+      "risoto de funghi",
+      "pasta fresca",
+      "sobremesa do dia"
+    ],
+    "tip_local": "El menú degustación con precio fijo es el secreto de este sitio — calidad de alta cocina a precio de restaurante corriente. La Lapa tiene fama de nocturna pero este es el mejor almuerzo del barrio.",
+    "resena_destacada": "No entiendo cómo puede ofrecer esta calidad a ese precio. Menú degustación con ingredientes de primera y técnica impecable. Uno de los mejores restaurantes de Río que nadie conoce.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2224-2330",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-023",
+    "nombre": "Rotisseria Sírio Libaneza",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Catete / Largo do Machado",
+    "tipo_cocina": "Árabe / Libanesa",
+    "precio": "€",
+    "precio_medio_brl": 30,
+    "ambiente": [
+      "muy local",
+      "casual",
+      "histórico"
+    ],
+    "tags": [
+      "árabe",
+      "libanés",
+      "muy local",
+      "barato",
+      "Largo do Machado"
+    ],
+    "emoji": "🥙",
+    "rating": 4.5,
+    "votos": 870,
+    "picar": true,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.9256,
+      "lng": -43.1762
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "20:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "20:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "20:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "20:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "20:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "16:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "Rotissería árabe del Largo do Machado con fama entre los cariocas por sus esfirras, quibes y kafta. Precios muy bajos y porciones generosas. Muy frecuentado por vecinos del barrio. Para llevar o comer en el local.",
+    "platos_destacados": [
+      "esfiha de carne",
+      "quibe assado",
+      "kafta",
+      "tabule"
+    ],
+    "tip_local": "Las mejores esfirras de esta zona de Río. Ideal para almorzar rápido y barato antes de explorar el Largo do Machado. Los cariocas hacen cola al mediodía — buena señal.",
+    "resena_destacada": "La esfiha de carne está en su punto perfecto, con masa fina y relleno generoso. Precios de hace 20 años. Un sitio que los vecinos del barrio llevan a sus familias hace décadas.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2205-4419",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-024",
+    "nombre": "Via Sete",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Ipanema",
+    "tipo_cocina": "Brasileña / Internacional",
+    "precio": "€€",
+    "precio_medio_brl": 75,
+    "ambiente": [
+      "moderno",
+      "animado",
+      "casual",
+      "muy local"
+    ],
+    "tags": [
+      "muy local",
+      "ipanema",
+      "almuerzo",
+      "custo-benefício",
+      "variado"
+    ],
+    "emoji": "🍱",
+    "rating": 4.4,
+    "votos": 1230,
+    "picar": false,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.9843,
+      "lng": -43.2007
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:30",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "11:30",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "11:30",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "11:30",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "11:30",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Restaurante muy popular entre los cariocas de Ipanema en la Rua Garcia Dávila. Cocina variada y bien ejecutada, con menú ejecutivo al mediodía y carta más amplia por la noche. Clientela mixta de locales y expats del barrio.",
+    "platos_destacados": [
+      "prato executivo",
+      "arroz de pato",
+      "grelhados",
+      "sobremesas caseiras"
+    ],
+    "tip_local": "El menú ejecutivo del mediodía es uno de los mejores de Ipanema en términos de precio-calidad. Por la noche la carta es más amplia. Muy buen sitio para comer sin gastar mucho en el barrio más caro de Río.",
+    "resena_destacada": "La mejor relación calidad-precio que encontré en Ipanema. El prato executivo del mediodía es abundante y bien cocinado. Sitio tranquilo y muy frecuentado por vecinos — buena señal.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2512-8100",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-025",
+    "nombre": "Caravela do Visconde",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Grelhados / Brasileña",
+    "precio": "€€",
+    "precio_medio_brl": 65,
+    "ambiente": [
+      "casual",
+      "muy local",
+      "animado"
+    ],
+    "tags": [
+      "muy local",
+      "botafogo",
+      "grelhados",
+      "picanha",
+      "custo-benefício"
+    ],
+    "emoji": "⚓",
+    "rating": 4.4,
+    "votos": 990,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9465,
+      "lng": -43.1892
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:30",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "11:30",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "11:30",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "11:30",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "11:30",
+        "cierra": "21:00"
+      }
+    },
+    "descripcion": "Restaurante casual de Botafogo famoso por sus grelhados, especialmente el frango frito y la picanha. Uno de los mejores custo-benefício del barrio — calidad de steakhouse sin pagar precio de steakhouse. La batata portuguesa es perfecta.",
+    "platos_destacados": [
+      "picanha na grelha",
+      "frango frito",
+      "batata portuguesa",
+      "arroz carreteiro"
+    ],
+    "tip_local": "La picanha con batata portuguesa y una cerveja gelada. Eso es todo lo que necesitas aquí. Sin glamour, sin pretensiones, solo buena carne a precio honesto en pleno Botafogo.",
+    "resena_destacada": "La picanha perfectamente cocinada, jugosa y con ese sabor a brasa que te transporta. La batata portuguesa crujiente es adictiva. Precio muy razonable para la calidad que ofrecen.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2527-3896",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-026",
+    "nombre": "Bar do Arnaudo",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Santa Teresa",
+    "tipo_cocina": "Nordestina",
+    "precio": "€",
+    "precio_medio_brl": 45,
+    "ambiente": [
+      "muy local",
+      "histórico",
+      "casual"
+    ],
+    "tags": [
+      "muy local",
+      "nordestino",
+      "histórico",
+      "barato",
+      "santa teresa"
+    ],
+    "emoji": "🌵",
+    "rating": 4.4,
+    "votos": 840,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.921,
+      "lng": -43.1828
+    },
+    "horario": {
+      "lunes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "20:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "20:00"
+      }
+    },
+    "descripcion": "Casa nordestina en Santa Teresa desde 1970. Más de 50 años sirviendo comida del Nordeste de Brasil — carne de sol, baião de dois, carne seca — a precios muy económicos. El salón modesto está decorado con cuadros del artista chileno-carioca Selarón.",
+    "platos_destacados": [
+      "carne de sol",
+      "baião de dois",
+      "carne seca com nata",
+      "cachaça nordestina"
+    ],
+    "tip_local": "Uno de los sitios más auténticos de Santa Teresa, con 50 años en el barrio. Las porciones son enormes y van bien para compartir. La carne de sol con nata es el plato más pedido.",
+    "resena_destacada": "Comida nordestina auténtica en un ambiente que no ha cambiado en 50 años. Las porciones son enormes, los precios ridículos y la calidad constante. Uno de los secretos de Santa Teresa.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2210-0817",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-027",
+    "nombre": "Marchezinho",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Contemporánea / Fusión",
+    "precio": "€€",
+    "precio_medio_brl": 85,
+    "ambiente": [
+      "moderno",
+      "animado",
+      "casual",
+      "variado"
+    ],
+    "tags": [
+      "creativo",
+      "botafogo",
+      "polvo",
+      "fusión",
+      "moderno"
+    ],
+    "emoji": "🐙",
+    "rating": 4.5,
+    "votos": 1080,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9458,
+      "lng": -43.1884
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "martes": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "miercoles": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "11:30",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "10:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "10:00",
+        "cierra": "18:00"
+      }
+    },
+    "descripcion": "Restaurante de cocina contemporánea en Botafogo con carta creativa y variada. Destaca por su pulpo — el polvo grelhado es el plato más elogiado de la casa. Ambiente acogedor en un casarão renovado, clientela joven y mixta de locales.",
+    "platos_destacados": [
+      "polvo grelhado",
+      "risoto de funghi",
+      "entradas para compartir",
+      "sobremesas autorais"
+    ],
+    "tip_local": "El polvo grelhado es la razón para venir. Perfectamente cocinado, tierno y con una presentación cuidada. Para compartir las entradas con la mesa antes de pedir el principal.",
+    "resena_destacada": "El mejor polvo que he comido en Río sin dudas. Tierno, bien sazonado, presentación cuidada. El resto de la carta también está bien pero el pulpo es la estrella indiscutible.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 3591-0087",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-028",
+    "nombre": "Nusa Café Brunch & Bistrô",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Ipanema",
+    "tipo_cocina": "Brunch / Café",
+    "precio": "€€",
+    "precio_medio_brl": 55,
+    "ambiente": [
+      "desayuno",
+      "colorido",
+      "moderno",
+      "acogedor"
+    ],
+    "tags": [
+      "desayuno",
+      "brunch",
+      "saludable",
+      "Bali",
+      "fotogénico",
+      "ipanema"
+    ],
+    "emoji": "🌸",
+    "rating": 4.6,
+    "votos": 1340,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9849,
+      "lng": -43.2008
+    },
+    "horario": {
+      "lunes": {
+        "abre": "08:30",
+        "cierra": "17:00"
+      },
+      "martes": {
+        "abre": "08:30",
+        "cierra": "17:00"
+      },
+      "miercoles": {
+        "abre": "08:30",
+        "cierra": "17:00"
+      },
+      "jueves": {
+        "abre": "08:30",
+        "cierra": "17:00"
+      },
+      "viernes": {
+        "abre": "08:30",
+        "cierra": "17:00"
+      },
+      "sabado": {
+        "abre": "08:30",
+        "cierra": "18:00"
+      },
+      "domingo": {
+        "abre": "08:30",
+        "cierra": "17:00"
+      }
+    },
+    "descripcion": "Un rincón de Bali en el corazón de Ipanema. Elegido 3º mejor café da manhã de Río por VEJA Rio. Carta de brunch saludable y fotogénica con waffles de pão de queijo, bowls de açaí, toasts con salmón curado y huevo poché. Pet-friendly, decoración colorida inspirada en la isla indonesia.",
+    "platos_destacados": [
+      "waffle de pão de queijo",
+      "toast de salmão curado",
+      "bowl de açaí",
+      "croissant de pistache"
+    ],
+    "tip_local": "El waffle de pão de queijo con guacamole es la combinación más rara y más buena del menú. Los fines de semana hay cola — llega antes de las 9h o después de las 11h para evitar esperar. Está a 5 minutos andando desde la playa de Ipanema.",
+    "resena_destacada": "El mejor brunch de Ipanema sin discusión. El waffle de pão de queijo es una revelación y los bowls de açaí son los más frescos que he probado. Ambiente precioso y un equipo encantador.",
+    "google_place_id": "",
+    "web": "nusacafe.com.br",
+    "telefono": "+55 21 3228-3562",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-029",
+    "nombre": "Empório Jardim Ipanema",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Ipanema",
+    "tipo_cocina": "Café / Panadería artesanal",
+    "precio": "€€",
+    "precio_medio_brl": 60,
+    "ambiente": [
+      "desayuno",
+      "sofisticado",
+      "moderno"
+    ],
+    "tags": [
+      "desayuno",
+      "panadería",
+      "fermentación natural",
+      "premiado",
+      "brunch todo el día"
+    ],
+    "emoji": "🥐",
+    "rating": 4.7,
+    "votos": 2100,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9863,
+      "lng": -43.2016
+    },
+    "horario": {
+      "lunes": {
+        "abre": "07:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "07:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "07:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "07:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "07:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "07:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "07:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "El café da manhã más premiado de Río — 16 premios como mejor de la ciudad y uno nacional. Padaria y deli con más de 90 ítems de producción propia, desde panes de fermentación natural hasta iogurte grego artesanal. El desayuno se sirve todo el día. Unidad frente a la playa de Ipanema.",
+    "platos_destacados": [
+      "pão de fermentação natural",
+      "iogurte grego yummy",
+      "ovos gregos",
+      "trio de pão de queijo gruyère"
+    ],
+    "tip_local": "Sirven desayuno a cualquier hora del día — perfectamente válido para desayunar tarde después de la playa. El iogurte grego con granola casera es el pedido más repetido. Abre a las 7h — ideal para madrugar antes de la playa.",
+    "resena_destacada": "El mejor café de Ipanema sin dudas. Los panes de fermentación natural son extraordinarios y el iogurte grego es adictivo. Precios un poco por encima de la media pero absolutamente justificados por la calidad.",
+    "google_place_id": "",
+    "web": "emporiojardim.com.br",
+    "telefono": "+55 21 3085-9898",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-030",
+    "nombre": "Polis Sucos",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Ipanema",
+    "tipo_cocina": "Café / Jugos / Snacks",
+    "precio": "€",
+    "precio_medio_brl": 25,
+    "ambiente": [
+      "desayuno",
+      "muy local",
+      "rápido",
+      "casual"
+    ],
+    "tags": [
+      "desayuno",
+      "jugos",
+      "muy local",
+      "barato",
+      "carioca",
+      "histórico"
+    ],
+    "emoji": "🥤",
+    "rating": 4.4,
+    "votos": 1890,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9841,
+      "lng": -43.201
+    },
+    "horario": {
+      "lunes": {
+        "abre": "07:00",
+        "cierra": "22:00"
+      },
+      "martes": {
+        "abre": "07:00",
+        "cierra": "22:00"
+      },
+      "miercoles": {
+        "abre": "07:00",
+        "cierra": "22:00"
+      },
+      "jueves": {
+        "abre": "07:00",
+        "cierra": "22:00"
+      },
+      "viernes": {
+        "abre": "07:00",
+        "cierra": "22:00"
+      },
+      "sabado": {
+        "abre": "07:00",
+        "cierra": "22:00"
+      },
+      "domingo": {
+        "abre": "07:00",
+        "cierra": "21:00"
+      }
+    },
+    "descripcion": "Inaugurada en 1958, se considera la primera casa de sucos naturales de Río de Janeiro. Icono carioca en la esquina de María Quitéria con Visconde de Pirajá. Sin mesas — se come en el mostrador o de pie en la acera. La forma más auténtica y barata de desayunar en Ipanema.",
+    "platos_destacados": [
+      "suco de acerola",
+      "suco de maracujá",
+      "açaí no copo",
+      "sanduíche natural"
+    ],
+    "tip_local": "El desayuno más carioca de Ipanema: un suco natural y un sanduíche en el mostrador, mirando pasar a la gente. Llega antes de las 8h si no quieres cola. Los sucos de frutas tropicales son fresquísimos y cambian con la temporada.",
+    "resena_destacada": "Esto es el Rio auténtico. Sin pretensiones, sin lujos, solo el mejor zumo de acerola que he probado en mi vida por menos de 2€. Toda la gente del barrio desayuna aquí de pie en la acera. Perfecto.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2247-2518",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-031",
+    "nombre": "The Bakers Copacabana",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Copacabana",
+    "tipo_cocina": "Panadería / Café",
+    "precio": "€€",
+    "precio_medio_brl": 45,
+    "ambiente": [
+      "desayuno",
+      "moderno",
+      "acogedor"
+    ],
+    "tags": [
+      "desayuno",
+      "panadería artesanal",
+      "sourdough",
+      "copacabana",
+      "café especial"
+    ],
+    "emoji": "🍞",
+    "rating": 4.5,
+    "votos": 980,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9708,
+      "lng": -43.183
+    },
+    "horario": {
+      "lunes": {
+        "abre": "07:00",
+        "cierra": "20:00"
+      },
+      "martes": {
+        "abre": "07:00",
+        "cierra": "20:00"
+      },
+      "miercoles": {
+        "abre": "07:00",
+        "cierra": "20:00"
+      },
+      "jueves": {
+        "abre": "07:00",
+        "cierra": "20:00"
+      },
+      "viernes": {
+        "abre": "07:00",
+        "cierra": "20:00"
+      },
+      "sabado": {
+        "abre": "07:30",
+        "cierra": "18:00"
+      },
+      "domingo": {
+        "abre": "07:30",
+        "cierra": "16:00"
+      }
+    },
+    "descripcion": "Panadería artesanal de referencia en Copacabana. Pan de fermentación natural, croissants, sourdough y bollería de calidad en una zona donde escasean las buenas panaderías. Café especial cuidadosamente preparado. Local pequeño y acogedor en la Rua Santa Clara.",
+    "platos_destacados": [
+      "croissant de manteiga",
+      "sourdough",
+      "pão de forma integral",
+      "café coado"
+    ],
+    "tip_local": "El croissant de mantequilla es el mejor de Copacabana. Los panes de fermentación natural se agotan antes del mediodía los fines de semana — llega temprano. A 10 minutos andando de la esquina Ipanema-Copacabana.",
+    "resena_destacada": "Por fin una buena panadería en Copacabana. El croissant está a la altura de cualquiera de Ipanema y el café especial es de los mejores de la zona. Precios razonables para la calidad.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-032",
+    "nombre": "Nooma Bistrô",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Copacabana",
+    "tipo_cocina": "Brunch / Café / Bistrô",
+    "precio": "€€",
+    "precio_medio_brl": 55,
+    "ambiente": [
+      "desayuno",
+      "moderno",
+      "tranquilo"
+    ],
+    "tags": [
+      "desayuno",
+      "brunch",
+      "copacabana",
+      "brod",
+      "patisserie"
+    ],
+    "emoji": "☀️",
+    "rating": 4.5,
+    "votos": 760,
+    "picar": false,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.9703,
+      "lng": -43.1832
+    },
+    "horario": {
+      "lunes": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      },
+      "martes": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      },
+      "miercoles": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      },
+      "jueves": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      },
+      "viernes": {
+        "abre": "08:00",
+        "cierra": "21:00"
+      },
+      "sabado": {
+        "abre": "08:00",
+        "cierra": "21:00"
+      },
+      "domingo": {
+        "abre": "08:30",
+        "cierra": "18:00"
+      }
+    },
+    "descripcion": "Bistrô moderno en el límite Copacabana-Ipanema. Especialidad en 'Brods' — panes abiertos con toppings variados, mix de hojas y chips. También pâtisserie artesanal y opción de menú ejecutivo al mediodía. Ambiente tranquilo y luminoso, perfecto para un desayuno sin prisa.",
+    "platos_destacados": [
+      "brod de abacate",
+      "brod de salmão",
+      "waffle",
+      "pâtisserie do dia"
+    ],
+    "tip_local": "Los Brods son el concepto estrella — un pan abierto tostado con combinaciones creativas de ingredientes frescos. Mucho menos concurrido que los cafés de Ipanema pero igual de bueno. Muy cómodo para desayunar antes de ir a la playa del Arpoador.",
+    "resena_destacada": "Un hallazgo entre Ipa y Copa. Los Brods son una delicia y la pâtisserie está muy bien ejecutada. El ambiente es tranquilo y el café excelente. Mucho menos cola que los sitios similares de Ipanema.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-033",
+    "nombre": "Café 18 do Forte",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Copacabana",
+    "tipo_cocina": "Café / Brunch",
+    "precio": "€€€",
+    "precio_medio_brl": 80,
+    "ambiente": [
+      "desayuno",
+      "vistas",
+      "especial",
+      "histórico"
+    ],
+    "tags": [
+      "desayuno",
+      "vistas",
+      "Forte de Copacabana",
+      "especial",
+      "premiado"
+    ],
+    "emoji": "🏰",
+    "rating": 4.7,
+    "votos": 2300,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9884,
+      "lng": -43.1893
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "10:00",
+        "cierra": "19:00"
+      },
+      "miercoles": {
+        "abre": "10:00",
+        "cierra": "19:00"
+      },
+      "jueves": {
+        "abre": "10:00",
+        "cierra": "19:00"
+      },
+      "viernes": {
+        "abre": "10:00",
+        "cierra": "19:00"
+      },
+      "sabado": {
+        "abre": "10:00",
+        "cierra": "19:00"
+      },
+      "domingo": {
+        "abre": "10:00",
+        "cierra": "19:00"
+      }
+    },
+    "descripcion": "Elegido mejor café da manhã de Brasil en 2023 por la Revista Prazeres da Mesa. Ubicado dentro del Forte de Copacabana — acceso con entrada (R$6). Vista directa al mar de Copacabana y al Pão de Açúcar. El brunch incluye panes artesanales, ovos mexidos trufados, steak tartare. Experiencia única en la ciudad.",
+    "platos_destacados": [
+      "ovos mexidos trufados con aspargos",
+      "steak tartare",
+      "pão de fermentação natural",
+      "brunch completo"
+    ],
+    "tip_local": "Paga la entrada del Forte (R$6) — vale por la vista sola, el café es el bonus. El brunch solo se sirve de 10h a 13h. Los fines de semana hay cola — llega antes de las 10h15 o reserva con antelación. No abre lunes.",
+    "resena_destacada": "La mejor vista para desayunar en Río sin dudas. El Forte de Copacabana con el mar delante y el Pão de Açúcar al fondo, con un brunch extraordinario. Precio justificado al 100% por la experiencia completa.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2523-0171",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-034",
+    "nombre": "Sova Padaria",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Copacabana",
+    "tipo_cocina": "Panadería / Café",
+    "precio": "€€",
+    "precio_medio_brl": 40,
+    "ambiente": [
+      "desayuno",
+      "moderno",
+      "tranquilo"
+    ],
+    "tags": [
+      "desayuno",
+      "sourdough",
+      "panadería",
+      "copacabana",
+      "fermentación natural"
+    ],
+    "emoji": "🫓",
+    "rating": 4.5,
+    "votos": 650,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9712,
+      "lng": -43.1838
+    },
+    "horario": {
+      "lunes": {
+        "abre": "07:30",
+        "cierra": "19:00"
+      },
+      "martes": {
+        "abre": "07:30",
+        "cierra": "19:00"
+      },
+      "miercoles": {
+        "abre": "07:30",
+        "cierra": "19:00"
+      },
+      "jueves": {
+        "abre": "07:30",
+        "cierra": "19:00"
+      },
+      "viernes": {
+        "abre": "07:30",
+        "cierra": "19:00"
+      },
+      "sabado": {
+        "abre": "08:00",
+        "cierra": "17:00"
+      },
+      "domingo": {
+        "abre": "08:00",
+        "cierra": "15:00"
+      }
+    },
+    "descripcion": "Panadería con foco en fermentación natural. Pain au chocolat, croissants, sourdough, brioche, baguete — todo hecho en casa. También cookies, brownie, cinnamon roll y NY Roll. A partir del mediodía sirven sándwiches. En la Rua Xavier da Silveira, a 12 minutos andando de Ipanema.",
+    "platos_destacados": [
+      "pain au chocolat",
+      "croissant",
+      "sourdough",
+      "cinnamon roll"
+    ],
+    "tip_local": "La panadería más seria de Copacabana junto a The Bakers. El pain au chocolat es de nivel europeo. Si llegas al mediodía puedes complementar con uno de sus sándwiches artesanales. Sin filas — mucho más tranquilo que los cafés de Ipanema.",
+    "resena_destacada": "Finalmente una boulangerie seria en Copacabana. El sourdough es de los mejores que he probado en Brasil y el pain au chocolat es auténtico. Un sitio que encuentras si sabes buscarlo.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-035",
+    "nombre": "The Slow Bakery Botafogo",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Panadería artesanal / Café",
+    "precio": "€€",
+    "precio_medio_brl": 55,
+    "ambiente": [
+      "desayuno",
+      "moderno",
+      "acogedor",
+      "artesanal"
+    ],
+    "tags": [
+      "desayuno",
+      "fermentación natural",
+      "panadería",
+      "café especial",
+      "brunch"
+    ],
+    "emoji": "🐢",
+    "rating": 4.6,
+    "votos": 1560,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9478,
+      "lng": -43.1876
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      },
+      "miercoles": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      },
+      "jueves": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      },
+      "viernes": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      },
+      "sabado": {
+        "abre": "08:00",
+        "cierra": "18:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "Una de las panaderías artesanales más queridas de Río. Panes de fermentación natural elaborados con tiempo, croissants perfectos, sourdough y brunch completo al fondo de la panadería. La unidad de Botafogo es la más tranquila — sin las colas de Ipanema o Jardim Botânico.",
+    "platos_destacados": [
+      "pão sourdough",
+      "croissant de manteiga",
+      "misto quente prensado",
+      "croque madame"
+    ],
+    "tip_local": "El misto quente amanteigado prensado en pan sourdough con presunto y queso meia cura de la Serra da Mantiqueira es el pedido de referencia. La panadería en la fábrica de la Rua General Polidoro abre antes (martes-viernes desde las 8h). Los sábados hay brunch.",
+    "resena_destacada": "La mejor panadería de Botafogo sin discusión. El croissant está perfectamente laminado y el sourdough tiene una corteza crujiente ideal. El café también está al nivel. Un sitio donde quedarte un rato.",
+    "google_place_id": "",
+    "web": "theslowbakery.com.br",
+    "telefono": "+55 21 97295-1234",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-036",
+    "nombre": "Empório Jardim Casa Firjan",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Café / Brunch / Deli",
+    "precio": "€€",
+    "precio_medio_brl": 60,
+    "ambiente": [
+      "desayuno",
+      "sofisticado",
+      "jardín",
+      "cultural"
+    ],
+    "tags": [
+      "desayuno",
+      "brunch todo el día",
+      "jardín",
+      "cultural",
+      "pão de queijo"
+    ],
+    "emoji": "🏡",
+    "rating": 4.7,
+    "votos": 1230,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9492,
+      "lng": -43.1862
+    },
+    "horario": {
+      "lunes": {
+        "abre": "07:00",
+        "cierra": "22:00"
+      },
+      "martes": {
+        "abre": "07:00",
+        "cierra": "22:00"
+      },
+      "miercoles": {
+        "abre": "07:00",
+        "cierra": "22:00"
+      },
+      "jueves": {
+        "abre": "07:00",
+        "cierra": "22:00"
+      },
+      "viernes": {
+        "abre": "07:00",
+        "cierra": "23:00"
+      },
+      "sabado": {
+        "abre": "07:00",
+        "cierra": "23:00"
+      },
+      "domingo": {
+        "abre": "07:00",
+        "cierra": "21:00"
+      }
+    },
+    "descripcion": "El Empório Jardim instalado en la Casa Firjan — una antigua mansión de Botafogo reconvertida en centro cultural. Desayuno servido todo el día con sistema de comanda. El pão de queijo gruyère es de los más famosos de Río. Las mesas en el jardín de la mansión son la experiencia más especial.",
+    "platos_destacados": [
+      "pão de queijo gruyère",
+      "iogurte grego",
+      "ovos gregos",
+      "salpicão de frango defumado"
+    ],
+    "tip_local": "Pide mesa en el jardín exterior — la mansión y el jardín son preciosos. El pão de queijo gruyère es una versión diferente y superior al estándar. Después del desayuno puedes visitar las exposiciones del centro cultural sin coste adicional.",
+    "resena_destacada": "Desayunar en el jardín de una mansión de Botafogo con el mejor pão de queijo de Río. Una experiencia que combina gastronomía y cultura perfectamente. El ambiente es irresistible.",
+    "google_place_id": "",
+    "web": "emporiojardim.com.br",
+    "telefono": "+55 21 3500-1234",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-037",
+    "nombre": "Dainer Botafogo",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Diner americano / Café",
+    "precio": "€€",
+    "precio_medio_brl": 50,
+    "ambiente": [
+      "desayuno",
+      "animado",
+      "retro",
+      "informal"
+    ],
+    "tags": [
+      "desayuno",
+      "americano",
+      "pancakes",
+      "café refil",
+      "botafogo"
+    ],
+    "emoji": "🥞",
+    "rating": 4.4,
+    "votos": 890,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9484,
+      "lng": -43.188
+    },
+    "horario": {
+      "lunes": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "martes": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "miercoles": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "jueves": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "viernes": {
+        "abre": "08:00",
+        "cierra": "23:00"
+      },
+      "sabado": {
+        "abre": "08:00",
+        "cierra": "23:00"
+      },
+      "domingo": {
+        "abre": "09:00",
+        "cierra": "21:00"
+      }
+    },
+    "descripcion": "Diner americano de estética retro en Botafogo con el clásico mostrador y banquetas. Sirven desayuno americano todo el día — pancakes, waffles, huevos revueltos, french toast. Especialmente popular el refil de café: pagas una vez y la taza nunca se queda vacía.",
+    "platos_destacados": [
+      "pancakes americanos",
+      "french toast",
+      "ovos mexidos",
+      "waffle com maple syrup"
+    ],
+    "tip_local": "El refil de café es el gran secreto del sitio — pagas una vez y siguen rellenando. Las pancakes son esponjosas y generosas. Ambiente muy fotogénico y diferente a todo lo que hay alrededor. Sirven desayuno a cualquier hora del día.",
+    "resena_destacada": "Me encantó la propuesta del diner americano en pleno Botafogo. Las pancakes son las mejores que he comido en Río y el refil de café es una idea brillante. Ambiente muy especial con ese mostrador retro.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-038",
+    "nombre": "Bario Cafés Especiais",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Café de especialidad",
+    "precio": "€",
+    "precio_medio_brl": 25,
+    "ambiente": [
+      "desayuno",
+      "minimalista",
+      "moderno",
+      "tranquilo"
+    ],
+    "tags": [
+      "café especial",
+      "tercera ola",
+      "barista",
+      "botafogo",
+      "pequeños productores"
+    ],
+    "emoji": "☕",
+    "rating": 4.6,
+    "votos": 720,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9471,
+      "lng": -43.1883
+    },
+    "horario": {
+      "lunes": {
+        "abre": "08:00",
+        "cierra": "19:00"
+      },
+      "martes": {
+        "abre": "08:00",
+        "cierra": "19:00"
+      },
+      "miercoles": {
+        "abre": "08:00",
+        "cierra": "19:00"
+      },
+      "jueves": {
+        "abre": "08:00",
+        "cierra": "19:00"
+      },
+      "viernes": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      },
+      "sabado": {
+        "abre": "09:00",
+        "cierra": "18:00"
+      },
+      "domingo": {
+        "abre": "09:00",
+        "cierra": "16:00"
+      }
+    },
+    "descripcion": "Cafetería de especialidad de tercera ola en Botafogo. Granos seleccionados de pequeños productores de diversas regiones de Brasil, con múltiples métodos de preparación incluyendo café turco y cafés helados. Bebidas autorales de barista con o sin café, con opción de leche de avena.",
+    "platos_destacados": [
+      "café coado",
+      "espresso simples",
+      "café turco",
+      "café gelado autoral"
+    ],
+    "tip_local": "Para los amantes del café de verdad. Los granos cambian según temporada y procedencia. El café turco es una rareza en Río. Ambiente minimalista, tranquilo — perfecto para trabajar o leer por la mañana.",
+    "resena_destacada": "El mejor café especial de Botafogo sin dudas. El barista sabe lo que hace y los granos de pequeños productores brasileños son excepcionales. El café turco es una experiencia diferente que vale mucho la pena.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-039",
+    "nombre": "La Bicyclette Jardim Botânico",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Jardim Botânico",
+    "tipo_cocina": "Panadería francesa / Bistrô",
+    "precio": "€€",
+    "precio_medio_brl": 55,
+    "ambiente": [
+      "desayuno",
+      "terraza",
+      "francés",
+      "bohemio"
+    ],
+    "tags": [
+      "desayuno",
+      "francés",
+      "croissant",
+      "terraza",
+      "jardim botânico"
+    ],
+    "emoji": "🚲",
+    "rating": 4.6,
+    "votos": 1780,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9677,
+      "lng": -43.2254
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "08:30",
+        "cierra": "21:00"
+      },
+      "miercoles": {
+        "abre": "08:30",
+        "cierra": "21:00"
+      },
+      "jueves": {
+        "abre": "08:30",
+        "cierra": "21:00"
+      },
+      "viernes": {
+        "abre": "08:30",
+        "cierra": "21:00"
+      },
+      "sabado": {
+        "abre": "08:30",
+        "cierra": "20:00"
+      },
+      "domingo": {
+        "abre": "08:30",
+        "cierra": "20:00"
+      }
+    },
+    "descripcion": "Fundada por un francés y una carioca, es la panadería-bistrô más parisina de Río. Mesas en la acera frente al Jardim Botânico. Baguetes, croissants, pain au chocolat, croque-monsieur y opciones veganas. El desayuno à la carte está disponible todo el día.",
+    "platos_destacados": [
+      "croque madame",
+      "croissant de queijo minas",
+      "omelete de presunto royale e gruyère",
+      "baguete con manteiga"
+    ],
+    "tip_local": "Las mesas de la acera frente al verde del Jardim Botânico son el sitio ideal para desayunar sin prisa. La omelete de gruyère es el plato más pedido. Perfecto para combinar con una visita al Jardim Botânico — está a 2 minutos andando.",
+    "resena_destacada": "El ambiente más parisino de Río. El croque madame es auténtico y el croissant está perfectamente laminado. Las mesitas en la acera con el Jardim Botânico de fondo hacen que no quieras irte.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 99531-5010",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-040",
+    "nombre": "Irajá Redux",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Leblon",
+    "tipo_cocina": "Contemporánea brasileña",
+    "precio": "€€€",
+    "precio_medio_brl": 120,
+    "ambiente": [
+      "moderno",
+      "sofisticado",
+      "animado"
+    ],
+    "tags": [
+      "creativo",
+      "leblon",
+      "masterchef",
+      "bolo de chocolate",
+      "premiado"
+    ],
+    "emoji": "🎖️",
+    "rating": 4.6,
+    "votos": 1120,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.985,
+      "lng": -43.2234
+    },
+    "horario": {
+      "lunes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Restaurante del chef Pedro de Artagão — ganador de MasterChef Brasil — en el Rio Design Leblon con entrada directa por la calle. Cocina contemporánea con proteínas menos habituales (pato, conejo), masas frescas y el bolo de chocolate elegido mejor postre del Río Gastronomia.",
+    "platos_destacados": [
+      "pato braseado",
+      "massa fresca com trufas",
+      "bolo de chocolate",
+      "menu degustação"
+    ],
+    "tip_local": "El bolo de chocolate al final de la comida es obligatorio — elegido mejor postre de Río. Las masas frescas son extraordinarias. Reserva recomendada en fines de semana. Ambiente moderno y desenfadado a pesar del nivel de cocina.",
+    "resena_destacada": "Una de las mejores cenas que he tenido en Río. El pato está en su punto perfecto y las masas frescas son una maravilla. El bolo de chocolate del final es el mejor de la ciudad — ya entiendo el premio.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 3749-0498",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-041",
+    "nombre": "Ferro e Farinha",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Leblon",
+    "tipo_cocina": "Pizzería",
+    "precio": "€€",
+    "precio_medio_brl": 80,
+    "ambiente": [
+      "animado",
+      "moderno",
+      "casual"
+    ],
+    "tags": [
+      "pizza",
+      "leblon",
+      "masa fina",
+      "muy local",
+      "premiado"
+    ],
+    "emoji": "🍕",
+    "rating": 4.6,
+    "votos": 2100,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9849,
+      "lng": -43.226
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "18:00",
+        "cierra": "00:00"
+      },
+      "miercoles": {
+        "abre": "18:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "18:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      }
+    },
+    "descripcion": "La pizzería más premiada del Leblon, del chef y empresario Sei Shiroma. Masa fina de estilo napolitano con toques brasileños y combinaciones atrevidas. El local tiene hermano — el Suibi, el restaurante japonés de al lado. Imprescindible para una noche en el Leblon.",
+    "platos_destacados": [
+      "pizza margherita",
+      "pizza de figo com gorgonzola",
+      "pizza de linguiça",
+      "calzone"
+    ],
+    "tip_local": "La pizza de higo con gorgonzola es la combinación que más sorprende y convence. Los viernes y sábados espera cola si no tienes reserva. A partir de las 12h los fines de semana puedes comer en el almuerzo también.",
+    "resena_destacada": "La mejor pizza de Río en mi opinión. Masa perfecta, ingredientes de calidad y combinaciones que no ves en ningún otro sitio. El Leblon tiene suerte de tener este sitio.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2512-8100",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-042",
+    "nombre": "Armazém do Café",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Leblon",
+    "tipo_cocina": "Café de especialidad",
+    "precio": "€€",
+    "precio_medio_brl": 30,
+    "ambiente": [
+      "desayuno",
+      "moderno",
+      "tranquilo"
+    ],
+    "tags": [
+      "café especial",
+      "granos locales",
+      "pour-over",
+      "leblon",
+      "café del estado RJ"
+    ],
+    "emoji": "🫘",
+    "rating": 4.5,
+    "votos": 890,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9847,
+      "lng": -43.2278
+    },
+    "horario": {
+      "lunes": {
+        "abre": "07:00",
+        "cierra": "21:00"
+      },
+      "martes": {
+        "abre": "07:00",
+        "cierra": "21:00"
+      },
+      "miercoles": {
+        "abre": "07:00",
+        "cierra": "21:00"
+      },
+      "jueves": {
+        "abre": "07:00",
+        "cierra": "21:00"
+      },
+      "viernes": {
+        "abre": "07:00",
+        "cierra": "22:00"
+      },
+      "sabado": {
+        "abre": "07:30",
+        "cierra": "22:00"
+      },
+      "domingo": {
+        "abre": "07:30",
+        "cierra": "20:00"
+      }
+    },
+    "descripcion": "Referencia para amantes del café en el Leblon. Granos de origen directo de granjas del estado de Río de Janeiro y otras regiones brasileñas. Servido como espresso o en el método preferido de los locales: pour-over. El café del estado de Río (granos propios de la región) es la pedida más especial.",
+    "platos_destacados": [
+      "café coado método pour-over",
+      "espresso de origen único",
+      "café do estado RJ",
+      "latte"
+    ],
+    "tip_local": "Pide el café de los granos del estado de Río de Janeiro — una rareza que pocos conocen. El pour-over aquí está perfectamente ejecutado. Varias unidades por la Zona Sul, la de Leblon es la más tranquila.",
+    "resena_destacada": "El café más serio del Leblon. Los granos son excepcionales y el barista sabe exactamente lo que hace con cada método. El pour-over del café fluminense es algo que no encontrarás en muchos sitios.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2529-7400",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-043",
+    "nombre": "Clan Brasa e Carvão",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Leblon",
+    "tipo_cocina": "Carnes a la brasa",
+    "precio": "€€€",
+    "precio_medio_brl": 130,
+    "ambiente": [
+      "sofisticado",
+      "animado",
+      "especial"
+    ],
+    "tags": [
+      "carnes",
+      "brasa",
+      "premiado",
+      "leblon",
+      "especial"
+    ],
+    "emoji": "🔥",
+    "rating": 4.6,
+    "votos": 1340,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9853,
+      "lng": -43.2248
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "12:00",
+        "cierra": "23:30"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:30"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "23:30"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "00:30"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "00:30"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Premiado como mejor restaurante de carnes del Río en múltiples ediciones. Especialidad en brasa y carvão — todos los platos obligatoriamente braseados. Tres ambientes distintos en la Rua Dias Ferreira, carta de vinos excepcional. Cortes individuales y para compartir.",
+    "platos_destacados": [
+      "picanha na brasa",
+      "costela de boi",
+      "frango braseado",
+      "acompanhamentos da casa"
+    ],
+    "tip_local": "La costela de boi braseada es el plato de referencia — viene para compartir y tarda su tiempo pero vale cada minuto. Reserva imprescindible los fines de semana. El vino de la carta está muy bien elegido para acompañar las carnes.",
+    "resena_destacada": "Las mejores carnes a la brasa de Río en un ambiente que también está al nivel. La costela es excepcional — tierna, con ese sabor ahumado perfecto. Un sitio para una noche especial en el Leblon.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2274-8044",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-044",
+    "nombre": "Ocyá Leblon",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Leblon",
+    "tipo_cocina": "Frutos del mar / Pescados",
+    "precio": "€€€",
+    "precio_medio_brl": 140,
+    "ambiente": [
+      "sofisticado",
+      "especial",
+      "moderno"
+    ],
+    "tags": [
+      "frutos del mar",
+      "pescado",
+      "leblon",
+      "especial",
+      "brasa"
+    ],
+    "emoji": "🐟",
+    "rating": 4.7,
+    "votos": 980,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9854,
+      "lng": -43.2241
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "18:00"
+      }
+    },
+    "descripcion": "Filial en Leblon del premiado restaurante de la Isla Primera en la Barra da Tijuca. Especializado en pescados y frutos del mar preparados a la brasa o en crudo, con ingredientes de pescadores locales. El filé de peixe maturado na brasa es el plato estrella.",
+    "platos_destacados": [
+      "filé de peixe maturado na brasa",
+      "polvo grelhado",
+      "ceviche",
+      "arroz cremoso de tomate assado"
+    ],
+    "tip_local": "El peixe maturado es el pedido de referencia — un concepto poco habitual en Río que eleva enormemente el sabor del pescado. Reserva obligatoria. Para una noche especial de mariscos en el Leblon sin tener que ir a la Barra.",
+    "resena_destacada": "El mejor restaurante de pescado del Leblon. El concepto de maduración del pescado es innovador y el resultado en el plato es extraordinario. El polvo también está impecable. Una experiencia gastronómica de primer nivel.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 97286-1250",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-045",
+    "nombre": "Yasoshima",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Copacabana",
+    "tipo_cocina": "Japonesa / Nikkei",
+    "precio": "€€",
+    "precio_medio_brl": 85,
+    "ambiente": [
+      "íntimo",
+      "moderno",
+      "tranquilo"
+    ],
+    "tags": [
+      "japonesa",
+      "nikkei",
+      "omakase",
+      "copacabana",
+      "saquê"
+    ],
+    "emoji": "🍱",
+    "rating": 4.6,
+    "votos": 720,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9698,
+      "lng": -43.1832
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "11:30",
+        "cierra": "23:59"
+      },
+      "miercoles": {
+        "abre": "11:30",
+        "cierra": "23:59"
+      },
+      "jueves": {
+        "abre": "11:30",
+        "cierra": "23:59"
+      },
+      "viernes": {
+        "abre": "11:30",
+        "cierra": "23:59"
+      },
+      "sabado": {
+        "abre": "11:30",
+        "cierra": "23:59"
+      },
+      "domingo": {
+        "abre": "11:30",
+        "cierra": "23:59"
+      }
+    },
+    "descripcion": "Restaurante japonés-nikkei en Copacabana con el omakase hitori como plato estrella — robalos, olhetes y sororocas, pesados por pescadores locales. El buta kimchi domburi (carne de cerdo con verduras fermentadas sobre arroz) es el hit de la carta caliente. Carta de saquês excepcional.",
+    "platos_destacados": [
+      "omakase hitori",
+      "buta kimchi domburi",
+      "usuzukuri",
+      "saquê selecionado"
+    ],
+    "tip_local": "El omakase hitori a 125R$ es el mejor custo-benefício de sushi en Río. El buta kimchi domburi es el plato caliente que más piden los habituales. Cierra el primer domingo de cada mes. La carta de saquê merece exploración.",
+    "resena_destacada": "El mejor japonés de Copacabana sin dudas. El omakase con pescados locales es brillante — nada de salmón noruego sobreexpuesto, sino peces que solo se consiguen en estas aguas. El saquê completa la experiencia.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-046",
+    "nombre": "Casa do Saulo Rio",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Centro",
+    "tipo_cocina": "Amazónica / Norte brasileño",
+    "precio": "€€€",
+    "precio_medio_brl": 100,
+    "ambiente": [
+      "colorido",
+      "cultural",
+      "moderno"
+    ],
+    "tags": [
+      "amazónico",
+      "Norte do Brasil",
+      "pirarucu",
+      "Centro",
+      "cultural",
+      "innovador"
+    ],
+    "emoji": "🌿",
+    "rating": 4.6,
+    "votos": 890,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.8955,
+      "lng": -43.1808
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:30",
+        "cierra": "21:00"
+      },
+      "martes": {
+        "abre": "11:30",
+        "cierra": "21:00"
+      },
+      "miercoles": {
+        "abre": "11:30",
+        "cierra": "21:00"
+      },
+      "jueves": {
+        "abre": "11:30",
+        "cierra": "21:00"
+      },
+      "viernes": {
+        "abre": "11:30",
+        "cierra": "21:00"
+      },
+      "sabado": {
+        "abre": "11:30",
+        "cierra": "21:00"
+      },
+      "domingo": {
+        "abre": "11:30",
+        "cierra": "19:00"
+      }
+    },
+    "descripcion": "La primera unidad fuera de Pará de este restaurante del chef Saulo Jennings, nacido en Santarém. Instalado junto al Museo del Mañana en el Centro. Cocina amazónica auténtica con ingredientes rarísimos: pirarucu, jambu, tucupi. Salón colorido con artesanía local.",
+    "platos_destacados": [
+      "carpaccio de pirarucu defumado",
+      "feijoqueca",
+      "caldo de jambu",
+      "açaí de sobremesa"
+    ],
+    "tip_local": "Combina la comida con una visita al Museo del Mañana — están literalmente juntos. El carpaccio de pirarucu (el pez de agua dulce más grande del mundo) es una experiencia única. La feijoqueca mezcla moqueca y feijão de una forma sorprendente.",
+    "resena_destacada": "Cocina amazónica auténtica en pleno Centro de Río. El pirarucu defumado es algo que no encontrarás en ningún otro sitio de la ciudad. Un restaurante que te lleva al Amazonas sin salir de Río.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-047",
+    "nombre": "Confeitaria Colombo Centro",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Centro",
+    "tipo_cocina": "Confeitaria histórica / Café",
+    "precio": "€€",
+    "precio_medio_brl": 55,
+    "ambiente": [
+      "histórico",
+      "especial",
+      "desayuno",
+      "icónico"
+    ],
+    "tags": [
+      "histórico",
+      "1894",
+      "art nouveau",
+      "imprescindible",
+      "Centro",
+      "desayuno"
+    ],
+    "emoji": "🏺",
+    "rating": 4.5,
+    "votos": 4500,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9067,
+      "lng": -43.1776
+    },
+    "horario": {
+      "lunes": {
+        "abre": "09:00",
+        "cierra": "19:00"
+      },
+      "martes": {
+        "abre": "09:00",
+        "cierra": "19:00"
+      },
+      "miercoles": {
+        "abre": "09:00",
+        "cierra": "19:00"
+      },
+      "jueves": {
+        "abre": "09:00",
+        "cierra": "19:00"
+      },
+      "viernes": {
+        "abre": "09:00",
+        "cierra": "19:00"
+      },
+      "sabado": {
+        "abre": "09:00",
+        "cierra": "17:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "Fundada en 1894, es el monumento gastronómico de Río. Salón art nouveau con espejos belgas, azulejos portugueses y techo de vidriera. Pastelería clásica, café da manhã, almuerzos. La arquitectura sola justifica la visita. Frecuentada históricamente por presidentes y artistas.",
+    "platos_destacados": [
+      "pastel de nata",
+      "bolo de mel",
+      "sanduíche Colombo",
+      "café com leite"
+    ],
+    "tip_local": "Ve a la hora de apertura (9h) para ver el salón sin aglomeraciones y disfrutar de la arquitectura. Los turistas llegan masivamente a partir de las 11h. El pastel de nata es la mejor versión de Río. Solo abre laborables en el Centro.",
+    "resena_destacada": "No es solo un café — es un pedazo de historia de Río. La arquitectura es de las más impresionantes de la ciudad. Los pasteis de nata están muy bien y el ambiente es irrepetible. Una visita obligatoria aunque solo tomes un café.",
+    "google_place_id": "",
+    "web": "confeitariacolombo.com.br",
+    "telefono": "+55 21 2505-1500",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-048",
+    "nombre": "Gringo Café",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Ipanema",
+    "tipo_cocina": "Americano / Brunch",
+    "precio": "€€",
+    "precio_medio_brl": 65,
+    "ambiente": [
+      "desayuno",
+      "animado",
+      "informal",
+      "americano"
+    ],
+    "tags": [
+      "desayuno",
+      "americano",
+      "pancakes",
+      "eggs benedict",
+      "brunch todo el día"
+    ],
+    "emoji": "🥞",
+    "rating": 4.5,
+    "votos": 1230,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9838,
+      "lng": -43.1987
+    },
+    "horario": {
+      "lunes": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "martes": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "miercoles": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "jueves": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "viernes": {
+        "abre": "08:00",
+        "cierra": "23:00"
+      },
+      "sabado": {
+        "abre": "08:00",
+        "cierra": "23:00"
+      },
+      "domingo": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Diner americano abierto en 2010 por un estadounidense en Ipanema. Sirve desayuno americano todo el día hasta las 22h — pancakes, waffles, huevos benedict, french toast con maple syrup. Local pequeño — los fines de semana hay cola, especialmente a partir de las 10h.",
+    "platos_destacados": [
+      "eggs benedict",
+      "french toast com maple syrup",
+      "pancakes americanos",
+      "waffles"
+    ],
+    "tip_local": "El eggs benedict es el plato estrella y con razón. Sirven desayuno HASTA LAS 22H — uno de los pocos sitios en Río donde puedes desayunar americano a la hora de cenar. Los fines de semana llega antes de las 9h o después de las 12h para evitar la cola.",
+    "resena_destacada": "El mejor brunch americano de Río sin discusión. El eggs benedict está perfectamente ejecutado y el french toast con maple syrup es adictivo. El concepto de breakfast all day es una idea brillante que encaja perfecto en Ipanema.",
+    "google_place_id": "",
+    "web": "gringocafe.com",
+    "telefono": "+55 21 2523-3233",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-049",
+    "nombre": "Botequim da Praça",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Glória / Catete",
+    "tipo_cocina": "Boteco / Brasileña",
+    "precio": "€",
+    "precio_medio_brl": 40,
+    "ambiente": [
+      "muy local",
+      "histórico",
+      "casual",
+      "animado"
+    ],
+    "tags": [
+      "muy local",
+      "histórico",
+      "Largo do Machado",
+      "boteco",
+      "barato"
+    ],
+    "emoji": "🍺",
+    "rating": 4.3,
+    "votos": 780,
+    "picar": true,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.9264,
+      "lng": -43.1744
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "11:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Boteco clásico en el Largo do Machado — una de las plazas más bonitas y auténticas de Río, entre Catete y Flamengo. Mesas en la plaza entre árboles, clientela de vecinos del barrio, petiscos tradicionales y prato feito económico. Una zona muy poco turística con mucho sabor local.",
+    "platos_destacados": [
+      "picadinho carioca",
+      "iscas de alcatra acebolada",
+      "chips de jiló",
+      "feijoada vermelha"
+    ],
+    "tip_local": "El Largo do Machado es una de las plazas más bonitas de Río y apenas la conocen los turistas. Los petiscos son el carro-chefe — acompáñalos con una cerveza bien fría en las mesas de la plaza. Muy buena relación calidad-precio.",
+    "resena_destacada": "El sitio local por excelencia del Largo do Machado. Mesas entre los árboles de la plaza, clientela 100% de barrio y petiscos honestos a precio justo. Uno de esos sitios que se descubren cuando te alejas de los circuitos habituales.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-050",
+    "nombre": "Churrascaria Majórica",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Flamengo",
+    "tipo_cocina": "Churrascaria",
+    "precio": "€€",
+    "precio_medio_brl": 85,
+    "ambiente": [
+      "histórico",
+      "muy local",
+      "casual",
+      "tradicional"
+    ],
+    "tags": [
+      "churrascaria",
+      "rodízio",
+      "histórico",
+      "flamengo",
+      "muy local"
+    ],
+    "emoji": "🥩",
+    "rating": 4.5,
+    "votos": 1890,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9385,
+      "lng": -43.174
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "martes": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "miercoles": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "11:30",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "11:30",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "11:30",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "11:30",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "Una de las churrascarias tradicionales más queridas de Río, en el Flamengo. Rodízio clásico con cortes de carne en espeto pasando continuamente por las mesas. Precio más accesible que las churrascarias de la Zona Sul sin perder calidad. Décadas sirviendo a los cariocas.",
+    "platos_destacados": [
+      "picanha no espeto",
+      "costela na brasa",
+      "frango com alho",
+      "farofa da casa"
+    ],
+    "tip_local": "El rodízio más honesto de Río en precio-calidad. Cortes de picanha y costela que rotan continuamente — di que sí siempre que pase el garçom con la picanha. La farofa da casa es el acompañamiento que más adiciona al conjunto.",
+    "resena_destacada": "La churrascaria perfecta para quien quiere experiencia de rodízio sin pagar precio de Zona Sul. La picanha pasa constantemente y está perfectamente en su punto. Clientela local total, sin pretensiones — eso es lo mejor.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2205-6820",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-051",
+    "nombre": "Tasca da Esquina",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Portuguesa",
+    "precio": "€€",
+    "precio_medio_brl": 75,
+    "ambiente": [
+      "casual",
+      "muy local",
+      "acogedor",
+      "histórico"
+    ],
+    "tags": [
+      "portuguesa",
+      "bacalhau",
+      "muy local",
+      "botafogo",
+      "tradicional"
+    ],
+    "emoji": "🇵🇹",
+    "rating": 4.5,
+    "votos": 1100,
+    "picar": true,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.9463,
+      "lng": -43.1879
+    },
+    "horario": {
+      "lunes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "21:00"
+      }
+    },
+    "descripcion": "Tasca portuguesa de referencia en Botafogo. Más de 70 años funcionando en el mismo local, con decoración y ambiente intactos. Las pataniscas de bacalhau, los bifes à portuguesa y el bacalhau à brás son platos de culto entre los cariocas. Las mesas se llenan en 20 minutos al mediodía.",
+    "platos_destacados": [
+      "bacalhau à brás",
+      "pataniscas de bacalhau",
+      "bife à portuguesa",
+      "filé à milanesa"
+    ],
+    "tip_local": "El bacalhau à brás es el plato más pedido y el que más recomienda el personal. A mediodía hay menú ejecutivo a buen precio. Los lunes el bacalhau especial del día merece la pena. Llega antes de las 12h30 para asegurarte mesa.",
+    "resena_destacada": "70 años sirviendo el mejor bacalhau de Botafogo. El bacalhau à brás es extraordinario — suave, cremoso, perfectamente sazonado. El local tiene ese encanto de sitio que no ha necesitado actualizarse porque ya era perfecto.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2527-8656",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-052",
+    "nombre": "Liga dos Botecos",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Boteco / Brasileña",
+    "precio": "€",
+    "precio_medio_brl": 45,
+    "ambiente": [
+      "muy local",
+      "animado",
+      "casual",
+      "grupos"
+    ],
+    "tags": [
+      "muy local",
+      "boteco",
+      "ejecutivo",
+      "barato",
+      "grupos",
+      "animado"
+    ],
+    "emoji": "🍻",
+    "rating": 4.3,
+    "votos": 1230,
+    "picar": true,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.946,
+      "lng": -43.1886
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "Cuatro botecos unidos bajo el mismo techo en Botafogo, con cardápio amplio que incluye pratos executivos (mayoría R$45), petiscos variados y buena oferta de cerveza y caipirinhas. El sitio más económico y animado para comer y beber en Botafogo. Perfecto para grupos.",
+    "platos_destacados": [
+      "prato executivo do dia",
+      "petiscos variados",
+      "caipirinhas",
+      "chopp gelado"
+    ],
+    "tip_local": "El menú ejecutivo es una de las mejores opciones precio-calidad de Botafogo. Llegad en grupo — el ambiente mejora con más personas y la variedad de petiscos se aprovecha más. Lleno siempre los viernes y sábados a partir de las 19h.",
+    "resena_destacada": "El mejor sitio para comer barato y bien en Botafogo. Los pratos executivos son abundantes y variados. El ambiente de boteco auténtico es exactamente lo que buscas cuando quieres sentirte local en Río.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-053",
+    "nombre": "Chez Claude Troisgros",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Leblon",
+    "tipo_cocina": "Franco-brasileña de autor",
+    "precio": "€€€",
+    "precio_medio_brl": 200,
+    "ambiente": [
+      "sofisticado",
+      "especial",
+      "íntimo",
+      "cocinaVista"
+    ],
+    "tags": [
+      "alta cocina",
+      "leblon",
+      "francés",
+      "espectáculo",
+      "especial",
+      "reserva obligatoria"
+    ],
+    "emoji": "👨‍🍳",
+    "rating": 4.8,
+    "votos": 780,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9848,
+      "lng": -43.2257
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "18:30",
+        "cierra": "22:30"
+      },
+      "jueves": {
+        "abre": "18:30",
+        "cierra": "22:30"
+      },
+      "viernes": {
+        "abre": "18:30",
+        "cierra": "23:30"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "17:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "17:00"
+      }
+    },
+    "descripcion": "El espectáculo gastronómico más singular de Río. Solo 6 mesas en un espacio íntimo donde el chef Claude Troisgros cocina con la cocina abierta como escenario. Durante 2h20, las paredes se llenan de proyecciones, música en directo y una cocina franco-brasileña de autor. El steak tartare con cornflakes y el ragu de cavaquinha son clásicos de la casa.",
+    "platos_destacados": [
+      "steak tartare com cornflakes",
+      "ragu de cavaquinha com rigatoni",
+      "wagyu con purê de aipim",
+      "cappuccino de cogumelos"
+    ],
+    "tip_local": "Reserva con semanas de antelación — solo 12 plazas por noche. Es una experiencia que va más allá de la comida: música, proyecciones, el chef en el centro del salón. Para una noche absolutamente especial en Río. Solo de miércoles a sábado.",
+    "resena_destacada": "La experiencia gastronómica más especial que he tenido en Río. No es solo una cena — es un espectáculo. La cocina de Claude Troisgros a 2 metros de tu mesa mientras la música llena el espacio. Hay que vivirlo al menos una vez.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-054",
+    "nombre": "Harad Culinária Árabe",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Árabe / Libanesa",
+    "precio": "€",
+    "precio_medio_brl": 30,
+    "ambiente": [
+      "muy local",
+      "casual",
+      "rápido"
+    ],
+    "tags": [
+      "árabe",
+      "esfiha",
+      "muy local",
+      "barato",
+      "botafogo",
+      "premiado"
+    ],
+    "emoji": "🥙",
+    "rating": 4.5,
+    "votos": 1560,
+    "picar": true,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.9468,
+      "lng": -43.1875
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "10:00",
+        "cierra": "01:00"
+      },
+      "miercoles": {
+        "abre": "10:00",
+        "cierra": "01:00"
+      },
+      "jueves": {
+        "abre": "10:00",
+        "cierra": "01:00"
+      },
+      "viernes": {
+        "abre": "10:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "10:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "10:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "Ganador del Premio Jackeline Mota a la mejor esfiha de Río de Janeiro. Las esfihas de queijo minas con espinafre son las más pedidas. Prato árabe tradicional (kafta, falafel o quibe con arroz de lentilha, tabule y pasta a elegir) es el mejor menú económico de Botafogo. Dos locales en Botafogo.",
+    "platos_destacados": [
+      "esfiha de queijo minas com espinafre",
+      "prato árabe tradicional",
+      "quibe frito",
+      "kafta assada"
+    ],
+    "tip_local": "Compra 5 esfihas por el precio de 4 — la promoción permanente. El prato árabe tradicional a R$20 es el mejor custo-benefício de toda la zona. Los quibes fritos recién hechos son adictivos.",
+    "resena_destacada": "Las mejores esfihas de Botafogo y probablemente de toda la Zona Sul. La de queijo minas con espinafre es una combinación perfecta. El prato árabe a ese precio es imbatible. Un sitio que el barrio adora.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 3496-8008",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-055",
+    "nombre": "Jobi",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Leblon",
+    "tipo_cocina": "Boteco / Petiscos",
+    "precio": "€€",
+    "precio_medio_brl": 55,
+    "ambiente": [
+      "muy local",
+      "histórico",
+      "nocturno",
+      "animado"
+    ],
+    "tags": [
+      "muy local",
+      "histórico",
+      "leblon",
+      "boteco",
+      "nocturno",
+      "clásico"
+    ],
+    "emoji": "🌙",
+    "rating": 4.5,
+    "votos": 2300,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9843,
+      "lng": -43.227
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "02:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "02:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "02:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "02:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "04:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "04:00"
+      },
+      "domingo": {
+        "abre": "11:00",
+        "cierra": "02:00"
+      }
+    },
+    "descripcion": "El boteco más famoso del Leblon, desde los años 50. Cierra a las 4h los fines de semana — es el punto de encuentro nocturno del barrio para finalizar la noche. Petiscos clásicos, chopp bien tirado y una clientela que mezcla gente del barrio con artistas y personajes de la noche carioca.",
+    "platos_destacados": [
+      "mandioca frita",
+      "bolinho de bacalhau",
+      "camarão na moranga",
+      "chopp Brahma"
+    ],
+    "tip_local": "El sitio nocturno por excelencia del Leblon. Si terminas la noche en el barrio, acabarás aquí. El camarão na moranga (camarón dentro de una calabaza) es el petisco más elaborado y uno de los mejores. Los viernes cierra a las 4h.",
+    "resena_destacada": "Un clásico de Río que nunca falla. A las 2h de la madrugada del sábado está lleno de cariocas de toda la vida. El camarão na moranga es una maravilla y el chopp siempre bien frío. 70 años y sigue siendo el rey del Leblon.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2274-0547",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-056",
+    "nombre": "Guimas",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Jardim Botânico",
+    "tipo_cocina": "Contemporánea brasileña",
+    "precio": "€€€",
+    "precio_medio_brl": 110,
+    "ambiente": [
+      "sofisticado",
+      "jardín",
+      "especial",
+      "animado"
+    ],
+    "tags": [
+      "jardim botânico",
+      "bar",
+      "shows",
+      "especial",
+      "contemporánea"
+    ],
+    "emoji": "🌺",
+    "rating": 4.5,
+    "votos": 1120,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9681,
+      "lng": -43.2267
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Restaurante con casi 6 años en el Jardim Botânico que combina buena gastronomia, bar de cócteles y casa de shows. El jardín repaginado por la cenógrafa Gigi Barreto es el espacio más especial. Cocina contemporánea brasileña con énfasis en ingredientes frescos y presentaciones cuidadas.",
+    "platos_destacados": [
+      "moqueca de frutos do mar",
+      "polvo grelhado",
+      "cócteles da casa",
+      "sobremesas autorais"
+    ],
+    "tip_local": "Reserva mesa en el jardín — el espacio exterior es el más bonito del restaurante. Los jueves a domingos hay shows en vivo que elevan aún más el ambiente. El bar de cócteles es uno de los mejores del Jardim Botânico.",
+    "resena_destacada": "El ambiente del jardín es precioso y la cocina está a la altura. Los cócteles son creativos y bien ejecutados. Cuando hay show en vivo, la experiencia completa es de las mejores de Río.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-057",
+    "nombre": "Bar do Horto",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Jardim Botânico",
+    "tipo_cocina": "Petiscos / Fusión",
+    "precio": "€€",
+    "precio_medio_brl": 70,
+    "ambiente": [
+      "muy local",
+      "bohemio",
+      "jardín",
+      "animado"
+    ],
+    "tags": [
+      "muy local",
+      "jardim botânico",
+      "petiscos",
+      "caipirinhas",
+      "bohemio"
+    ],
+    "emoji": "🌿",
+    "rating": 4.4,
+    "votos": 1340,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.969,
+      "lng": -43.2258
+    },
+    "horario": {
+      "lunes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "martes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "Bar-restaurante de referencia en el Jardim Botânico, muy frecuentado por los vecinos del barrio. Ambiente bohemio con mesas en la acera bajo la sombra de los árboles. Petiscos creativos para compartir y caipirinhas de frutas tropicales. El happy hour más popular del barrio.",
+    "platos_destacados": [
+      "polvo com legumes",
+      "camarão com alho",
+      "caipirinhas de frutas",
+      "tábua de frios"
+    ],
+    "tip_local": "El happy hour de 18h a 20h es el momento ideal — petiscos a precio reducido y el ambiente tranquilo del barrio. Las caipirinhas de frutas tropicales (maracujá, acerola) son las más pedidas. Las mesas en la acera son el sitio para estar.",
+    "resena_destacada": "El sitio de barrio por excelencia del Jardim Botânico. Las caipirinhas de maracujá son las mejores que he tomado en Río y el ambiente con las mesitas bajo los árboles es irresistible. Clientela local total.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2538-1897",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-058",
+    "nombre": "Zuka",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Leblon",
+    "tipo_cocina": "Contemporánea / Internacional",
+    "precio": "€€€",
+    "precio_medio_brl": 130,
+    "ambiente": [
+      "sofisticado",
+      "moderno",
+      "animado"
+    ],
+    "tags": [
+      "leblon",
+      "internacional",
+      "chef",
+      "especial",
+      "contemporánea"
+    ],
+    "emoji": "⭐",
+    "rating": 4.6,
+    "votos": 1450,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9851,
+      "lng": -43.2245
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "19:00",
+        "cierra": "23:30"
+      },
+      "miercoles": {
+        "abre": "19:00",
+        "cierra": "23:30"
+      },
+      "jueves": {
+        "abre": "19:00",
+        "cierra": "23:30"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Restaurante de la chef Ludmila Soeiro, referencia del Leblon gastronómico. Cocina contemporánea de influencia internacional con ingredientes brasileños de primera calidad. Uno de los restaurantes más consistentes de la Zona Sul — siempre en las listas de los mejores de Río.",
+    "platos_destacados": [
+      "risoto de funghi trufado",
+      "robalo na brasa",
+      "sobremesas da chef",
+      "menu degustação"
+    ],
+    "tip_local": "El risoto de funghi trufado es el plato más pedido de la casa y el que más recuerda la gente. Los viernes y sábados sirven almuerzo también. Reserva obligatoria — es uno de los restaurantes más solicitados del Leblon.",
+    "resena_destacada": "Uno de los mejores restaurantes del Leblon y de toda la Zona Sul. El risoto de funghi es extraordinario — cremoso, aromático, perfectamente ejecutado. La chef Ludmila lleva años siendo referencia y se nota en cada plato.",
+    "google_place_id": "",
+    "web": "zuka.com.br",
+    "telefono": "+55 21 3205-7154",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-059",
+    "nombre": "Azumi",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Japonesa tradicional",
+    "precio": "€€€",
+    "precio_medio_brl": 120,
+    "ambiente": [
+      "íntimo",
+      "sofisticado",
+      "histórico"
+    ],
+    "tags": [
+      "japonesa",
+      "tradicional",
+      "botafogo",
+      "histórico",
+      "nikkei",
+      "especial"
+    ],
+    "emoji": "🍣",
+    "rating": 4.7,
+    "votos": 1230,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9455,
+      "lng": -43.187
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "12:00",
+        "cierra": "15:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "15:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "15:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "15:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "15:30"
+      },
+      "domingo": null
+    },
+    "descripcion": "Institución de la cocina japonesa en Río, con décadas de historia en Botafogo. Solo almuerzos. Cocina japonesa auténtica sin concesiones a la fusión — sushi, sashimi, tepanyaki y caldos preparados con técnica tradicional. Una de las comunidades nikkei más antiguas de Río.",
+    "platos_destacados": [
+      "sashimi misto",
+      "sushi no balcão",
+      "ramen caseiro",
+      "gyoza da casa"
+    ],
+    "tip_local": "Solo almuerzos y solo de martes a sábado. El sashimi misto pedido al chef del balcão es la experiencia más auténtica. Reserva imprescindible — a veces la lista de espera llega a semanas. Vale absolutamente cada espera.",
+    "resena_destacada": "El japonés más serio y auténtico de Río. Sin fusion, sin adaptaciones para turistas — solo cocina japonesa tradicional ejecutada con maestría. El sashimi al balcão con el chef es una de las mejores experiencias gastronómicas que he tenido.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 21 2541-4294",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-060",
+    "nombre": "Lasai",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Alta gastronomía brasileña",
+    "precio": "€€€€",
+    "precio_medio_brl": 500,
+    "ambiente": [
+      "sofisticado",
+      "especial",
+      "íntimo"
+    ],
+    "tags": [
+      "Michelin",
+      "50 Best",
+      "especial",
+      "botafogo",
+      "imprescindible",
+      "reserva obligatoria"
+    ],
+    "emoji": "🌟",
+    "rating": 4.9,
+    "votos": 780,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9459,
+      "lng": -43.1864
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "19:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "19:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "19:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "19:00",
+        "cierra": "23:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "15:30"
+      },
+      "domingo": null
+    },
+    "descripcion": "El restaurante brasileño mejor valorado del mundo en 2025 — puesto 28 en The World's 50 Best Restaurants y dos estrellas Michelin. Chef Rafa Costa e Silva. Cocina naturalista moderna con ingredientes de sus propias huertas en el Itanhangá. Menú de 12-14 tiempos, cambia cada día según temporada. Solo 30 plazas — reserva con meses de antelación.",
+    "platos_destacados": [
+      "menú degustação de temporada",
+      "ingredientes de huerta propia",
+      "maridaje de vinos brasileños",
+      "petit fours finales"
+    ],
+    "tip_local": "Para incluirlo hay que reservar con 4-8 semanas de antelación como mínimo. El menú cambia completamente cada día según lo que haya en las huertas. El maridaje de vinos brasileños es una elección sorprendente y brillante. Una vez en la vida — o más si puedes.",
+    "resena_destacada": "La mejor cena de mi vida. Sin exageración. El menú de 14 tiempos es un viaje por los ingredientes brasileños que no conocías. Cada plato es una sorpresa y el equipo de sala hace que te sientas el único cliente del mundo. Extraordinario.",
+    "google_place_id": "",
+    "web": "lasai.com.br",
+    "telefono": "+55 21 3449-1834",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-061",
+    "nombre": "Toto Restaurante",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Ipanema",
+    "tipo_cocina": "Contemporánea / Francesa",
+    "precio": "€€€",
+    "precio_medio_brl": 180,
+    "ambiente": [
+      "sofisticado",
+      "especial",
+      "moderno"
+    ],
+    "tags": [
+      "contemporánea",
+      "francesa",
+      "ipanema",
+      "Troisgros",
+      "especial"
+    ],
+    "emoji": "✨",
+    "rating": 4.7,
+    "votos": 650,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9835,
+      "lng": -43.2002
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "19:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "19:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "19:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "17:00"
+      }
+    },
+    "descripcion": "El primer restaurante 100% autoral del chef Thomas Troisgros en Ipanema. Cocina moderna naturalista de la nouvelle cuisine con ingredientes frescos y de temporada de granjas propias. El Oseille, en el piso de arriba, es su versión más exclusiva (solo 16 plazas). Cocina refinada sin la rigidez de la alta gastronomía.",
+    "platos_destacados": [
+      "crocante de alga com tartare de tomate",
+      "peixe do dia na brasa",
+      "sobremesas de Thomas",
+      "carta de vinhos natural"
+    ],
+    "tip_local": "Más accesible que el Oseille del piso de arriba pero con el mismo ADN gastronómico de Thomas Troisgros. Los viernes y sábados sirven almuerzo. El menú cambia continuamente — pregunta qué es lo más especial del día.",
+    "resena_destacada": "La cocina de Thomas Troisgros es delicada, precisa y llena de sorpresas. El crocante de alga con tartare de tomate es uno de esos bocados que no olvidarás. Para una cena especial en Ipanema sin llegar al precio del Oseille.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-062",
+    "nombre": "Bip Bip",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Copacabana",
+    "tipo_cocina": "Bar / Boteco / Samba",
+    "precio": "€",
+    "precio_medio_brl": 20,
+    "ambiente": [
+      "muy local",
+      "musical",
+      "nocturno",
+      "histórico"
+    ],
+    "tags": [
+      "muy local",
+      "samba",
+      "choro",
+      "histórico",
+      "nocturno",
+      "música en vivo"
+    ],
+    "emoji": "🎸",
+    "rating": 4.6,
+    "votos": 1780,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9714,
+      "lng": -43.1849
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "19:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "19:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "19:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "17:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "17:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "El bar de samba y choro más auténtico de Copacabana. Local diminuto con sillas en la acera, músicos tocando en el interior y la música desbordando a la calle. Sin cocina formal — solo cerveza y caipirinhas. Pero la experiencia cultural y musical es de las más genuinas de Río.",
+    "platos_destacados": [
+      "cerveja gelada",
+      "caipirinha de cachaça",
+      "petiscos simples"
+    ],
+    "tip_local": "No vengas a comer — vengas a beber y escuchar música carioca en directo. Los domingos y jueves hay choro, los miércoles y sábados samba. El espacio se derrama a la acera — lleva efectivo. Una de las experiencias más auténticas de la ciudad.",
+    "resena_destacada": "Esto es el alma de Río. Un bar diminuto de donde sale la samba más auténtica que hayas escuchado. La cerveza está fría, la música es perfecta y la gente del barrio que viene cada semana completa el cuadro. Imprescindible.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  }
+]
