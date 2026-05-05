@@ -2,7 +2,7 @@
  * Mi Gastro — app.js v5b
  */
 
-window.MAPS_API_KEY = 'AIzaSyAC7drA3_1vuz5cLiAcHSIWg-EoVf8YDFM';
+window.MAPS_API_KEY = 'TU_API_KEY_AQUI';
 
 const State = {
   allRests: [], ciudades: {}, currentCiudad: null,
@@ -149,7 +149,7 @@ function buildCard(r, i) {
         <span class="badge">${r.barrio}</span>
         <span class="badge price">${r.precio}</span>
         <span class="badge ${st.open?'open':'closed'}">${st.label}</span>
-        ${r.origen==='usuario'?'<span class="badge user">Añadido por ti</span>':''}
+        
       </div>
       <div class="card-rating">
         <span class="star">★</span>
@@ -212,7 +212,7 @@ function fillFicha(r) {
     <span class="badge">${r.tipo_cocina||''}</span>
     <span class="badge price">${r.precio}</span>
     <span class="badge ${st.open?'open':'closed'}">${st.label}</span>
-    ${r.origen==='usuario'?'<span class="badge user">Añadido por ti</span>':''}
+    
   `;
   $('ficha-rating').textContent = r.rating || '–';
   $('ficha-votes').textContent = r.votos ? `· ${r.votos.toLocaleString()} reseñas en Google` : '';
@@ -243,6 +243,10 @@ function fillFicha(r) {
   $('ficha-notes').value = Storage.getNote(r.id);
   $('notes-save-btn').classList.remove('visible');
   $('ficha-wsp-btn').onclick = () => shareWhatsApp(r);
+
+  // Mostrar acciones de editar/eliminar solo para restaurantes de usuario
+  const isUser = r.origen === 'usuario';
+  $('ficha-user-actions').style.display = isUser ? 'block' : 'none';
 }
 
 // ── FAV / WISH ──
@@ -409,6 +413,92 @@ function saveRestaurant() {
   closeSheet();
   renderLista();
   showToast('✓ Restaurante añadido');
+}
+
+// ── EDITAR RESTAURANTE ──
+function openEditSheet(id) {
+  const r = State.allRests.find(x => x.id === id);
+  if (!r) return;
+
+  $('edit-nombre').value = r.nombre || '';
+  $('edit-emoji').value  = Storage.getEmoji(id) || r.emoji || '🍽️';
+  $('edit-barrio').value = r.barrio || '';
+  $('edit-cocina').value = r.tipo_cocina || '';
+  $('edit-desc').value   = r.descripcion || '';
+
+  // Precio
+  $$('#edit-precio-row .precio-opt').forEach(o => {
+    o.classList.toggle('selected', o.dataset.p === r.precio);
+  });
+
+  $('edit-sheet').dataset.id = id;
+  openSheet('edit-sheet');
+}
+
+function saveEdit() {
+  const id = $('edit-sheet').dataset.id;
+  const r  = State.allRests.find(x => x.id === id);
+  if (!r) return;
+
+  r.nombre      = $('edit-nombre').value.trim() || r.nombre;
+  r.barrio      = $('edit-barrio').value.trim() || r.barrio;
+  r.tipo_cocina = $('edit-cocina').value.trim() || r.tipo_cocina;
+  r.descripcion = $('edit-desc').value.trim()   || r.descripcion;
+  r.precio      = document.querySelector('#edit-precio-row .precio-opt.selected')?.dataset.p || r.precio;
+
+  const newEmoji = $('edit-emoji').value.trim();
+  if (newEmoji) Storage.saveEmoji(id, newEmoji);
+
+  // Actualizar en ciudades
+  const key = `${r.pais}/${r.region}/${r.municipio}`;
+  if (State.ciudades[key]) {
+    const idx = State.ciudades[key].findIndex(x => x.id === id);
+    if (idx >= 0) State.ciudades[key][idx] = r;
+  }
+
+  // Actualizar en localStorage si es de usuario
+  if (r.origen === 'usuario') {
+    try {
+      const saved = JSON.parse(localStorage.getItem('gastro_user') || '[]');
+      const idx = saved.findIndex(x => x.id === id);
+      if (idx >= 0) saved[idx] = r;
+      localStorage.setItem('gastro_user', JSON.stringify(saved));
+    } catch(e) {}
+  }
+
+  closeSheet();
+  fillFicha(r);
+  renderLista();
+  showToast('✓ Restaurante actualizado');
+}
+
+// ── ELIMINAR RESTAURANTE ──
+function deleteRestaurant(id) {
+  const r = State.allRests.find(x => x.id === id);
+  if (!r) return;
+
+  if (!confirm(`¿Eliminar "${r.nombre}" de tu lista?`)) return;
+
+  // Quitar de allRests
+  State.allRests = State.allRests.filter(x => x.id !== id);
+
+  // Quitar de ciudades
+  const key = `${r.pais}/${r.region}/${r.municipio}`;
+  if (State.ciudades[key]) {
+    State.ciudades[key] = State.ciudades[key].filter(x => x.id !== id);
+  }
+
+  // Quitar de localStorage si es de usuario
+  if (r.origen === 'usuario') {
+    try {
+      const saved = JSON.parse(localStorage.getItem('gastro_user') || '[]');
+      localStorage.setItem('gastro_user', JSON.stringify(saved.filter(x => x.id !== id)));
+    } catch(e) {}
+  }
+
+  closeFicha();
+  renderLista();
+  showToast('Restaurante eliminado');
 }
 
 // ── SHEETS ──
@@ -673,6 +763,15 @@ async function init() {
 
   // ── Ficha ──
   $('ficha-back').addEventListener('click', closeFicha);
+  $('ficha-close-btn').addEventListener('click', closeFicha);
+  $('ficha-edit-btn').addEventListener('click', () => { if (State.fichaId) openEditSheet(State.fichaId); });
+  $('ficha-delete-btn').addEventListener('click', () => { if (State.fichaId) deleteRestaurant(State.fichaId); });
+  $('edit-cancel-btn').addEventListener('click', closeSheet);
+  $('edit-save-btn').addEventListener('click', saveEdit);
+  $$('#edit-precio-row .precio-opt').forEach(o => o.addEventListener('click', () => {
+    $$('#edit-precio-row .precio-opt').forEach(x => x.classList.remove('selected'));
+    o.classList.add('selected');
+  }));
   $('ficha-fav-btn').addEventListener('click', () => { if (State.fichaId) toggleFav(State.fichaId); });
   $('ficha-wish-btn').addEventListener('click', () => { if (State.fichaId) toggleWish(State.fichaId); });
 
