@@ -268,9 +268,15 @@ const Maps = (() => {
     { featureType: 'transit',             stylers: [{ visibility: 'off' }] },
 
     { featureType: 'administrative',
-      elementType: 'labels.text.fill',    stylers: [{ color: '#888' }] },
+      elementType: 'labels.text.stroke',  stylers: [{ color: '#1a1a1a' }] },
+    { featureType: 'administrative',
+      elementType: 'labels.text.fill',    stylers: [{ color: '#ffffff' }] },
     { featureType: 'administrative.locality',
-      elementType: 'labels.text.fill',    stylers: [{ color: '#bbb' }] },
+      elementType: 'labels.text.fill',    stylers: [{ color: '#ffffff' }] },
+    { featureType: 'administrative.neighborhood',
+      elementType: 'labels.text.fill',    stylers: [{ color: '#e0e0e0' }] },
+    { featureType: 'administrative.land_parcel',
+      elementType: 'labels',              stylers: [{ visibility: 'off' }] },
   ];
 
   return { init, setMarkers, centerOnUser, searchPlace, preload };
