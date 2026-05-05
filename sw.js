@@ -1,8 +1,7 @@
 // SW minimalista — sin caché, siempre red
-// Cambiar a true cuando la app esté estable
 const USE_CACHE = false;
-const VERSION = 'v5';
- 
+const VERSION = 'v7';
+
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', e => {
   e.waitUntil(
@@ -11,8 +10,7 @@ self.addEventListener('activate', e => {
       .then(() => self.clients.claim())
   );
 });
- 
+
 self.addEventListener('fetch', e => {
-  if (!USE_CACHE) return; // sin caché: deja pasar todas las peticiones a la red
+  if (!USE_CACHE) return;
 });
- 

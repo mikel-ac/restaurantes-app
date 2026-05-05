@@ -1,8 +1,9 @@
 {
-  "name": "Mis Restaurantes",
-  "short_name": "Restaurantes",
-  "description": "Guía personal de restaurantes para viajes",
-  "start_url": "/",
+  "name": "Mi Gastro",
+  "short_name": "Gastro",
+  "description": "Mi guía personal de restaurantes para viajes",
+  "start_url": "/restaurantes-app/",
+  "scope": "/restaurantes-app/",
   "display": "standalone",
   "background_color": "#141414",
   "theme_color": "#141414",
