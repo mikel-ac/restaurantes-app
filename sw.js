@@ -1,6 +1,5 @@
-// SW minimalista — sin caché, siempre red
 const USE_CACHE = false;
-const VERSION = 'v8';
+const VERSION = 'v9';
 
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', e => {
