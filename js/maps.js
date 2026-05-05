@@ -1,5 +1,5 @@
 /**
- * maps.js — Maps se carga desde index.html, aquí solo lo usamos
+ * maps.js — Maps se carga desde index.html
  */
 const Maps = (() => {
 
@@ -8,7 +8,6 @@ const Maps = (() => {
   let infoWindow = null;
   let onSelect = null;
 
-  // Espera a que Google Maps esté listo (callback definido en index.html)
   function whenReady() {
     return new Promise(resolve => {
       if (window.__mapsApiReady && window.google && window.google.maps) {
@@ -38,7 +37,44 @@ const Maps = (() => {
       styles: DARK_STYLE,
     });
 
-    infoWindow = new google.maps.InfoWindow();
+    // Eliminar el borde blanco del InfoWindow con CSS
+    const styleEl = document.createElement('style');
+    styleEl.textContent = `
+      .gm-style .gm-style-iw-c {
+        padding: 0 !important;
+        border-radius: 14px !important;
+        background: transparent !important;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.5) !important;
+      }
+      .gm-style .gm-style-iw-d {
+        overflow: hidden !important;
+        padding: 0 !important;
+      }
+      .gm-style .gm-style-iw-tc::after {
+        background: #1e1e1e !important;
+      }
+      .gm-style-iw-chr {
+        position: absolute !important;
+        top: 6px !important;
+        right: 6px !important;
+        height: auto !important;
+      }
+      .gm-style-iw-chr button {
+        width: 24px !important;
+        height: 24px !important;
+        opacity: 0.6 !important;
+      }
+      .gm-style-iw-chr button span {
+        width: 14px !important;
+        height: 14px !important;
+        margin: 5px !important;
+      }
+    `;
+    document.head.appendChild(styleEl);
+
+    infoWindow = new google.maps.InfoWindow({
+      maxWidth: 260,
+    });
 
     const loading = document.getElementById('map-loading');
     if (loading) {
@@ -90,16 +126,35 @@ const Maps = (() => {
   }
 
   function infoContent(r) {
-    return `<div style="font-family:'Inter',sans-serif;background:#1e1e1e;color:#f0f0f0;
-      border-radius:12px;padding:13px 15px;min-width:190px;max-width:250px;">
-      <div style="font-size:24px;margin-bottom:6px">${r.emoji||'🍽️'}</div>
-      <div style="font-size:14px;font-weight:700;line-height:1.3">${r.nombre}</div>
-      <div style="font-size:12px;color:#777;margin-top:3px">${r.barrio} · ${r.precio}</div>
-      <div style="font-size:12px;color:#EF9F27;margin-top:5px">★ ${r.rating}
-        <span style="color:#555"> · ${(r.votos||0).toLocaleString()} reseñas</span></div>
-      <button id="iw-${r.id}" style="margin-top:10px;width:100%;background:#1D9E75;
-        color:#fff;border:none;border-radius:8px;padding:9px;font-size:13px;font-weight:600;
-        font-family:'Inter',sans-serif;cursor:pointer;">Ver ficha →</button>
+    return `<div style="
+      font-family:'Inter',sans-serif;
+      background:#1e1e1e;
+      color:#f0f0f0;
+      border-radius:14px;
+      padding:14px 16px;
+      min-width:200px;
+      max-width:250px;
+    ">
+      <div style="font-size:26px;margin-bottom:8px;line-height:1">${r.emoji||'🍽️'}</div>
+      <div style="font-size:15px;font-weight:700;line-height:1.3;margin-bottom:3px">${r.nombre}</div>
+      <div style="font-size:12px;color:#777;margin-bottom:6px">${r.barrio} · ${r.precio}</div>
+      <div style="font-size:13px;color:#EF9F27;margin-bottom:12px">
+        ★ ${r.rating}
+        <span style="color:#555;font-size:12px"> · ${(r.votos||0).toLocaleString()} reseñas</span>
+      </div>
+      <button id="iw-${r.id}" style="
+        width:100%;
+        background:#1D9E75;
+        color:#fff;
+        border:none;
+        border-radius:8px;
+        padding:10px;
+        font-size:13px;
+        font-weight:600;
+        font-family:'Inter',sans-serif;
+        cursor:pointer;
+        letter-spacing:0.01em;
+      ">Ver ficha →</button>
     </div>`;
   }
 
@@ -174,19 +229,48 @@ const Maps = (() => {
     map.setZoom(15);
   }
 
-  // preload no hace nada — Maps ya se carga desde el HTML
   function preload() {}
 
+  // Estilo oscuro más legible — texto claro, agua azul visible, calles diferenciadas
   const DARK_STYLE = [
-    { elementType:'geometry',           stylers:[{color:'#1a1a1a'}] },
-    { elementType:'labels.text.stroke', stylers:[{color:'#141414'}] },
-    { elementType:'labels.text.fill',   stylers:[{color:'#666'}] },
-    { featureType:'road', elementType:'geometry',         stylers:[{color:'#2a2a2a'}] },
-    { featureType:'road', elementType:'labels.text.fill', stylers:[{color:'#555'}] },
-    { featureType:'water',   elementType:'geometry', stylers:[{color:'#0d1f2d'}] },
-    { featureType:'poi',     stylers:[{visibility:'off'}] },
-    { featureType:'transit', stylers:[{visibility:'off'}] },
-    { featureType:'administrative', elementType:'labels.text.fill', stylers:[{color:'#444'}] },
+    { elementType: 'geometry',            stylers: [{ color: '#212121' }] },
+    { elementType: 'labels.text.stroke',  stylers: [{ color: '#212121' }] },
+    { elementType: 'labels.text.fill',    stylers: [{ color: '#a0a0a0' }] },
+
+    { featureType: 'road',
+      elementType: 'geometry',            stylers: [{ color: '#373737' }] },
+    { featureType: 'road',
+      elementType: 'labels.text.fill',    stylers: [{ color: '#8a8a8a' }] },
+    { featureType: 'road.arterial',
+      elementType: 'geometry',            stylers: [{ color: '#454545' }] },
+    { featureType: 'road.highway',
+      elementType: 'geometry',            stylers: [{ color: '#3c3c3c' }] },
+    { featureType: 'road.highway',
+      elementType: 'labels.text.fill',    stylers: [{ color: '#b0b0b0' }] },
+
+    { featureType: 'water',
+      elementType: 'geometry',            stylers: [{ color: '#1a3a4a' }] },
+    { featureType: 'water',
+      elementType: 'labels.text.fill',    stylers: [{ color: '#4a8fa8' }] },
+
+    { featureType: 'landscape',
+      elementType: 'geometry',            stylers: [{ color: '#2a2a2a' }] },
+    { featureType: 'landscape.natural',
+      elementType: 'geometry',            stylers: [{ color: '#1e2e1e' }] },
+
+    { featureType: 'poi',
+      elementType: 'geometry',            stylers: [{ color: '#2a2a2a' }] },
+    { featureType: 'poi',
+      elementType: 'labels',              stylers: [{ visibility: 'off' }] },
+    { featureType: 'poi.park',
+      elementType: 'geometry',            stylers: [{ color: '#1a2e1a' }] },
+
+    { featureType: 'transit',             stylers: [{ visibility: 'off' }] },
+
+    { featureType: 'administrative',
+      elementType: 'labels.text.fill',    stylers: [{ color: '#888' }] },
+    { featureType: 'administrative.locality',
+      elementType: 'labels.text.fill',    stylers: [{ color: '#bbb' }] },
   ];
 
   return { init, setMarkers, centerOnUser, searchPlace, preload };
