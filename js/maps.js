@@ -1,6 +1,5 @@
 /**
- * maps.js v5
- * Carga Google Maps dinámicamente solo cuando se necesita.
+ * maps.js — carga robusta de Google Maps
  */
 const Maps = (() => {
 
@@ -8,38 +7,65 @@ const Maps = (() => {
   let markers = [];
   let infoWindow = null;
   let onSelect = null;
-  let scriptLoaded = false;
-  let initPromise = null;
+  let loaded = false;
+  let loadPromise = null;
 
-  function loadScript(apiKey) {
-    if (scriptLoaded && window.google) return Promise.resolve();
-    if (initPromise) return initPromise;
+  // ── CARGAR SCRIPT ──
+  // Garantiza que el callback global existe ANTES de inyectar el script
+  function loadScript() {
+    if (loaded && window.google && window.google.maps) return Promise.resolve();
+    if (loadPromise) return loadPromise;
 
-    initPromise = new Promise((resolve, reject) => {
+    loadPromise = new Promise((resolve, reject) => {
+      // Si ya está cargado por algún motivo
       if (window.google && window.google.maps) {
-        scriptLoaded = true;
+        loaded = true;
         resolve();
         return;
       }
-      window._mapsCallback = () => {
-        scriptLoaded = true;
+
+      // Definir callback ANTES de crear el script
+      window.__mapsReady = () => {
+        loaded = true;
         resolve();
       };
-      const s = document.createElement('script');
-      s.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=_mapsCallback&libraries=places`;
-      s.async = true;
-      s.onerror = reject;
-      document.head.appendChild(s);
+
+      const key = window.MAPS_API_KEY || '';
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=places&callback=__mapsReady&loading=async`;
+      script.async = true;
+      script.defer = true;
+      script.onerror = () => {
+        loadPromise = null;
+        reject(new Error('No se pudo cargar Google Maps'));
+      };
+      document.head.appendChild(script);
     });
-    return initPromise;
+
+    return loadPromise;
   }
 
+  // ── INICIALIZAR MAPA ──
   async function init(containerId, selectCallback) {
     onSelect = selectCallback;
-    await loadScript(window.MAPS_API_KEY);
+
+    await loadScript();
 
     const el = document.getElementById(containerId);
-    if (!el) return;
+    if (!el) throw new Error('Contenedor del mapa no encontrado');
+
+    // Calcular altura disponible real
+    const navTop    = document.querySelector('.top-nav')?.offsetHeight || 0;
+    const chips     = document.querySelector('.chips-row')?.offsetHeight || 0;
+    const navBottom = document.querySelector('.bottom-nav')?.offsetHeight || 60;
+    const h = window.innerHeight - navTop - chips - navBottom;
+
+    el.style.position = 'absolute';
+    el.style.top = '0';
+    el.style.left = '0';
+    el.style.right = '0';
+    el.style.bottom = '0';
+    el.style.minHeight = Math.max(h, 300) + 'px';
 
     const RIO = { lat: -22.9519, lng: -43.2105 };
     map = new google.maps.Map(el, {
@@ -47,23 +73,36 @@ const Maps = (() => {
       zoom: 13,
       disableDefaultUI: true,
       zoomControl: true,
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.RIGHT_BOTTOM,
+      },
       styles: DARK_STYLE,
     });
+
     infoWindow = new google.maps.InfoWindow();
 
+    // Ocultar loading overlay
     const loading = document.getElementById('map-loading');
-    if (loading) loading.classList.add('hidden');
+    if (loading) {
+      loading.style.opacity = '0';
+      setTimeout(() => { loading.style.display = 'none'; }, 300);
+    }
+
+    return map;
   }
 
+  // ── MARCADORES ──
   function setMarkers(restaurantes, isFavFn) {
     if (!map) return;
+
     markers.forEach(m => m.setMap(null));
     markers = [];
 
     restaurantes.forEach(r => {
-      if (!r.coordenadas || !r.coordenadas.lat) return;
+      if (!r.coordenadas?.lat || !r.coordenadas?.lng) return;
+
+      const isFav  = isFavFn?.(r.id);
       const isUser = r.origen === 'usuario';
-      const isFav = isFavFn?.(r.id);
 
       const marker = new google.maps.Marker({
         position: { lat: r.coordenadas.lat, lng: r.coordenadas.lng },
@@ -75,12 +114,13 @@ const Maps = (() => {
       marker.addListener('click', () => {
         infoWindow.setContent(infoContent(r));
         infoWindow.open(map, marker);
+
         google.maps.event.addListenerOnce(infoWindow, 'domready', () => {
-          const btn = document.getElementById(`iw-btn-${r.id}`);
-          btn?.addEventListener('click', () => {
-            infoWindow.close();
-            onSelect?.(r);
-          });
+          document.getElementById(`iw-${r.id}`)
+            ?.addEventListener('click', () => {
+              infoWindow.close();
+              onSelect?.(r);
+            });
         });
       });
 
@@ -100,45 +140,57 @@ const Maps = (() => {
   }
 
   function infoContent(r) {
-    return `<div style="font-family:'Inter',sans-serif;background:#1e1e1e;color:#f0f0f0;
-      border-radius:12px;padding:13px 15px;min-width:200px;max-width:260px;">
-      <div style="font-size:22px;margin-bottom:6px">${r.emoji || '🍽️'}</div>
-      <div style="font-size:14px;font-weight:700">${r.nombre}</div>
-      <div style="font-size:12px;color:#777;margin-top:2px">${r.barrio} · ${r.precio}</div>
-      <div style="font-size:12px;color:#EF9F27;margin-top:5px">★ ${r.rating}
-        <span style="color:#555"> · ${(r.votos||0).toLocaleString()} reseñas</span></div>
-      <button id="iw-btn-${r.id}" style="margin-top:10px;width:100%;background:#1D9E75;
-        color:#fff;border:none;border-radius:8px;padding:8px;font-size:12px;font-weight:600;
-        font-family:'Inter',sans-serif;cursor:pointer;">Ver ficha →</button>
-    </div>`;
+    return `
+      <div style="font-family:'Inter',sans-serif;background:#1e1e1e;color:#f0f0f0;
+        border-radius:12px;padding:13px 15px;min-width:190px;max-width:250px;">
+        <div style="font-size:24px;margin-bottom:6px">${r.emoji||'🍽️'}</div>
+        <div style="font-size:14px;font-weight:700;line-height:1.3">${r.nombre}</div>
+        <div style="font-size:12px;color:#777;margin-top:3px">${r.barrio} · ${r.precio}</div>
+        <div style="font-size:12px;color:#EF9F27;margin-top:5px">
+          ★ ${r.rating}
+          <span style="color:#555"> · ${(r.votos||0).toLocaleString()} reseñas</span>
+        </div>
+        <button id="iw-${r.id}" style="
+          margin-top:10px;width:100%;background:#1D9E75;color:#fff;
+          border:none;border-radius:8px;padding:9px;
+          font-size:13px;font-weight:600;
+          font-family:'Inter',sans-serif;cursor:pointer;">
+          Ver ficha →
+        </button>
+      </div>`;
   }
 
+  // ── BUSCAR LUGAR (para añadir restaurante) ──
   async function searchPlace(input) {
-    await loadScript(window.MAPS_API_KEY);
+    await loadScript();
 
-    const svc = new google.maps.places.PlacesService(
-      map || (() => { const d = document.createElement('div'); document.body.appendChild(d); return d; })()
-    );
+    // Necesitamos un mapa o un div para PlacesService
+    const container = map || (() => {
+      const d = document.createElement('div');
+      d.style.display = 'none';
+      document.body.appendChild(d);
+      return d;
+    })();
 
-    let searchQuery = input.trim();
+    const svc = new google.maps.places.PlacesService(container);
 
-    // Si es un URL largo de Maps, intentar extraer el nombre del lugar
-    if (searchQuery.startsWith('http')) {
-      const nameMatch = searchQuery.match(/\/place\/([^/@?+]+)/);
-      if (nameMatch) {
-        searchQuery = decodeURIComponent(nameMatch[1].replace(/\+/g, ' '));
-      } else {
-        const qMatch = searchQuery.match(/[?&]q=([^&]+)/);
-        if (qMatch) searchQuery = decodeURIComponent(qMatch[1].replace(/\+/g, ' '));
+    // Limpiar el input: si es URL, extraer nombre
+    let query = input.trim();
+    if (query.startsWith('http')) {
+      const m = query.match(/\/place\/([^/@?+]+)/);
+      if (m) query = decodeURIComponent(m[1].replace(/\+/g, ' '));
+      else {
+        const q = query.match(/[?&]q=([^&]+)/);
+        if (q) query = decodeURIComponent(q[1].replace(/\+/g, ' '));
       }
     }
 
     return new Promise((resolve, reject) => {
       svc.findPlaceFromQuery(
-        { query: searchQuery, fields: ['place_id', 'name', 'geometry'] },
+        { query, fields: ['place_id', 'name', 'geometry'] },
         (results, status) => {
           if (status !== 'OK' || !results?.length) {
-            reject(new Error('No se encontró el restaurante. Prueba escribiendo solo el nombre.'));
+            reject(new Error('No se encontró el restaurante. Prueba con el nombre exacto.'));
             return;
           }
           getDetails(svc, results[0].place_id).then(resolve).catch(reject);
@@ -154,9 +206,8 @@ const Maps = (() => {
           placeId,
           fields: [
             'name', 'formatted_address', 'rating', 'user_ratings_total',
-            'opening_hours', 'geometry', 'international_phone_number',
-            'website', 'url'
-          ]
+            'opening_hours', 'geometry', 'international_phone_number', 'website',
+          ],
         },
         (place, status) => {
           if (status !== 'OK' || !place) {
@@ -164,17 +215,17 @@ const Maps = (() => {
             return;
           }
           resolve({
-            nombre: place.name,
-            direccion: place.formatted_address,
-            rating: place.rating || 0,
-            votos: place.user_ratings_total || 0,
-            telefono: place.international_phone_number || '',
-            web: place.website || '',
+            nombre:          place.name,
+            direccion:       place.formatted_address,
+            rating:          place.rating || 0,
+            votos:           place.user_ratings_total || 0,
+            telefono:        place.international_phone_number || '',
+            web:             place.website || '',
             coordenadas: {
               lat: place.geometry.location.lat(),
               lng: place.geometry.location.lng(),
             },
-            horario: parseHorario(place.opening_hours?.periods),
+            horario:         parseHorario(place.opening_hours?.periods),
             google_place_id: placeId,
           });
         }
@@ -189,10 +240,10 @@ const Maps = (() => {
     periods.forEach(p => {
       if (!p.open) return;
       const day = DAYS[p.open.day];
-      const oh = String(p.open.hours).padStart(2, '0');
-      const om = String(p.open.minutes).padStart(2, '0');
-      const ch = String(p.close?.hours ?? 23).padStart(2, '0');
-      const cm = String(p.close?.minutes ?? 59).padStart(2, '0');
+      const oh  = String(p.open.hours).padStart(2, '0');
+      const om  = String(p.open.minutes).padStart(2, '0');
+      const ch  = String(p.close?.hours ?? 23).padStart(2, '0');
+      const cm  = String(p.close?.minutes ?? 59).padStart(2, '0');
       result[day] = { abre: `${oh}:${om}`, cierra: `${ch}:${cm}` };
     });
     return result;
@@ -205,19 +256,20 @@ const Maps = (() => {
   }
 
   async function preload() {
-    try { await loadScript(window.MAPS_API_KEY); } catch(e) {}
+    try { await loadScript(); } catch(e) { /* silencioso */ }
   }
 
+  // ── ESTILO OSCURO ──
   const DARK_STYLE = [
-    { elementType:'geometry', stylers:[{ color:'#1a1a1a' }] },
-    { elementType:'labels.text.stroke', stylers:[{ color:'#141414' }] },
-    { elementType:'labels.text.fill', stylers:[{ color:'#666' }] },
-    { featureType:'road', elementType:'geometry', stylers:[{ color:'#2a2a2a' }] },
-    { featureType:'road', elementType:'labels.text.fill', stylers:[{ color:'#555' }] },
-    { featureType:'water', elementType:'geometry', stylers:[{ color:'#0d1f2d' }] },
-    { featureType:'poi', stylers:[{ visibility:'off' }] },
-    { featureType:'transit', stylers:[{ visibility:'off' }] },
-    { featureType:'administrative', elementType:'labels.text.fill', stylers:[{ color:'#444' }] },
+    { elementType: 'geometry',            stylers: [{ color: '#1a1a1a' }] },
+    { elementType: 'labels.text.stroke',  stylers: [{ color: '#141414' }] },
+    { elementType: 'labels.text.fill',    stylers: [{ color: '#666' }] },
+    { featureType: 'road', elementType: 'geometry',         stylers: [{ color: '#2a2a2a' }] },
+    { featureType: 'road', elementType: 'labels.text.fill', stylers: [{ color: '#555' }] },
+    { featureType: 'water',   elementType: 'geometry',      stylers: [{ color: '#0d1f2d' }] },
+    { featureType: 'poi',     stylers: [{ visibility: 'off' }] },
+    { featureType: 'transit', stylers: [{ visibility: 'off' }] },
+    { featureType: 'administrative', elementType: 'labels.text.fill', stylers: [{ color: '#444' }] },
   ];
 
   return { init, setMarkers, centerOnUser, searchPlace, preload };
