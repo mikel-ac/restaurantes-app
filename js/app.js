@@ -85,14 +85,18 @@ function cyclSort() {
 function updateAddSuggestion(totalResults) {
   const hasQuery = State.filters.query.trim().length > 0;
   const el = $('add-suggestion');
-  if (hasQuery && totalResults === 0) {
-    el.style.display = 'flex';
-    el.querySelector('span').textContent = `"${State.filters.query}" no está en tu lista.`;
-  } else if (hasQuery) {
-    el.style.display = 'flex';
-    el.querySelector('span').textContent = '¿No está lo que buscas?';
-  } else {
+  if (!hasQuery) {
     el.style.display = 'none';
+    return;
+  }
+  el.style.display = 'flex';
+  const txt = $('add-suggestion-text');
+  if (totalResults === 0) {
+    txt.textContent = '¿No está en tu lista?';
+    txt.style.color = 'var(--text2)';
+  } else {
+    txt.textContent = '¿No encuentras lo que buscas?';
+    txt.style.color = 'var(--text3)';
   }
 }
 
