@@ -2,7 +2,7 @@
  * Mi Gastro — app.js v5b
  */
 
-window.MAPS_API_KEY = 'AIzaSyDW6pyW3oid6Fvz87JBSVSdYnH_sDd-rw8';
+window.MAPS_API_KEY = 'TU_API_KEY_AQUI';
 
 const State = {
   allRests: [], ciudades: {}, currentCiudad: null,
@@ -181,8 +181,13 @@ function openFicha(id) {
   $('ficha-view').classList.add('open');
 }
 function closeFicha() {
+  const prevId = State.fichaId;
   $('ficha-view').classList.remove('open');
   State.fichaId = null;
+  // Si venimos del mapa, resaltar el marcador del restaurante que veíamos
+  if (State.currentView === 'mapa' && prevId && mapReady) {
+    setTimeout(() => Maps.highlightMarker(prevId), 150);
+  }
 }
 
 function fillFicha(r) {
@@ -443,10 +448,12 @@ function applyFilter() {
   const sel = $('filter-options').querySelector('.sheet-option.selected');
   State.filters[type] = sel ? sel.dataset.val : null;
   updatePills(); closeSheet(); renderLista();
+  syncMapFilters();
 }
 function clearFilter() {
   State.filters[$('filter-sheet').dataset.type] = null;
   updatePills(); closeSheet(); renderLista();
+  syncMapFilters();
 }
 function updatePills() {
   $$('.filter-pill[data-filter]').forEach(p => {
@@ -454,6 +461,15 @@ function updatePills() {
     p.classList.toggle('active', !!v);
     lbl.textContent = v || lbl.dataset.default;
   });
+}
+
+// ── SYNC MAPA CON FILTROS ──
+function syncMapFilters() {
+  if (State.currentView === 'mapa' && mapReady) {
+    const filtered = Filters.apply(getCurrent(), State.filters, Storage);
+    const sorted = sortedList(filtered);
+    Maps.updateMarkersFiltered(sorted, Storage.isFav);
+  }
 }
 
 // ── NAVEGACIÓN ──
@@ -468,6 +484,12 @@ function switchView(view) {
   if (view === 'mapa')  initMap();
   if (view === 'favs')  renderFavs();
   if (view === 'lista') renderLista();
+  // Sincronizar filtros con mapa si ya estaba inicializado
+  if (view === 'mapa' && mapReady) {
+    const filtered = Filters.apply(getCurrent(), State.filters, Storage);
+    const sorted = sortedList(filtered);
+    Maps.updateMarkersFiltered(sorted, Storage.isFav);
+  }
 }
 
 // ── MAPA ──
@@ -591,6 +613,7 @@ async function init() {
       if (idx >= 0) State.filters.chips.splice(idx,1); else State.filters.chips.push(k);
       chip.classList.toggle('active', idx < 0);
       renderLista();
+      syncMapFilters();
     });
   });
 
