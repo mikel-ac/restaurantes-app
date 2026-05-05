@@ -110,6 +110,7 @@ const Maps = (() => {
         });
       });
 
+      marker._restId = r.id;
       markers.push(marker);
     });
   }
@@ -134,6 +135,7 @@ const Maps = (() => {
       padding:14px 16px;
       min-width:200px;
       max-width:250px;
+      position:relative;
     ">
       <div style="font-size:26px;margin-bottom:8px;line-height:1">${r.emoji||'🍽️'}</div>
       <div style="font-size:15px;font-weight:700;line-height:1.3;margin-bottom:3px">${r.nombre}</div>
@@ -223,6 +225,24 @@ const Maps = (() => {
     });
   }
 
+  // Resaltar marcador al volver de la ficha
+  function highlightMarker(restauranteId) {
+    markers.forEach(m => {
+      if (m._restId === restauranteId) {
+        // Animar: agrandar y cambiar color brevemente
+        const original = m.getIcon();
+        m.setIcon({ ...original, scale: 16, fillColor: '#EF9F27' });
+        map.panTo(m.getPosition());
+        setTimeout(() => m.setIcon(original), 1500);
+      }
+    });
+  }
+
+  // Actualizar marcadores con filtro (para sincronizar con chips/filtros)
+  function updateMarkersFiltered(restaurantes, isFavFn) {
+    setMarkers(restaurantes, isFavFn);
+  }
+
   function centerOnUser(lat, lng) {
     if (!map) return;
     map.setCenter({ lat, lng });
@@ -279,5 +299,5 @@ const Maps = (() => {
       elementType: 'labels',              stylers: [{ visibility: 'off' }] },
   ];
 
-  return { init, setMarkers, centerOnUser, searchPlace, preload };
+  return { init, setMarkers, updateMarkersFiltered, highlightMarker, centerOnUser, searchPlace, preload };
 })();
