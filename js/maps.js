@@ -5,7 +5,6 @@ const Maps = (() => {
 
   let map = null;
   let markers = [];
-  let infoWindow = null;
   let onSelect = null;
 
   function whenReady() {
@@ -72,9 +71,12 @@ const Maps = (() => {
     `;
     document.head.appendChild(styleEl);
 
-    infoWindow = new google.maps.InfoWindow({
-      maxWidth: 260,
-    });
+    // Panel preview custom (en lugar de InfoWindow)
+    const closeBtn = document.getElementById('map-preview-close');
+    closeBtn?.addEventListener('click', closePreview);
+
+    // Cerrar al clicar en el mapa fuera
+    map.addListener('click', closePreview);
 
     const loading = document.getElementById('map-loading');
     if (loading) {
@@ -99,15 +101,7 @@ const Maps = (() => {
       });
 
       marker.addListener('click', () => {
-        infoWindow.setContent(infoContent(r));
-        infoWindow.open(map, marker);
-        google.maps.event.addListenerOnce(infoWindow, 'domready', () => {
-          document.getElementById(`iw-${r.id}`)
-            ?.addEventListener('click', () => {
-              infoWindow.close();
-              onSelect?.(r);
-            });
-        });
+        showPreview(r, onSelect);
       });
 
       marker._restId = r.id;
@@ -263,6 +257,74 @@ const Maps = (() => {
         }
       );
     });
+  }
+
+  // ── PANEL PREVIEW CUSTOM ──
+  function showPreview(r, selectCb) {
+    const panel = document.getElementById('map-preview');
+    const contentEl = document.getElementById('map-preview-content');
+    if (!panel || !contentEl) return;
+
+    const DAYS = ['domingo','lunes','martes','miercoles','jueves','viernes','sabado'];
+    const today = DAYS[new Date().getDay()];
+    const sched = r.horario?.[today];
+    let statusHtml = '';
+    if (sched) {
+      const now = new Date();
+      const mins = now.getHours() * 60 + now.getMinutes();
+      const [oh, om] = sched.abre.split(':').map(Number);
+      const [ch, cm] = sched.cierra.split(':').map(Number);
+      const open = oh * 60 + om;
+      let close = ch * 60 + cm;
+      if (close < open) close += 24 * 60;
+      const isOpen = mins >= open && mins < close;
+      statusHtml = isOpen
+        ? `<span style="color:#4ECFA0;font-weight:600">Abierto</span> · cierra ${sched.cierra}h`
+        : `<span style="color:#e87070;font-weight:600">Cerrado</span> · abre ${sched.abre}h`;
+    }
+
+    const tags = (r.tags || []).slice(0, 3).map(t =>
+      `<span style="font-size:11px;padding:2px 8px;border-radius:6px;
+        background:rgba(29,158,117,0.15);color:#4ECFA0;
+        border:1px solid rgba(29,158,117,0.25);white-space:nowrap">${t}</span>`
+    ).join('');
+
+    const platos = (r.platos_destacados || []).slice(0, 2).join(', ');
+
+    contentEl.innerHTML = `
+      <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px">
+        <div style="font-size:36px;line-height:1;flex-shrink:0">${r.emoji||'🍽️'}</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:16px;font-weight:700;color:#f0f0f0;line-height:1.2;margin-bottom:3px;
+            white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${r.nombre}</div>
+          <div style="font-size:12px;color:#777">${r.barrio} · ${r.tipo_cocina||''} · ${r.precio}</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap">
+        <span style="font-size:13px;color:#EF9F27;font-weight:600">★ ${r.rating}</span>
+        <span style="font-size:12px;color:#555">${(r.votos||0).toLocaleString()} reseñas</span>
+        ${statusHtml ? `<span style="font-size:12px;color:#888">· ${statusHtml}</span>` : ''}
+      </div>
+      ${tags ? `<div style="display:flex;gap:5px;margin-bottom:8px;flex-wrap:wrap">${tags}</div>` : ''}
+      ${platos ? `<div style="font-size:12px;color:#666;margin-bottom:10px;font-style:italic">🍴 ${platos}</div>` : ''}
+      <button id="map-preview-open" style="
+        width:100%;background:#1D9E75;color:#fff;border:none;border-radius:8px;
+        padding:11px;font-size:14px;font-weight:600;
+        font-family:'Inter',sans-serif;cursor:pointer;">
+        Ver ficha completa →
+      </button>`;
+
+    panel.style.display = 'block';
+
+    document.getElementById('map-preview-open')?.addEventListener('click', () => {
+      closePreview();
+      selectCb?.(r);
+    });
+  }
+
+  function closePreview() {
+    const panel = document.getElementById('map-preview');
+    if (panel) panel.style.display = 'none';
   }
 
   // Resaltar marcador al volver de la ficha
