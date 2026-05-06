@@ -2,7 +2,7 @@
  * Mi Gastro — app.js v5b
  */
 
-window.MAPS_API_KEY = 'AIzaSyAC7drA3_1vuz5cLiAcHSIWg-EoVf8YDFM';
+window.MAPS_API_KEY = 'TU_API_KEY_AQUI';
 
 const State = {
   allRests: [], ciudades: {}, currentCiudad: null,
@@ -781,6 +781,13 @@ async function init() {
         updatePills();
         $('city-name').textContent = el.querySelector('strong').textContent;
         closeSheet(); renderLista();
+        // Si el mapa está activo, recentrar y actualizar marcadores
+        if (State.currentView === 'mapa' && mapReady) {
+          const cityName = State.currentCiudad?.split('/')?.pop();
+          const center = CITY_CENTERS[cityName];
+          if (center) Maps.centerOn(center.lat, center.lng);
+          Maps.setMarkers(getCurrent(), Storage.isFav);
+        }
       });
     });
     openSheet('city-sheet');
