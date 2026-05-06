@@ -208,6 +208,7 @@ input, textarea { font-family:var(--font); }
 .badge.open   { background:#061510; color:#4ECFA0; border-color:#155a3a; }
 .badge.closed { background:#1c0808; color:#e87070; border-color:#5a1a1a; }
 .badge.user   { background:var(--purple-dim); color:var(--purple); border-color:#2e2860; }
+.badge.dist   { color:var(--text3); border-color:var(--border); background:transparent; font-family:var(--mono); font-size:10px; }
 .badge.price  { color:var(--amber); border-color:rgba(239,159,39,.2); background:rgba(239,159,39,.06); }
 
 .card-rating { display:flex; align-items:center; gap:5px; margin-top:6px; font-size:13px; color:var(--text2); }
@@ -588,4 +589,4 @@ input, textarea { font-family:var(--font); }
 }
 .user-action-btn.delete:active { background:rgba(226,75,74,.15); }
 
-/* v17 */
+/* v18 */
