@@ -545,14 +545,18 @@ input, textarea { font-family:var(--font); }
   flex:1; padding:15px; border-radius:var(--r);
   font-size:15px; font-weight:600; font-family:var(--font);
   cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px;
-  -webkit-tap-highlight-color:transparent; transition:opacity .15s;
+  -webkit-tap-highlight-color:transparent; transition:all .15s;
 }
 .ficha-bottom-btn.share {
-  background:var(--bg3); border:1.5px solid var(--border2); color:var(--text2);
+  background:rgba(29,158,117,0.08);
+  border:1.5px solid rgba(29,158,117,0.5);
+  color:var(--green-hi);
 }
-.ficha-bottom-btn.share:active { background:var(--bg4); }
+.ficha-bottom-btn.share:active { background:rgba(29,158,117,0.15); }
 .ficha-bottom-btn.close {
-  background:var(--bg3); border:1.5px solid var(--border2); color:var(--text3);
+  background:var(--bg3);
+  border:1.5px solid var(--border2);
+  color:var(--text2);
 }
 .ficha-bottom-btn.close:active { background:var(--bg4); }
 
