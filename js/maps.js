@@ -451,7 +451,7 @@ const Maps = (() => {
           <animate attributeName="fill-opacity" values="0.12;0.03;0.12" dur="2s" repeatCount="indefinite"/>
         </circle>
         <g transform="rotate(${heading}, 28, 28)">
-          <polygon points="28,4 36,26 28,21 20,26" fill="#4A90E2" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"/>
+          <polygon points="28,9 33,23 28,20 23,23" fill="#4A90E2" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"/>
         </g>
         <circle cx="28" cy="28" r="10" fill="#4A90E2" stroke="#ffffff" stroke-width="3"/>
       </svg>`;
