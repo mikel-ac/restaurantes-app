@@ -444,25 +444,25 @@ const Maps = (() => {
   // Genera SVG del marcador de usuario con orientación opcional
   function userMarkerSVG(heading) {
     if (heading != null) {
-      // Con orientación: punto azul + flecha de dirección
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
-        <g transform="rotate(${heading}, 20, 20)">
-          <polygon points="20,4 24,18 20,15 16,18" fill="#4A90E2" opacity="0.9"/>
-        </g>
-        <circle cx="20" cy="20" r="9" fill="#4A90E2" stroke="#ffffff" stroke-width="2.5"/>
-        <circle cx="20" cy="20" r="16" fill="#4A90E2" fill-opacity="0.12">
-          <animate attributeName="r" values="10;16;10" dur="2s" repeatCount="indefinite"/>
+      // Con orientación: punto azul + flecha grande y visible
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+        <circle cx="28" cy="28" r="22" fill="#4A90E2" fill-opacity="0.12">
+          <animate attributeName="r" values="13;20;13" dur="2s" repeatCount="indefinite"/>
           <animate attributeName="fill-opacity" values="0.12;0.03;0.12" dur="2s" repeatCount="indefinite"/>
         </circle>
+        <g transform="rotate(${heading}, 28, 28)">
+          <polygon points="28,4 36,26 28,21 20,26" fill="#4A90E2" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"/>
+        </g>
+        <circle cx="28" cy="28" r="10" fill="#4A90E2" stroke="#ffffff" stroke-width="3"/>
       </svg>`;
     }
     // Sin orientación: solo punto pulsante
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
-      <circle cx="18" cy="18" r="14" fill="#4A90E2" fill-opacity="0.12">
-        <animate attributeName="r" values="9;15;9" dur="2s" repeatCount="indefinite"/>
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+      <circle cx="20" cy="20" r="16" fill="#4A90E2" fill-opacity="0.12">
+        <animate attributeName="r" values="10;17;10" dur="2s" repeatCount="indefinite"/>
         <animate attributeName="fill-opacity" values="0.12;0.03;0.12" dur="2s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="18" cy="18" r="8" fill="#4A90E2" stroke="#ffffff" stroke-width="2.5"/>
+      <circle cx="20" cy="20" r="9" fill="#4A90E2" stroke="#ffffff" stroke-width="2.5"/>
     </svg>`;
   }
 
@@ -486,7 +486,7 @@ const Maps = (() => {
     });
 
     const svg = userMarkerSVG(userHeading);
-    const size = userHeading != null ? 40 : 36;
+    const size = userHeading != null ? 56 : 40;
     const icon = {
       url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg),
       anchor: new google.maps.Point(size / 2, size / 2),
@@ -515,8 +515,8 @@ const Maps = (() => {
           const newSize = 40;
           userMarker?.setIcon({
             url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(newSvg),
-            anchor: new google.maps.Point(20, 20),
-            scaledSize: new google.maps.Size(newSize, newSize),
+            anchor: new google.maps.Point(28, 28),
+            scaledSize: new google.maps.Size(56, 56),
           });
         };
         // iOS 13+ requiere permiso
