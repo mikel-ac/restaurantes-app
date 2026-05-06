@@ -1,15 +1,7 @@
 const USE_CACHE = false;
-const VERSION = 'v9';
-
+const VERSION = 'v10';
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', e => {
-  e.waitUntil(
-    caches.keys()
-      .then(keys => Promise.all(keys.map(k => caches.delete(k))))
-      .then(() => self.clients.claim())
-  );
+  e.waitUntil(caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k)))).then(() => self.clients.claim()));
 });
-
-self.addEventListener('fetch', e => {
-  if (!USE_CACHE) return;
-});
+self.addEventListener('fetch', e => { if (!USE_CACHE) return; });
