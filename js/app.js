@@ -6,7 +6,7 @@ window.MAPS_API_KEY = 'AIzaSyAC7drA3_1vuz5cLiAcHSIWg-EoVf8YDFM';
 
 const State = {
   allRests: [], ciudades: {}, currentCiudad: null,
-  filters: { query:'', chips:[], barrio:null, cocina:null, precio:null, favOnly:false },
+  filters: { query:'', chips:[], barrio:null, cocina:null, precio:null, favOnly:false, soloAbiertos:false },
   sort: 'proximidad',
   userLat: null, userLng: null,
   currentView: 'lista',
@@ -83,6 +83,10 @@ function dist(la1,lo1,la2,lo2) {
   const R=6371, dLa=(la2-la1)*Math.PI/180, dLo=(lo2-lo1)*Math.PI/180;
   const a = Math.sin(dLa/2)**2 + Math.cos(la1*Math.PI/180)*Math.cos(la2*Math.PI/180)*Math.sin(dLo/2)**2;
   return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+}
+function formatDist(km) {
+  if (km < 1) return `${Math.round(km*1000)}m`;
+  return `${km.toFixed(1)}km`;
 }
 
 function cyclSort() {
@@ -165,7 +169,7 @@ function buildCard(r, i) {
         <span class="badge">${r.barrio}</span>
         <span class="badge price">${r.precio}</span>
         <span class="badge ${st.open?'open':'closed'}">${st.label}</span>
-        
+        ${State.userLat != null && r.coordenadas?.lat ? `<span class="badge dist">${formatDist(dist(State.userLat, State.userLng, r.coordenadas.lat, r.coordenadas.lng))}</span>` : ''}
       </div>
       <div class="card-rating">
         <span class="star">★</span>
@@ -293,7 +297,9 @@ function toggleWish(id) {
 // ── FAVORITOS ──
 function renderFavs() {
   const isFavs = State.favTab === 'favs';
-  const items = State.allRests.filter(r => isFavs ? Storage.isFav(r.id) : Storage.isWish(r.id));
+  // Solo mostrar favs/wish de la ciudad activa
+  const ciudadActual = getCurrent();
+  const items = ciudadActual.filter(r => isFavs ? Storage.isFav(r.id) : Storage.isWish(r.id));
   const list = $('favs-list');
 
   if (!items.length) {
@@ -305,18 +311,7 @@ function renderFavs() {
     return;
   }
 
-  const grupos = {};
-  items.forEach(r => { if(!grupos[r.municipio]) grupos[r.municipio]=[]; grupos[r.municipio].push(r); });
-
-  list.innerHTML = Object.entries(grupos).map(([ciudad, rests]) => `
-    <div style="padding:0 16px">
-      <div style="font-size:11px;color:var(--text3);font-family:var(--mono);text-transform:uppercase;
-        letter-spacing:.08em;padding:16px 0 8px;border-bottom:1px solid var(--border);margin-bottom:12px">
-        ${ciudad}
-      </div>
-      ${rests.map((r,i) => buildCard(r,i)).join('')}
-    </div>
-  `).join('') + `
+  list.innerHTML = `<div style="padding:0 16px">${items.map((r,i) => buildCard(r,i)).join('')}</div>` + `
     <div style="padding:12px 16px 0">
       <button id="export-wsp-btn" style="width:100%;padding:14px;border-radius:14px;
         background:var(--bg3);border:1.5px solid var(--border2);color:var(--text2);
@@ -717,6 +712,7 @@ function autoSelectCiudad(lat, lng) {
     State.filters.cocina = null;
     State.filters.precio = null;
     State.filters.favOnly = false;
+    State.filters.soloAbiertos = false;
     $('city-name').textContent = selected.split('/').pop();
   }
 }
@@ -773,7 +769,15 @@ async function init() {
   // ── Chips ──
   $$('.chip').forEach(chip => {
     chip.addEventListener('click', () => {
-      const k = chip.dataset.chip, idx = State.filters.chips.indexOf(k);
+      const k = chip.dataset.chip;
+      if (k === 'abierto') {
+        State.filters.soloAbiertos = !State.filters.soloAbiertos;
+        chip.classList.toggle('active', State.filters.soloAbiertos);
+        renderLista();
+        syncMapFilters();
+        return;
+      }
+      const idx = State.filters.chips.indexOf(k);
       if (idx >= 0) State.filters.chips.splice(idx,1); else State.filters.chips.push(k);
       chip.classList.toggle('active', idx < 0);
       renderLista();
@@ -815,6 +819,7 @@ async function init() {
         State.filters.cocina = null;
         State.filters.precio = null;
         State.filters.favOnly = false;
+        State.filters.soloAbiertos = false;
         // Limpiar UI de filtros
         $('search-input').value = '';
         $('search-clear').classList.remove('visible');
