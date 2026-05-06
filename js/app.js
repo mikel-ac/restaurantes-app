@@ -2,7 +2,7 @@
  * Mi Gastro — app.js v5b
  */
 
-window.MAPS_API_KEY = 'AIzaSyAC7drA3_1vuz5cLiAcHSIWg-EoVf8YDFM'; // ← reemplaza esto con tu key real
+window.MAPS_API_KEY = 'AIzaSyAC7drA3_1vuz5cLiAcHSIWg-EoVf8YDFM';
 
 const State = {
   allRests: [], ciudades: {}, currentCiudad: null,
@@ -671,6 +671,7 @@ function requestLocation() {
     pos => {
       State.userLat = pos.coords.latitude;
       State.userLng = pos.coords.longitude;
+      autoSelectCiudad(State.userLat, State.userLng);
       renderLista();
     },
     () => {
@@ -680,6 +681,37 @@ function requestLocation() {
     },
     { timeout:8000, enableHighAccuracy:false }
   );
+}
+
+// Auto-selecciona la ciudad más cercana al usuario (máx 100km).
+// Si no hay coincidencia, selecciona Bilbao como fallback.
+function autoSelectCiudad(lat, lng) {
+  const FALLBACK = 'España/País Vasco/Bilbao';
+  let bestKey = null;
+  let bestDist = Infinity;
+
+  for (const key of Object.keys(State.ciudades)) {
+    const cityName = key.split('/').pop();
+    const center = CITY_CENTERS[cityName];
+    if (!center) continue;
+    const d = dist(lat, lng, center.lat, center.lng);
+    if (d < bestDist) { bestDist = d; bestKey = key; }
+  }
+
+  // Solo cambia si está a menos de 100km, o usa fallback Bilbao
+  const selected = (bestKey && bestDist < 100) ? bestKey
+    : (State.ciudades[FALLBACK] ? FALLBACK : Object.keys(State.ciudades)[0]);
+
+  if (selected && selected !== State.currentCiudad) {
+    State.currentCiudad = selected;
+    State.filters.query  = '';
+    State.filters.chips  = [];
+    State.filters.barrio = null;
+    State.filters.cocina = null;
+    State.filters.precio = null;
+    State.filters.favOnly = false;
+    $('city-name').textContent = selected.split('/').pop();
+  }
 }
 
 // ── TOAST ──
