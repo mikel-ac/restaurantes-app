@@ -28,8 +28,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9186,
-      "lng": -43.1844
+      "lat": -22.9248291,
+      "lng": -43.1874614
     },
     "horario": {
       "lunes": {
@@ -103,8 +103,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9215,
-      "lng": -43.1831
+      "lat": -22.9210655,
+      "lng": -43.1869033
     },
     "horario": {
       "lunes": {
@@ -179,8 +179,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9199,
-      "lng": -43.1827
+      "lat": -22.9213615,
+      "lng": -43.1895341
     },
     "horario": {
       "lunes": {
@@ -254,8 +254,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9207,
-      "lng": -43.1835
+      "lat": -22.9208069,
+      "lng": -43.1848755
     },
     "horario": {
       "lunes": {
@@ -330,8 +330,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9193,
-      "lng": -43.184
+      "lat": -22.9212999,
+      "lng": -43.1861198
     },
     "horario": {
       "lunes": null,
@@ -403,8 +403,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9838,
-      "lng": -43.1997
+      "lat": -22.9852942,
+      "lng": -43.2030211
     },
     "horario": {
       "lunes": {
@@ -479,8 +479,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.968,
-      "lng": -43.1815
+      "lat": -22.9661506,
+      "lng": -43.1873241
     },
     "horario": {
       "lunes": {
@@ -554,8 +554,8 @@
     "picar": true,
     "menu_del_dia": true,
     "coordenadas": {
-      "lat": -22.9694,
-      "lng": -43.1822
+      "lat": -22.9676586,
+      "lng": -43.1846008
     },
     "horario": {
       "lunes": {
@@ -629,8 +629,8 @@
     "picar": false,
     "menu_del_dia": true,
     "coordenadas": {
-      "lat": -22.9706,
-      "lng": -43.1803
+      "lat": -22.9624848,
+      "lng": -43.1761372
     },
     "horario": {
       "lunes": {
@@ -705,8 +705,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9828,
-      "lng": -43.1981
+      "lat": -22.9854504,
+      "lng": -43.2049323
     },
     "horario": {
       "lunes": null,
@@ -778,8 +778,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9808,
-      "lng": -43.2062
+      "lat": -22.9800548,
+      "lng": -43.2033539
     },
     "horario": {
       "lunes": {
@@ -853,8 +853,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9836,
-      "lng": -43.1995
+      "lat": -22.9834151,
+      "lng": -43.2133218
     },
     "horario": {
       "lunes": null,
@@ -924,8 +924,8 @@
     "picar": false,
     "menu_del_dia": true,
     "coordenadas": {
-      "lat": -22.971,
-      "lng": -43.1842
+      "lat": -22.9850447,
+      "lng": -43.1905691
     },
     "horario": {
       "lunes": {
@@ -1000,8 +1000,8 @@
     "picar": false,
     "menu_del_dia": true,
     "coordenadas": {
-      "lat": -22.9456,
-      "lng": -43.1878
+      "lat": -22.9547373,
+      "lng": -43.1928924
     },
     "horario": {
       "lunes": {
@@ -1073,8 +1073,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9487,
-      "lng": -43.1856
+      "lat": -22.9560239,
+      "lng": -43.1799699
     },
     "horario": {
       "lunes": null,
@@ -1146,8 +1146,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9543,
-      "lng": -43.1654
+      "lat": -22.9436155,
+      "lng": -43.1602357
     },
     "horario": {
       "lunes": {
@@ -1222,8 +1222,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9128,
-      "lng": -43.1795
+      "lat": -22.9139517,
+      "lng": -43.1868918
     },
     "horario": {
       "lunes": null,
@@ -1293,8 +1293,8 @@
     "picar": false,
     "menu_del_dia": true,
     "coordenadas": {
-      "lat": -22.9364,
-      "lng": -43.1766
+      "lat": -22.934759,
+      "lng": -43.1769489
     },
     "horario": {
       "lunes": {
@@ -1370,8 +1370,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9035,
-      "lng": -43.1731
+      "lat": -22.905129,
+      "lng": -43.1860844
     },
     "horario": {
       "lunes": {
@@ -1442,8 +1442,8 @@
     "picar": false,
     "menu_del_dia": true,
     "coordenadas": {
-      "lat": -22.9021,
-      "lng": -43.1755
+      "lat": -22.9096406,
+      "lng": -43.1933361
     },
     "horario": {
       "lunes": {
@@ -1515,8 +1515,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.918,
-      "lng": -43.1852
+      "lat": -19.1834229,
+      "lng": -40.3088626
     },
     "horario": {
       "lunes": null,
@@ -1587,8 +1587,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9118,
-      "lng": -43.1808
+      "lat": -23.5685289,
+      "lng": -46.6630763
     },
     "horario": {
       "lunes": {
@@ -1659,8 +1659,8 @@
     "picar": true,
     "menu_del_dia": true,
     "coordenadas": {
-      "lat": -22.9256,
-      "lng": -43.1762
+      "lat": -22.9317111,
+      "lng": -43.1786956
     },
     "horario": {
       "lunes": {
@@ -1732,8 +1732,8 @@
     "picar": false,
     "menu_del_dia": true,
     "coordenadas": {
-      "lat": -22.9843,
-      "lng": -43.2007
+      "lat": -22.9832611,
+      "lng": -43.2093167
     },
     "horario": {
       "lunes": {
@@ -1807,8 +1807,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9465,
-      "lng": -43.1892
+      "lat": -22.9570783,
+      "lng": -43.19605019999999
     },
     "horario": {
       "lunes": {
@@ -1882,8 +1882,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.921,
-      "lng": -43.1828
+      "lat": -22.9546384,
+      "lng": -43.1813189
     },
     "horario": {
       "lunes": {
@@ -1958,8 +1958,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9458,
-      "lng": -43.1884
+      "lat": -22.9508562,
+      "lng": -43.1833256
     },
     "horario": {
       "lunes": {
@@ -2035,8 +2035,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9849,
-      "lng": -43.2008
+      "lat": -22.9863466,
+      "lng": -43.1890661
     },
     "horario": {
       "lunes": {
@@ -2110,8 +2110,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9863,
-      "lng": -43.2016
+      "lat": -22.9844195,
+      "lng": -43.2069992
     },
     "horario": {
       "lunes": {
@@ -2187,8 +2187,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9841,
-      "lng": -43.201
+      "lat": -22.9842694,
+      "lng": -43.2069823
     },
     "horario": {
       "lunes": {
@@ -2262,8 +2262,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9708,
-      "lng": -43.183
+      "lat": -22.9708782,
+      "lng": -43.1875661
     },
     "horario": {
       "lunes": {
@@ -2337,8 +2337,8 @@
     "picar": false,
     "menu_del_dia": true,
     "coordenadas": {
-      "lat": -22.9703,
-      "lng": -43.1832
+      "lat": -22.9742604,
+      "lng": -43.1908571
     },
     "horario": {
       "lunes": {
@@ -2413,8 +2413,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9884,
-      "lng": -43.1893
+      "lat": -22.9856456,
+      "lng": -43.1857908
     },
     "horario": {
       "lunes": null,
@@ -2485,8 +2485,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9712,
-      "lng": -43.1838
+      "lat": -22.9768962,
+      "lng": -43.1897913
     },
     "horario": {
       "lunes": {
@@ -2561,8 +2561,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9478,
-      "lng": -43.1876
+      "lat": -22.9527396,
+      "lng": -43.1829308
     },
     "horario": {
       "lunes": null,
@@ -2631,8 +2631,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9492,
-      "lng": -43.1862
+      "lat": -22.9500794,
+      "lng": -43.1890712
     },
     "horario": {
       "lunes": {
@@ -2707,8 +2707,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9484,
-      "lng": -43.188
+      "lat": -22.9552844,
+      "lng": -43.1922899
     },
     "horario": {
       "lunes": {
@@ -2783,8 +2783,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9471,
-      "lng": -43.1883
+      "lat": -22.955586,
+      "lng": -43.1790621
     },
     "horario": {
       "lunes": {
@@ -2859,8 +2859,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9677,
-      "lng": -43.2254
+      "lat": -22.9650453,
+      "lng": -43.2225203
     },
     "horario": {
       "lunes": null,
@@ -2931,8 +2931,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.985,
-      "lng": -43.2234
+      "lat": -22.9835629,
+      "lng": -43.218683
     },
     "horario": {
       "lunes": {
@@ -3006,8 +3006,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9849,
-      "lng": -43.226
+      "lat": -22.98277,
+      "lng": -43.2071326
     },
     "horario": {
       "lunes": null,
@@ -3078,8 +3078,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9847,
-      "lng": -43.2278
+      "lat": -22.9844836,
+      "lng": -43.2031932
     },
     "horario": {
       "lunes": {
@@ -3153,8 +3153,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9853,
-      "lng": -43.2248
+      "lat": -22.9841234,
+      "lng": -43.2275042
     },
     "horario": {
       "lunes": null,
@@ -3225,8 +3225,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9854,
-      "lng": -43.2241
+      "lat": -22.9853546,
+      "lng": -43.22728439999999
     },
     "horario": {
       "lunes": null,
@@ -3297,8 +3297,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9698,
-      "lng": -43.1832
+      "lat": -22.9647438,
+      "lng": -43.1769441
     },
     "horario": {
       "lunes": null,
@@ -3370,8 +3370,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.8955,
-      "lng": -43.1808
+      "lat": -22.8940177,
+      "lng": -43.1794418
     },
     "horario": {
       "lunes": {
@@ -3447,8 +3447,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9067,
-      "lng": -43.1776
+      "lat": -22.9052103,
+      "lng": -43.1787672
     },
     "horario": {
       "lunes": {
@@ -3520,8 +3520,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9838,
-      "lng": -43.1987
+      "lat": -22.983183,
+      "lng": -43.2025854
     },
     "horario": {
       "lunes": {
@@ -3596,8 +3596,8 @@
     "picar": true,
     "menu_del_dia": true,
     "coordenadas": {
-      "lat": -22.9264,
-      "lng": -43.1744
+      "lat": -22.9946714,
+      "lng": -43.2347694
     },
     "horario": {
       "lunes": {
@@ -3672,8 +3672,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9385,
-      "lng": -43.174
+      "lat": -22.9336184,
+      "lng": -43.1764241
     },
     "horario": {
       "lunes": {
@@ -3748,8 +3748,8 @@
     "picar": true,
     "menu_del_dia": true,
     "coordenadas": {
-      "lat": -22.9463,
-      "lng": -43.1879
+      "lat": 38.7153691,
+      "lng": -9.163704700000002
     },
     "horario": {
       "lunes": {
@@ -3825,8 +3825,8 @@
     "picar": true,
     "menu_del_dia": true,
     "coordenadas": {
-      "lat": -22.946,
-      "lng": -43.1886
+      "lat": -22.9344084,
+      "lng": -43.1758913
     },
     "horario": {
       "lunes": {
@@ -3902,8 +3902,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9848,
-      "lng": -43.2257
+      "lat": -22.9808882,
+      "lng": -43.2228547
     },
     "horario": {
       "lunes": null,
@@ -3972,8 +3972,8 @@
     "picar": true,
     "menu_del_dia": true,
     "coordenadas": {
-      "lat": -22.9468,
-      "lng": -43.1875
+      "lat": -22.9497341,
+      "lng": -43.185073
     },
     "horario": {
       "lunes": null,
@@ -4046,8 +4046,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9843,
-      "lng": -43.227
+      "lat": -22.9853492,
+      "lng": -43.22692139999999
     },
     "horario": {
       "lunes": {
@@ -4122,8 +4122,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9681,
-      "lng": -43.2267
+      "lat": -22.9738349,
+      "lng": -43.2276743
     },
     "horario": {
       "lunes": null,
@@ -4195,8 +4195,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.969,
-      "lng": -43.2258
+      "lat": -22.9653559,
+      "lng": -43.2266099
     },
     "horario": {
       "lunes": {
@@ -4270,8 +4270,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9851,
-      "lng": -43.2245
+      "lat": -22.8769767,
+      "lng": -43.5548049
     },
     "horario": {
       "lunes": null,
@@ -4343,8 +4343,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9455,
-      "lng": -43.187
+      "lat": -22.9827805,
+      "lng": -43.2256066
     },
     "horario": {
       "lunes": null,
@@ -4413,8 +4413,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9459,
-      "lng": -43.1864
+      "lat": -22.9533081,
+      "lng": -43.1963114
     },
     "horario": {
       "lunes": null,
@@ -4482,8 +4482,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9835,
-      "lng": -43.2002
+      "lat": -22.9829679,
+      "lng": -43.20498569999999
     },
     "horario": {
       "lunes": null,
@@ -4556,8 +4556,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9714,
-      "lng": -43.1849
+      "lat": -22.9798321,
+      "lng": -43.1903734
     },
     "horario": {
       "lunes": null,
