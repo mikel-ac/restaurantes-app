@@ -1578,8 +1578,8 @@
     "picar": true,
     "menu_del_dia": true,
     "coordenadas": {
-      "lat": -12.994433,
-      "lng": -38.5139152
+      "lat": -12.9968482,
+      "lng": -38.52794129999999
     },
     "horario": {
       "lunes": {
@@ -1995,6 +1995,754 @@
     ],
     "tip_local": "El mejor desayuno del barrio para quien quiere algo local y sin artificios. La tapioca de queijo e tomate seco es el pedido de referencia. Por las noches es un bar animado con buenas caipirinhas.",
     "resena_destacada": "El alma bohemia de Rio Vermelho en un café. La tapioca de queijo es perfecta y el café especial baiano es una revelación. Por la noche el ambiente cambia completamente — se llena de gente del barrio y hay música de fondo.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-028",
+    "nombre": "Pereira",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Rio Vermelho",
+    "tipo_cocina": "Café / Desayuno / Brunch",
+    "precio": "€€",
+    "precio_medio_brl": 40,
+    "ambiente": [
+      "bohemio",
+      "tranquilo",
+      "muy local"
+    ],
+    "tags": [
+      "desayuno",
+      "café especial",
+      "brunch",
+      "muy local",
+      "bohemio"
+    ],
+    "emoji": "☕",
+    "rating": 4.6,
+    "votos": 980,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -13.00557,
+      "lng": -38.5326421
+    },
+    "horario": {
+      "lunes": {
+        "abre": "08:00",
+        "cierra": "18:00"
+      },
+      "martes": {
+        "abre": "08:00",
+        "cierra": "18:00"
+      },
+      "miercoles": {
+        "abre": "08:00",
+        "cierra": "18:00"
+      },
+      "jueves": {
+        "abre": "08:00",
+        "cierra": "18:00"
+      },
+      "viernes": {
+        "abre": "08:00",
+        "cierra": "18:00"
+      },
+      "sabado": {
+        "abre": "08:00",
+        "cierra": "18:00"
+      },
+      "domingo": {
+        "abre": "09:00",
+        "cierra": "16:00"
+      }
+    },
+    "descripcion": "La cafetería de referencia de Rio Vermelho para el desayuno. Café especial baiano de origen único, tapioca, pão na chapa, açaí con frutas tropicales y bolos caseiros. El punto de encuentro matutino de los bohemios y trabajadores del barrio. Ambiente sencillo, sin pretensiones y con mucho calor baiano.",
+    "platos_destacados": [
+      "café coado especial",
+      "tapioca de banana com mel",
+      "açaí bowl",
+      "bolo de cenoura da casa"
+    ],
+    "tip_local": "El desayuno más honesto de Rio Vermelho. Llega temprano los fines de semana — se llena rápido. El café especial baiano es de tostado propio. Una cuadra del hotel.",
+    "resena_destacada": "El café aquí es de otro nivel para lo que sueles encontrar en Salvador. El ambiente relajado y la tapioca de banana con mel son el comienzo de día perfecto en Rio Vermelho.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-029",
+    "nombre": "Amado",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Comércio / Contorno",
+    "tipo_cocina": "Contemporánea baiana / Vistas",
+    "precio": "€€€€",
+    "precio_medio_brl": 200,
+    "ambiente": [
+      "sofisticado",
+      "vistas",
+      "especial",
+      "romántico"
+    ],
+    "tags": [
+      "vistas bahía",
+      "especial",
+      "frutos del mar",
+      "imprescindible",
+      "atardecer"
+    ],
+    "emoji": "🌅",
+    "rating": 4.7,
+    "votos": 1560,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.9784389,
+      "lng": -38.51728320000001
+    },
+    "horario": {
+      "lunes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "martes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "El restaurante con mejores vistas de Salvador — terraza sobre la Baía de Todos os Santos, frente al Elevador Lacerda. Cocina contemporánea baiana con protagonismo de los frutos del mar. La lagosta ao leite de coco y el polvo confitado son los platos de referencia. Para una noche especial con puesta de sol sobre la bahía.",
+    "platos_destacados": [
+      "lagosta ao leite de coco",
+      "polvo confitado",
+      "camarão na manteiga de ervas",
+      "moqueca do chef"
+    ],
+    "tip_local": "Reserva mesa en la terraza con vistas — imprescindible especificar al reservar. Al atardecer la vista del Elevador Lacerda y la bahía es una de las más bonitas de Brasil. Av. Lafayete Coutinho, 660.",
+    "resena_destacada": "Las mejores vistas de Salvador desde una mesa. El polvo confitado está en su punto y la lagosta al leite de coco es un plato de memoria. Pero la vista al atardecer sobre la bahía es lo que hace que este sitio sea irrepetible.",
+    "google_place_id": "",
+    "web": "amadobahia.com.br",
+    "telefono": "+55 71 3322-3520",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-030",
+    "nombre": "Tasca do Marinheiro",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Barra",
+    "tipo_cocina": "Frutos del mar / Informal",
+    "precio": "€€",
+    "precio_medio_brl": 65,
+    "ambiente": [
+      "muy local",
+      "animado",
+      "casual",
+      "terraza"
+    ],
+    "tags": [
+      "muy local",
+      "frutos del mar",
+      "barra",
+      "informal",
+      "petiscos"
+    ],
+    "emoji": "🦐",
+    "rating": 4.4,
+    "votos": 1890,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.8950155,
+      "lng": -38.6637067
+    },
+    "horario": {
+      "lunes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Bar y restaurante de frutos del mar en el barrio de Barra, cerca del Farol. Petiscos generosos, cerveja gelada y ambiente de boteco playero sin pretensiones. El camarão frito, las ostras frescas y el polvo à vinagrete son los pedidos de referencia de los baianos del barrio.",
+    "platos_destacados": [
+      "camarão frito",
+      "ostra fresca da bahia",
+      "polvo à vinagrete",
+      "moqueca de mariscos"
+    ],
+    "tip_local": "El sitio informal de Barra para mariscos frescos a buen precio. A 5 minutos andando del Farol da Barra. Los sábados es el punto de encuentro de la gente del barrio después de la playa.",
+    "resena_destacada": "La ostra fresca de Bahía aquí cuesta la mitad que en los restaurantes del centro. El ambiente es de boteco de toda la vida y el camarão frito llega siempre crujiente. Para picar algo sin complicaciones en Barra.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 71 3264-7890",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-031",
+    "nombre": "O Navigador",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Barra",
+    "tipo_cocina": "Portuguesa / Frutos del mar",
+    "precio": "€€€",
+    "precio_medio_brl": 120,
+    "ambiente": [
+      "muy local",
+      "íntimo",
+      "acogedor"
+    ],
+    "tags": [
+      "portugués",
+      "bacalhau",
+      "muy local",
+      "barra",
+      "clásico"
+    ],
+    "emoji": "🐟",
+    "rating": 4.5,
+    "votos": 870,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.9636892,
+      "lng": -38.5037947
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "23:30"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "23:30"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "El mejor bacalhau de Salvador — referencia indiscutible entre los soteropolitanos que conocen la cocina portuguesa de verdad. El bacalhau à Brás, el bacalhau com natas y el bacalhau à lagareiro compiten en el podio de los platos más pedidos. Ambiente de tasca portuguesa clásica en el corazón de Barra.",
+    "platos_destacados": [
+      "bacalhau à lagareiro",
+      "bacalhau à Brás",
+      "polvo à lagareiro",
+      "pastel de nata"
+    ],
+    "tip_local": "Para los amantes del bacalhau portugués, este es el único sitio serio de Salvador. Reserva recomendable los fines de semana. Cerrado los lunes.",
+    "resena_destacada": "El bacalhau à lagareiro aquí es el que busco cuando tengo ganas de cocina portuguesa de verdad. Las patatas al horno y el aceite de oliva en su punto. Un clásico de Barra que los turistas raramente descubren.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 71 3264-5521",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-032",
+    "nombre": "Cantina da Lua",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Pelourinho",
+    "tipo_cocina": "Baiana / Bar histórico",
+    "precio": "€€",
+    "precio_medio_brl": 55,
+    "ambiente": [
+      "histórico",
+      "muy local",
+      "animado",
+      "terraza"
+    ],
+    "tags": [
+      "histórico",
+      "pelourinho",
+      "muy local",
+      "nocturno",
+      "terraza"
+    ],
+    "emoji": "🌙",
+    "rating": 4.3,
+    "votos": 2340,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.972917,
+      "lng": -38.5096328
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "11:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Institución del Pelourinho desde 1951 — la terraza sobre el Terreiro de Jesus es una de las más icónicas de Salvador. Comida baiana sencilla y sin pretensiones, pero el ambiente histórico y la ubicación lo hacen imprescindible. Para tomar una cerveja y absorber la energía del Pelô al caer la tarde.",
+    "platos_destacados": [
+      "isca de peixe frita",
+      "camarão na moranga",
+      "petiscos baianos",
+      "caipirinha da casa"
+    ],
+    "tip_local": "Ven para la cerveja y el ambiente, no solo para la comida. La terraza sobre el Terreiro de Jesus al atardecer, con los percusionistas tocando abajo, es una de las experiencias más baianas que puedes tener. Praça 15 de Novembro, 1.",
+    "resena_destacada": "Desde 1951 en el Pelourinho. La comida es correcta pero la razón de venir es la terraza — ver el Terreiro de Jesus lleno de vida desde arriba con una caipirinha en la mano es uno de esos momentos que recuerdas de un viaje.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 71 3322-4041",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-033",
+    "nombre": "Partido Alto Gastronomia",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Cidade Baixa / Comércio",
+    "tipo_cocina": "Baiana contemporánea / Bar gastronómico",
+    "precio": "€€",
+    "precio_medio_brl": 70,
+    "ambiente": [
+      "muy local",
+      "animado",
+      "bohemio",
+      "nocturno"
+    ],
+    "tags": [
+      "muy local",
+      "cidade baixa",
+      "nocturno",
+      "bohemio",
+      "petiscos criativos"
+    ],
+    "emoji": "🎸",
+    "rating": 4.6,
+    "votos": 1230,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.9751516,
+      "lng": -38.512866
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "18:00",
+        "cierra": "00:00"
+      },
+      "miercoles": {
+        "abre": "18:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "18:00",
+        "cierra": "01:00"
+      },
+      "viernes": {
+        "abre": "18:00",
+        "cierra": "02:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "02:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "El bar gastronómico de referencia de la Cidade Baixa — el barrio de moda de Salvador para la noche y el fin de semana. Petiscos creativos con producto baiano, tiraditos de peixe, ceviche de camarão y una carta de drinques excepcionalmente bien trabajada. Música ao vivo los fines de semana. El sitio donde van los soteropolitanos de 25 a 40 años.",
+    "platos_destacados": [
+      "ceviche de camarão baiano",
+      "tiradito de atum",
+      "bolinho de bacalhau criativo",
+      "drinques autorais"
+    ],
+    "tip_local": "El punto de arranque nocturno de moda en Salvador. Los jueves y viernes empieza lleno desde las 20h. Los sábados el almuerzo es más tranquilo y también muy bueno. Necesitas Uber desde Rio Vermelho — unos 15 minutos.",
+    "resena_destacada": "El sitio que mejor representa el Salvador contemporáneo — una ciudad que mira al futuro sin olvidar sus raíces. El ceviche de camarão baiano con leche de coco y dendê es una genialidad. La carta de drinques es de las mejores de la ciudad.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 71 99871-4523",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-034",
+    "nombre": "Soho Sushi & Asian",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Pituba",
+    "tipo_cocina": "Japonesa / Asiática",
+    "precio": "€€€",
+    "precio_medio_brl": 110,
+    "ambiente": [
+      "moderno",
+      "animado",
+      "joven"
+    ],
+    "tags": [
+      "japonés",
+      "sushi",
+      "pituba",
+      "moderno",
+      "joven"
+    ],
+    "emoji": "🍣",
+    "rating": 4.4,
+    "votos": 1450,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.9791044,
+      "lng": -38.5184473
+    },
+    "horario": {
+      "lunes": {
+        "abre": "18:00",
+        "cierra": "23:30"
+      },
+      "martes": {
+        "abre": "18:00",
+        "cierra": "23:30"
+      },
+      "miercoles": {
+        "abre": "18:00",
+        "cierra": "23:30"
+      },
+      "jueves": {
+        "abre": "18:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "18:00",
+        "cierra": "00:30"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "00:30"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "El restaurante japonés más reconocido de Salvador entre la clase media alta local. Rodízio de sushi o carta — nigiris, temakis, hot rolls y opciones asiáticas de fusión. En el barrio de Pituba, el área residencial y de negocios más moderna de la ciudad. Ambiente animado y ruidoso los fines de semana.",
+    "platos_destacados": [
+      "niguiri de salmão com maracujá",
+      "temaki de atum especial",
+      "hot roll de camarão",
+      "combinado da casa"
+    ],
+    "tip_local": "Para cuando necesitas un descanso de la cocina baiana. El rodízio es la opción más completa. Los sábados al mediodía es más tranquilo que por la noche. En Pituba, a unos 20 minutos de Rio Vermelho.",
+    "resena_destacada": "El mejor japonés de Salvador sin discusión. El niguiri de salmão com maracujá es una combinación inesperada que funciona perfectamente. El ambiente los fines de semana es muy animado — reserva siempre.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 71 3341-8990",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-035",
+    "nombre": "Café dos Artistas",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Pelourinho",
+    "tipo_cocina": "Café / Desayuno / Cocina baiana ligera",
+    "precio": "€",
+    "precio_medio_brl": 30,
+    "ambiente": [
+      "histórico",
+      "artístico",
+      "tranquilo",
+      "cultural"
+    ],
+    "tags": [
+      "desayuno",
+      "café",
+      "pelourinho",
+      "artístico",
+      "histórico"
+    ],
+    "emoji": "🎨",
+    "rating": 4.5,
+    "votos": 1120,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.962334,
+      "lng": -38.4448371
+    },
+    "horario": {
+      "lunes": {
+        "abre": "08:00",
+        "cierra": "19:00"
+      },
+      "martes": {
+        "abre": "08:00",
+        "cierra": "19:00"
+      },
+      "miercoles": {
+        "abre": "08:00",
+        "cierra": "19:00"
+      },
+      "jueves": {
+        "abre": "08:00",
+        "cierra": "19:00"
+      },
+      "viernes": {
+        "abre": "08:00",
+        "cierra": "19:00"
+      },
+      "sabado": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      },
+      "domingo": {
+        "abre": "09:00",
+        "cierra": "18:00"
+      }
+    },
+    "descripcion": "El café más bonito del Pelourinho, decorado con obras de artistas locales que cambian cada mes. Desayuno con pão de queijo, tapioca, frutas baianas, sucos naturais y café coado. La mejor parada para comenzar la mañana en el casco histórico antes de explorar el Pelô. También tiene cocina ligera al mediodía.",
+    "platos_destacados": [
+      "café coado da Bahia",
+      "tapioca de coco com queijo",
+      "suco de acerola",
+      "pão de queijo mineiro"
+    ],
+    "tip_local": "El mejor punto de partida para explorar el Pelourinho por la mañana. Llega a las 8h, desayuna con calma y empieza a caminar por las calles históricas antes de que lleguen los grupos de turistas. Rua das Laranjeiras, 16.",
+    "resena_destacada": "Un remanso de calma en el Pelourinho. El café es bueno de verdad y la tapioca de coco con queijo es el desayuno baiano perfecto. El arte que decora las paredes siempre sorprende — cada mes es diferente.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 71 3321-6892",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-036",
+    "nombre": "Lamas do Contorno",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Comércio / Contorno",
+    "tipo_cocina": "Baiana / Petiscos / Bar",
+    "precio": "€€",
+    "precio_medio_brl": 60,
+    "ambiente": [
+      "vistas",
+      "muy local",
+      "animado",
+      "nocturno"
+    ],
+    "tags": [
+      "vistas bahía",
+      "muy local",
+      "nocturno",
+      "petiscos",
+      "sunset"
+    ],
+    "emoji": "🌊",
+    "rating": 4.5,
+    "votos": 1670,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.9820924,
+      "lng": -38.5194377
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "Bar y restaurante sobre el Contorno con vistas panorámicas a la Baía de Todos os Santos. Uno de los mejores sitios de Salvador para ver el atardecer con una caipirinha en la mano. Cocina baiana informal — moqueca, petiscos de frutos del mar, isca de peixe. El ambiente se anima mucho los jueves y viernes.",
+    "platos_destacados": [
+      "moqueca de camarão",
+      "isca de peixe com pirão",
+      "petiscos de frutos do mar",
+      "caipirinha de maracujá"
+    ],
+    "tip_local": "Ven a las 17h para el atardecer sobre la bahía — es uno de los mejores de la ciudad. La moqueca de camarão para dos personas es enorme y está muy bien. Av. Contorno — necesitas Uber.",
+    "resena_destacada": "El atardecer desde el Contorno es de los más bonitos de Salvador — la bahía entera se tiñe de naranja y el Elevador Lacerda brilla al fondo. La moqueca de camarão está al nivel del ambiente. Un imprescindible.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "+55 71 3329-0012",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-037",
+    "nombre": "Baiana do Acarajé da Dinha",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Rio Vermelho",
+    "tipo_cocina": "Comida de rua / Acarajé",
+    "precio": "€",
+    "precio_medio_brl": 18,
+    "ambiente": [
+      "muy local",
+      "callejero",
+      "histórico"
+    ],
+    "tags": [
+      "muy local",
+      "acarajé",
+      "imprescindible",
+      "calle",
+      "baiana",
+      "río vermelho"
+    ],
+    "emoji": "🫓",
+    "rating": 4.7,
+    "votos": 4100,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -13.0114081,
+      "lng": -38.4918922
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "17:00",
+        "cierra": "21:30"
+      },
+      "miercoles": {
+        "abre": "17:00",
+        "cierra": "21:30"
+      },
+      "jueves": {
+        "abre": "17:00",
+        "cierra": "21:30"
+      },
+      "viernes": {
+        "abre": "17:00",
+        "cierra": "22:00"
+      },
+      "sabado": {
+        "abre": "17:00",
+        "cierra": "22:00"
+      },
+      "domingo": {
+        "abre": "17:00",
+        "cierra": "21:00"
+      }
+    },
+    "descripcion": "La baiana de acarajé más famosa de Rio Vermelho y una de las más reconocidas de Salvador. Dinha lleva décadas en la plaza de Rio Vermelho frente al mar, y su acarajé es Patrimonio Cultural de la ciudad. La fila es parte del ritual — no te impacientes, vale la pena. Vatapá, caruru y camarão seco en su punto perfecto.",
+    "platos_destacados": [
+      "acarajé completo com vatapá",
+      "acarajé com camarão seco",
+      "abará",
+      "mungunzá"
+    ],
+    "tip_local": "La fila puede ser larga los fines de semana — llega a las 17h cuando abre para evitarla. Es comida de calle: comes en la plaza frente al mar. El acarajé completo (vatapá + caruru + camarão) es el pedido obligatorio. Lunes cerrado.",
+    "resena_destacada": "El acarajé de Dinha es una institución de Salvador. La fila no miente — todo el mundo en Rio Vermelho ha estado aquí alguna vez. El vatapá tiene una textura y sabor que no encuentras en ningún otro sitio. Patrimonio cultural vivo.",
     "google_place_id": "",
     "web": "",
     "telefono": "",
