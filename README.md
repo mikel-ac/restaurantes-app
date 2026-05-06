@@ -109,4 +109,5 @@ Cada vez que hagas push a GitHub, Netlify despliega automáticamente.
 Para días cerrados usa `null`:
 ```json
 "lunes": null
+
 ```
