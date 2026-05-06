@@ -7,26 +7,37 @@ const Maps = (() => {
   let markers = [];
   let onSelect = null;
 
+  let loadPromise = null;
+
   function whenReady() {
-    return new Promise(resolve => {
-      if (window.__mapsApiReady && window.google && window.google.maps) {
-        resolve();
-        return;
-      }
+    if (window.__mapsApiReady && window.google && window.google.maps) {
+      return Promise.resolve();
+    }
+    if (loadPromise) return loadPromise;
+
+    loadPromise = new Promise((resolve, reject) => {
       window.__mapsApiCallback = resolve;
+      const key = window.MAPS_API_KEY || '';
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=places&callback=initMapsApi&loading=async`;
+      script.async = true;
+      script.defer = true;
+      script.onerror = () => reject(new Error('Error cargando Google Maps'));
+      document.head.appendChild(script);
     });
+    return loadPromise;
   }
 
-  async function init(containerId, selectCallback) {
+  async function init(containerId, selectCallback, center) {
     onSelect = selectCallback;
     await whenReady();
 
     const el = document.getElementById(containerId);
     if (!el) return;
 
-    const RIO = { lat: -22.9519, lng: -43.2105 };
+    const defaultCenter = center || { lat: -22.9519, lng: -43.2105 };
     map = new google.maps.Map(el, {
-      center: RIO,
+      center: defaultCenter,
       zoom: 13,
       disableDefaultUI: true,
       zoomControl: true,
@@ -351,6 +362,12 @@ const Maps = (() => {
     map.setZoom(15);
   }
 
+  function centerOn(lat, lng, zoom) {
+    if (!map) return;
+    map.setCenter({ lat, lng });
+    map.setZoom(zoom || 13);
+  }
+
   function preload() {}
 
   // Estilo oscuro más legible — texto claro, agua azul visible, calles diferenciadas
@@ -401,5 +418,5 @@ const Maps = (() => {
       elementType: 'labels',              stylers: [{ visibility: 'off' }] },
   ];
 
-  return { init, setMarkers, updateMarkersFiltered, highlightMarker, centerOnUser, searchPlace, preload };
+  return { init, setMarkers, updateMarkersFiltered, highlightMarker, centerOnUser, centerOn, searchPlace, preload };
 })();
