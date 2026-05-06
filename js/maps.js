@@ -103,21 +103,33 @@ const Maps = (() => {
     markers.forEach(m => m.setMap(null));
     markers = [];
 
+    let activeMarker = null;
+
     restaurantes.forEach(r => {
       if (!r.coordenadas?.lat || !r.coordenadas?.lng) return;
 
+      const isFav = isFavFn?.(r.id);
       const marker = new google.maps.Marker({
         position: { lat: r.coordenadas.lat, lng: r.coordenadas.lng },
         map,
         title: r.nombre,
-        icon: markerIcon(isFavFn?.(r.id)),
-      });
-
-      marker.addListener('click', () => {
-        showPreview(r, onSelect);
+        icon: markerIcon(isFav),
       });
 
       marker._restId = r.id;
+      marker._isFav = isFav;
+
+      marker.addListener('click', () => {
+        // Restaurar marcador anterior
+        if (activeMarker && activeMarker !== marker) {
+          activeMarker.setIcon(markerIcon(activeMarker._isFav));
+        }
+        // Destacar marcador activo
+        marker.setIcon(markerSVG('#EF9F27', '#141414', 1.4));
+        activeMarker = marker;
+        showPreview(r, onSelect);
+      });
+
       markers.push(marker);
     });
   }
@@ -340,10 +352,9 @@ const Maps = (() => {
 
     panel.style.display = 'block';
 
-    document.getElementById('map-preview-open')?.addEventListener('click', () => {
-      closePreview();
-      selectCb?.(r);
-    });
+    // Usar onclick para evitar acumulación de listeners al abrir múltiples previews
+    const btn = document.getElementById('map-preview-open');
+    if (btn) btn.onclick = () => { closePreview(); selectCb?.(r); };
   }
 
   function closePreview() {
@@ -430,7 +441,34 @@ const Maps = (() => {
       elementType: 'labels',              stylers: [{ visibility: 'off' }] },
   ];
 
-  // Muestra la posición del usuario en el mapa con punto azul pulsante
+  // Genera SVG del marcador de usuario con orientación opcional
+  function userMarkerSVG(heading) {
+    if (heading != null) {
+      // Con orientación: punto azul + flecha de dirección
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+        <g transform="rotate(${heading}, 20, 20)">
+          <polygon points="20,4 24,18 20,15 16,18" fill="#4A90E2" opacity="0.9"/>
+        </g>
+        <circle cx="20" cy="20" r="9" fill="#4A90E2" stroke="#ffffff" stroke-width="2.5"/>
+        <circle cx="20" cy="20" r="16" fill="#4A90E2" fill-opacity="0.12">
+          <animate attributeName="r" values="10;16;10" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="fill-opacity" values="0.12;0.03;0.12" dur="2s" repeatCount="indefinite"/>
+        </circle>
+      </svg>`;
+    }
+    // Sin orientación: solo punto pulsante
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+      <circle cx="18" cy="18" r="14" fill="#4A90E2" fill-opacity="0.12">
+        <animate attributeName="r" values="9;15;9" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="fill-opacity" values="0.12;0.03;0.12" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="18" cy="18" r="8" fill="#4A90E2" stroke="#ffffff" stroke-width="2.5"/>
+    </svg>`;
+  }
+
+  let userHeading = null;
+
+  // Muestra la posición del usuario en el mapa con punto azul pulsante y orientación
   function showUserLocation(lat, lng) {
     if (!map) return;
 
@@ -441,25 +479,18 @@ const Maps = (() => {
       center: { lat, lng },
       radius: 80,
       fillColor: '#4A90E2',
-      fillOpacity: 0.12,
+      fillOpacity: 0.10,
       strokeColor: '#4A90E2',
-      strokeOpacity: 0.25,
+      strokeOpacity: 0.2,
       strokeWeight: 1,
     });
 
-    // Punto azul pulsante con SVG animado
-    const svgPulse = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
-      <circle cx="14" cy="14" r="12" fill="#4A90E2" fill-opacity="0.18">
-        <animate attributeName="r" values="8;13;8" dur="2s" repeatCount="indefinite"/>
-        <animate attributeName="fill-opacity" values="0.18;0.05;0.18" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="14" cy="14" r="7" fill="#4A90E2" stroke="#ffffff" stroke-width="2.5"/>
-    </svg>`;
-
+    const svg = userMarkerSVG(userHeading);
+    const size = userHeading != null ? 40 : 36;
     const icon = {
-      url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svgPulse),
-      anchor: new google.maps.Point(14, 14),
-      scaledSize: new google.maps.Size(28, 28),
+      url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg),
+      anchor: new google.maps.Point(size / 2, size / 2),
+      scaledSize: new google.maps.Size(size, size),
     };
 
     if (userMarker) {
@@ -473,6 +504,30 @@ const Maps = (() => {
         title: 'Tu posición',
         zIndex: 999,
       });
+
+      // Escuchar orientación del dispositivo
+      if (window.DeviceOrientationEvent) {
+        const handler = e => {
+          const h = e.webkitCompassHeading ?? (e.alpha != null ? (360 - e.alpha) : null);
+          if (h == null) return;
+          userHeading = Math.round(h);
+          const newSvg = userMarkerSVG(userHeading);
+          const newSize = 40;
+          userMarker?.setIcon({
+            url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(newSvg),
+            anchor: new google.maps.Point(20, 20),
+            scaledSize: new google.maps.Size(newSize, newSize),
+          });
+        };
+        // iOS 13+ requiere permiso
+        if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+          DeviceOrientationEvent.requestPermission()
+            .then(r => { if (r === 'granted') window.addEventListener('deviceorientation', handler); })
+            .catch(() => {});
+        } else {
+          window.addEventListener('deviceorientation', handler);
+        }
+      }
     }
   }
 
