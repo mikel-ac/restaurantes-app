@@ -199,16 +199,16 @@ function openFicha(id) {
   if (!r) return;
   State.fichaId = id;
   fillFicha(r);
+  // Resetear scroll ANTES de mostrar la ficha — cubre todos los casos
+  $('ficha-scroll').scrollTop = 0;
   $('ficha-view').classList.add('open');
-  // Resetear scroll al top — delay para esperar a que la animación arranque
-  requestAnimationFrame(() => {
-    $('ficha-scroll').scrollTop = 0;
-    setTimeout(() => { $('ficha-scroll').scrollTop = 0; }, 50);
-  });
+  // Segundo reset tras el frame de render, por si Android lo ignora
+  requestAnimationFrame(() => { $('ficha-scroll').scrollTop = 0; });
 }
 function closeFicha() {
   const prevId = State.fichaId;
   $('ficha-view').classList.remove('open');
+  $('ficha-scroll').scrollTop = 0; // reset al cerrar para que la próxima apertura empiece arriba
   State.fichaId = null;
   // Si venimos del mapa, resaltar el marcador del restaurante que veíamos
   if (State.currentView === 'mapa' && prevId && mapReady) {
@@ -674,6 +674,7 @@ function requestLocation() {
     pos => {
       State.userLat = pos.coords.latitude;
       State.userLng = pos.coords.longitude;
+      autoSelectCiudad(State.userLat, State.userLng);
       renderLista();
     },
     () => {
@@ -683,6 +684,37 @@ function requestLocation() {
     },
     { timeout:8000, enableHighAccuracy:false }
   );
+}
+
+// Auto-selecciona la ciudad más cercana al usuario (máx 100km).
+// Si no hay coincidencia, selecciona Bilbao como fallback.
+function autoSelectCiudad(lat, lng) {
+  const FALLBACK = 'España/País Vasco/Bilbao';
+  let bestKey = null;
+  let bestDist = Infinity;
+
+  for (const key of Object.keys(State.ciudades)) {
+    const cityName = key.split('/').pop();
+    const center = CITY_CENTERS[cityName];
+    if (!center) continue;
+    const d = dist(lat, lng, center.lat, center.lng);
+    if (d < bestDist) { bestDist = d; bestKey = key; }
+  }
+
+  // Solo cambia si está a menos de 100km, si no usa Bilbao como fallback
+  const selected = (bestKey && bestDist < 100) ? bestKey
+    : (State.ciudades[FALLBACK] ? FALLBACK : Object.keys(State.ciudades)[0]);
+
+  if (selected && selected !== State.currentCiudad) {
+    State.currentCiudad = selected;
+    State.filters.query  = '';
+    State.filters.chips  = [];
+    State.filters.barrio = null;
+    State.filters.cocina = null;
+    State.filters.precio = null;
+    State.filters.favOnly = false;
+    $('city-name').textContent = selected.split('/').pop();
+  }
 }
 
 // ── TOAST ──
