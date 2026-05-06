@@ -2,7 +2,7 @@
  * Mi Gastro — app.js v5b
  */
 
-window.MAPS_API_KEY = 'AIzaSyAC7drA3_1vuz5cLiAcHSIWg-EoVf8YDFM';
+window.MAPS_API_KEY = 'TU_API_KEY_AQUI';
 
 const State = {
   allRests: [], ciudades: {}, currentCiudad: null,
@@ -23,14 +23,28 @@ async function loadData() {
     { path:'data/brasil/rio-de-janeiro/restaurantes.json', ciudad:'Río de Janeiro', region:'Río de Janeiro', pais:'Brasil' },
     { path:'data/brasil/bahia/salvador-de-bahia/restaurantes.json', ciudad:'Salvador de Bahía', region:'Bahía', pais:'Brasil' },
   ];
-  for (const s of sources) {
-    try {
-      const data = await fetch(s.path).then(r => r.json());
-      const key = `${s.pais}/${s.region}/${s.ciudad}`;
-      State.ciudades[key] = data;
-      State.allRests.push(...data);
-    } catch(e) { console.warn('Error cargando datos:', e); }
-  }
+
+  // Cargar todas las ciudades en paralelo
+  const results = await Promise.allSettled(
+    sources.map(s =>
+      fetch(s.path)
+        .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+        .then(data => ({ ...s, data }))
+    )
+  );
+
+  results.forEach(res => {
+    if (res.status !== 'fulfilled') {
+      console.warn('Error cargando ciudad:', res.reason);
+      return;
+    }
+    const { pais, region, ciudad, data } = res.value;
+    const key = `${pais}/${region}/${ciudad}`;
+    State.ciudades[key] = data;
+    State.allRests.push(...data);
+  });
+
+  // Restaurantes añadidos por el usuario
   try {
     JSON.parse(localStorage.getItem('gastro_user')||'[]').forEach(r => {
       State.allRests.push(r);
@@ -39,6 +53,7 @@ async function loadData() {
       State.ciudades[key].push(r);
     });
   } catch(e) {}
+
   if (Object.keys(State.ciudades).length > 0)
     State.currentCiudad = Object.keys(State.ciudades)[0];
 }
@@ -184,6 +199,8 @@ function openFicha(id) {
   State.fichaId = id;
   fillFicha(r);
   $('ficha-view').classList.add('open');
+  // Resetear scroll al top al abrir la ficha
+  $('ficha-scroll').scrollTop = 0;
 }
 function closeFicha() {
   const prevId = State.fichaId;
@@ -591,20 +608,26 @@ function switchView(view) {
 // Usamos una variable para saber si ya está inicializado
 let mapReady = false;
 
+// Centro por defecto de cada ciudad
+const CITY_CENTERS = {
+  'Río de Janeiro': { lat: -22.9519, lng: -43.2105 },
+  'Salvador de Bahía': { lat: -13.0117, lng: -38.4782 },
+};
+
 async function initMap() {
-  // Si ya está listo, solo actualizar marcadores
   if (mapReady) {
+    // Ya inicializado — centrar en ciudad activa y actualizar marcadores
+    const cityName = State.currentCiudad?.split('/')?.pop();
+    const center = CITY_CENTERS[cityName];
+    if (center) Maps.centerOn(center.lat, center.lng);
     Maps.setMarkers(getCurrent(), Storage.isFav);
     return;
   }
 
-  // El contenedor necesita tener tamaño real antes de inicializar
-  // Usamos requestAnimationFrame para esperar al siguiente frame de render
   requestAnimationFrame(async () => {
     const el = $('map');
     const container = $('map-container');
 
-    // Calcular altura disponible restando todos los elementos fijos
     const topNav    = document.querySelector('.top-nav')?.offsetHeight || 0;
     const chipsRow  = document.querySelector('.chips-row')?.offsetHeight || 0;
     const filterBar = document.querySelector('.filter-bar')?.offsetHeight || 0;
@@ -615,8 +638,11 @@ async function initMap() {
     el.style.position = 'absolute';
     el.style.inset = '0';
 
+    const cityName = State.currentCiudad?.split('/')?.pop();
+    const center   = CITY_CENTERS[cityName] || { lat: -22.9519, lng: -43.2105 };
+
     try {
-      await Maps.init('map', r => openFicha(r.id));
+      await Maps.init('map', r => openFicha(r.id), center);
       Maps.setMarkers(getCurrent(), Storage.isFav);
       mapReady = true;
     } catch(e) {
@@ -741,7 +767,18 @@ async function init() {
     $('city-options').querySelectorAll('.sheet-option').forEach(el => {
       el.addEventListener('click', () => {
         State.currentCiudad = el.dataset.key;
-        State.filters.barrio = null; State.filters.cocina = null;
+        // Resetear todos los filtros al cambiar de ciudad
+        State.filters.query  = '';
+        State.filters.chips  = [];
+        State.filters.barrio = null;
+        State.filters.cocina = null;
+        State.filters.precio = null;
+        State.filters.favOnly = false;
+        // Limpiar UI de filtros
+        $('search-input').value = '';
+        $('search-clear').classList.remove('visible');
+        $$('.chip').forEach(c => c.classList.remove('active'));
+        updatePills();
         $('city-name').textContent = el.querySelector('strong').textContent;
         closeSheet(); renderLista();
       });
