@@ -17,9 +17,7 @@
       if (window.__mapsApiCallback) window.__mapsApiCallback();
     }
   </script>
-  <!-- vConsole — consola de debug en móvil. QUITAR cuando se resuelva el bug -->
-  <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
-  <script>new VConsole();</script>
+
 </head>
 <body>
 
@@ -56,6 +54,7 @@
 
   <!-- CHIPS + FILTROS — GLOBALES (visibles en todas las vistas) -->
   <div class="chips-row">
+    <div class="chip" data-chip="abierto">🟢 Abierto</div>
     <div class="chip" data-chip="muy local">Muy local</div>
     <div class="chip" data-chip="desayuno">Desayuno</div>
     <div class="chip" data-chip="picar">Picar</div>
@@ -286,6 +285,7 @@
 
 <div id="toast" class="toast"></div>
 
+<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
 <script src="js/storage.js?v=17"></script>
 <script src="js/filters.js?v=17"></script>
 <script src="js/maps.js?v=17"></script>
