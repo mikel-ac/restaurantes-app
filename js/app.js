@@ -2,7 +2,7 @@
  * Mi Gastro — app.js v5b
  */
 
-window.MAPS_API_KEY = 'AIzaSyAC7drA3_1vuz5cLiAcHSIWg-EoVf8YDFM';
+window.MAPS_API_KEY = 'TU_API_KEY_AQUI';
 
 const State = {
   allRests: [], ciudades: {}, currentCiudad: null,
@@ -22,6 +22,7 @@ async function loadData() {
   const sources = [
     { path:'data/brasil/rio-de-janeiro/restaurantes.json', ciudad:'Río de Janeiro', region:'Río de Janeiro', pais:'Brasil' },
     { path:'data/brasil/bahia/salvador-de-bahia/restaurantes.json', ciudad:'Salvador de Bahía', region:'Bahía', pais:'Brasil' },
+    { path:'data/espana/pais-vasco/bilbao/restaurantes.json', ciudad:'Bilbao', region:'País Vasco', pais:'España' },
   ];
 
   // Cargar todas las ciudades en paralelo
@@ -612,6 +613,7 @@ let mapReady = false;
 const CITY_CENTERS = {
   'Río de Janeiro': { lat: -22.9519, lng: -43.2105 },
   'Salvador de Bahía': { lat: -13.0117, lng: -38.4782 },
+  'Bilbao': { lat: 43.2603, lng: -2.9350 },
 };
 
 async function initMap() {
