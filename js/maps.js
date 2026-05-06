@@ -5,6 +5,7 @@ const Maps = (() => {
 
   let map = null;
   let markers = [];
+  let clusterer = null;
   let userMarker = null;
   let userAccuracyCircle = null;
   let activeMarker = null;
@@ -131,6 +132,35 @@ const Maps = (() => {
 
       markers.push(marker);
     });
+
+    // Clustering con MarkerClusterer si está disponible
+    if (clusterer) {
+      clusterer.clearMarkers();
+      clusterer.addMarkers(markers);
+    } else if (window.markerClusterer) {
+      clusterer = new markerClusterer.MarkerClusterer({
+        map,
+        markers,
+        renderer: {
+          render: ({ count, position }) => {
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+              <circle cx="22" cy="22" r="20" fill="#1D9E75" stroke="#141414" stroke-width="2.5" opacity="0.92"/>
+              <text x="22" y="27" text-anchor="middle" font-size="14" font-weight="700"
+                font-family="Inter,sans-serif" fill="#ffffff">${count}</text>
+            </svg>`;
+            return new google.maps.Marker({
+              position,
+              icon: {
+                url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg),
+                anchor: new google.maps.Point(22, 22),
+                scaledSize: new google.maps.Size(44, 44),
+              },
+              zIndex: Number(google.maps.Marker.MAX_ZINDEX) + count,
+            });
+          }
+        }
+      });
+    }
   }
 
   // Genera un SVG de marcador moderno tipo pin con círculo
