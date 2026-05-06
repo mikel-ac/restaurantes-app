@@ -650,6 +650,8 @@ async function initMap() {
       await Maps.init('map', r => openFicha(r.id), center);
       Maps.setMarkers(getCurrent(), Storage.isFav);
       mapReady = true;
+      // Si ya tenemos la ubicación del usuario, mostrarla en el mapa
+      if (State.userLat != null) Maps.showUserLocation(State.userLat, State.userLng);
     } catch(e) {
       console.error('Error iniciando mapa:', e);
       $('map-loading').innerHTML = `
@@ -676,6 +678,8 @@ function requestLocation() {
       State.userLng = pos.coords.longitude;
       autoSelectCiudad(State.userLat, State.userLng);
       renderLista();
+      // Mostrar posición en el mapa si ya está inicializado
+      if (mapReady) Maps.showUserLocation(State.userLat, State.userLng);
     },
     () => {
       State.sort = 'rating';
