@@ -5,6 +5,8 @@ const Maps = (() => {
 
   let map = null;
   let markers = [];
+  let userMarker = null;
+  let userAccuracyCircle = null;
   let onSelect = null;
 
   let loadPromise = null;
@@ -108,7 +110,7 @@ const Maps = (() => {
         position: { lat: r.coordenadas.lat, lng: r.coordenadas.lng },
         map,
         title: r.nombre,
-        icon: markerIcon(isFavFn?.(r.id), r.origen === 'usuario'),
+        icon: markerIcon(isFavFn?.(r.id)),
       });
 
       marker.addListener('click', () => {
@@ -120,15 +122,26 @@ const Maps = (() => {
     });
   }
 
-  function markerIcon(isFav, isUser) {
+  // Genera un SVG de marcador moderno tipo pin con círculo
+  function markerSVG(color, borderColor, scale) {
+    const s = scale || 1;
+    const size = Math.round(22 * s);
+    const r = Math.round(10 * s);
+    const stroke = Math.round(2.5 * s);
     return {
-      path: google.maps.SymbolPath.CIRCLE,
-      fillColor: isFav ? '#E24B4A' : isUser ? '#9b96e0' : '#1D9E75',
-      fillOpacity: 1,
-      strokeColor: '#141414',
-      strokeWeight: 2.5,
-      scale: 10,
+      url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
+        <svg xmlns="http://www.w3.org/2000/svg" width="${size + stroke*2}" height="${size + stroke*2}" viewBox="0 0 ${size + stroke*2} ${size + stroke*2}">
+          <circle cx="${size/2 + stroke}" cy="${size/2 + stroke}" r="${r}"
+            fill="${color}" stroke="${borderColor}" stroke-width="${stroke}"/>
+        </svg>`),
+      anchor: new google.maps.Point((size + stroke*2) / 2, (size + stroke*2) / 2),
+      scaledSize: new google.maps.Size(size + stroke*2, size + stroke*2),
     };
+  }
+
+  function markerIcon(isFav) {
+    if (isFav) return markerSVG('#E24B4A', '#141414', 1);
+    return markerSVG('#1D9E75', '#141414', 1);
   }
 
   function infoContent(r) {
@@ -342,9 +355,8 @@ const Maps = (() => {
   function highlightMarker(restauranteId) {
     markers.forEach(m => {
       if (m._restId === restauranteId) {
-        // Animar: agrandar y cambiar color brevemente
         const original = m.getIcon();
-        m.setIcon({ ...original, scale: 16, fillColor: '#EF9F27' });
+        m.setIcon(markerSVG('#EF9F27', '#141414', 1.5));
         map.panTo(m.getPosition());
         setTimeout(() => m.setIcon(original), 1500);
       }
@@ -418,5 +430,51 @@ const Maps = (() => {
       elementType: 'labels',              stylers: [{ visibility: 'off' }] },
   ];
 
-  return { init, setMarkers, updateMarkersFiltered, highlightMarker, centerOnUser, centerOn, searchPlace, preload };
+  // Muestra la posición del usuario en el mapa con punto azul pulsante
+  function showUserLocation(lat, lng) {
+    if (!map) return;
+
+    // Círculo de precisión sutil
+    if (userAccuracyCircle) userAccuracyCircle.setMap(null);
+    userAccuracyCircle = new google.maps.Circle({
+      map,
+      center: { lat, lng },
+      radius: 80,
+      fillColor: '#4A90E2',
+      fillOpacity: 0.12,
+      strokeColor: '#4A90E2',
+      strokeOpacity: 0.25,
+      strokeWeight: 1,
+    });
+
+    // Punto azul pulsante con SVG animado
+    const svgPulse = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+      <circle cx="14" cy="14" r="12" fill="#4A90E2" fill-opacity="0.18">
+        <animate attributeName="r" values="8;13;8" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="fill-opacity" values="0.18;0.05;0.18" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="14" cy="14" r="7" fill="#4A90E2" stroke="#ffffff" stroke-width="2.5"/>
+    </svg>`;
+
+    const icon = {
+      url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svgPulse),
+      anchor: new google.maps.Point(14, 14),
+      scaledSize: new google.maps.Size(28, 28),
+    };
+
+    if (userMarker) {
+      userMarker.setPosition({ lat, lng });
+      userMarker.setIcon(icon);
+    } else {
+      userMarker = new google.maps.Marker({
+        position: { lat, lng },
+        map,
+        icon,
+        title: 'Tu posición',
+        zIndex: 999,
+      });
+    }
+  }
+
+  return { init, setMarkers, updateMarkersFiltered, highlightMarker, centerOnUser, centerOn, searchPlace, preload, showUserLocation };
 })();
