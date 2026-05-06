@@ -7,6 +7,7 @@ const Maps = (() => {
   let markers = [];
   let userMarker = null;
   let userAccuracyCircle = null;
+  let activeMarker = null;
   let onSelect = null;
 
   let loadPromise = null;
@@ -102,8 +103,6 @@ const Maps = (() => {
     if (!map) return;
     markers.forEach(m => m.setMap(null));
     markers = [];
-
-    let activeMarker = null;
 
     restaurantes.forEach(r => {
       if (!r.coordenadas?.lat || !r.coordenadas?.lng) return;
@@ -364,12 +363,16 @@ const Maps = (() => {
 
   // Resaltar marcador al volver de la ficha
   function highlightMarker(restauranteId) {
+    // Restaurar el marcador activo anterior si existe
+    if (activeMarker) {
+      activeMarker.setIcon(markerIcon(activeMarker._isFav));
+      activeMarker = null;
+    }
     markers.forEach(m => {
       if (m._restId === restauranteId) {
-        const original = m.getIcon();
-        m.setIcon(markerSVG('#EF9F27', '#141414', 1.5));
+        m.setIcon(markerSVG('#EF9F27', '#141414', 1.4));
         map.panTo(m.getPosition());
-        setTimeout(() => m.setIcon(original), 1500);
+        activeMarker = m;
       }
     });
   }
