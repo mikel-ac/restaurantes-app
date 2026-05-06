@@ -302,8 +302,8 @@ input, textarea { font-family:var(--font); }
   border-radius:var(--r-pill); padding:0 16px;
   font-size:14px; font-weight:500; color:var(--text2);
   backdrop-filter:blur(8px); cursor:pointer; -webkit-tap-highlight-color:transparent;
-  display:flex; align-items:center; gap:5px; line-height:1;
-  height:36px; /* altura fija para centrado consistente en Android */
+  display:flex; align-items:center; justify-content:center; gap:5px;
+  line-height:normal; height:36px;
 }
 .ficha-hero-btns { position:absolute; top:14px; right:14px; display:flex; gap:8px; }
 .ficha-icon-btn {
@@ -548,8 +548,8 @@ input, textarea { font-family:var(--font); }
   font-size:15px; font-weight:600; font-family:var(--font);
   cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px;
   -webkit-tap-highlight-color:transparent; transition:all .15s;
-  line-height:1; letter-spacing:0;
-  height:50px; /* altura fija para centrado consistente en Android */
+  line-height:normal; letter-spacing:0;
+  height:50px;
 }
 .ficha-bottom-btn.share {
   background:rgba(29,158,117,0.08);
@@ -584,4 +584,4 @@ input, textarea { font-family:var(--font); }
 }
 .user-action-btn.delete:active { background:rgba(226,75,74,.15); }
 
-/* v14 */
+/* v15 */
