@@ -302,8 +302,13 @@ input, textarea { font-family:var(--font); }
   border-radius:var(--r-pill); padding:0 16px;
   font-size:14px; font-weight:500; color:var(--text2);
   backdrop-filter:blur(8px); cursor:pointer; -webkit-tap-highlight-color:transparent;
-  display:flex; align-items:center; justify-content:center; gap:5px;
-  line-height:normal; height:36px;
+  display:inline-flex; align-items:center; gap:5px;
+  height:36px; line-height:36px;
+}
+.btn-arrow {
+  display:inline-block;
+  transform:translateY(-1px); /* compensa baseline asimétrico del ← en Android */
+  line-height:1;
 }
 .ficha-hero-btns { position:absolute; top:14px; right:14px; display:flex; gap:8px; }
 .ficha-icon-btn {
@@ -546,10 +551,9 @@ input, textarea { font-family:var(--font); }
 .ficha-bottom-btn {
   flex:1; padding:0 15px; border-radius:var(--r);
   font-size:15px; font-weight:600; font-family:var(--font);
-  cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px;
+  cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:6px;
   -webkit-tap-highlight-color:transparent; transition:all .15s;
-  line-height:normal; letter-spacing:0;
-  height:50px;
+  letter-spacing:0; height:50px; line-height:50px;
 }
 .ficha-bottom-btn.share {
   background:rgba(29,158,117,0.08);
@@ -584,4 +588,4 @@ input, textarea { font-family:var(--font); }
 }
 .user-action-btn.delete:active { background:rgba(226,75,74,.15); }
 
-/* v15 */
+/* v17 */
