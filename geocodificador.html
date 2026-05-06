@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Gastro — Geocodificador</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Syne:wght@400;600;700;800&display=swap');
+
+  :root {
+    --green: #1D9E75;
+    --green-hi: #4ECFA0;
+    --green-dim: #071a10;
+    --bg: #0e0e0e;
+    --bg2: #1a1a1a;
+    --bg3: #242424;
+    --border: #2a2a2a;
+    --border2: #363636;
+    --text: #f0f0f0;
+    --text2: #9a9a9a;
+    --text3: #555;
+    --amber: #EF9F27;
+    --red: #E24B4A;
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'Syne', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 24px;
+  }
+
+  .container { max-width: 760px; margin: 0 auto; }
+
+  header { margin-bottom: 40px; }
+  .logo { font-size: 13px; font-family: var(--mono); color: var(--green-hi); letter-spacing: .08em; margin-bottom: 10px; }
+  h1 { font-size: 32px; font-weight: 800; letter-spacing: -.5px; line-height: 1.1; }
+  h1 span { color: var(--green-hi); }
+  .subtitle { margin-top: 8px; font-size: 14px; color: var(--text2); line-height: 1.6; }
+
+  .card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+
+  .card-title {
+    font-size: 11px; font-family: var(--mono); color: var(--text3);
+    text-transform: uppercase; letter-spacing: .1em; margin-bottom: 14px;
+  }
+
+  label { display: block; font-size: 13px; color: var(--text2); margin-bottom: 6px; font-family: var(--mono); }
+
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    background: var(--bg3);
+    border: 1.5px solid var(--border2);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-family: var(--mono);
+    color: var(--text);
+    outline: none;
+    transition: border-color .2s;
+  }
+  input:focus { border-color: var(--green); }
+  input::placeholder { color: var(--text3); }
+
+  textarea {
+    width: 100%;
+    background: var(--bg3);
+    border: 1.5px solid var(--border2);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 12px;
+    font-family: var(--mono);
+    color: var(--text);
+    outline: none;
+    resize: vertical;
+    min-height: 160px;
+    transition: border-color .2s;
+    line-height: 1.5;
+  }
+  textarea:focus { border-color: var(--green); }
+  textarea::placeholder { color: var(--text3); }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 15px; font-weight: 700; font-family: var(--sans);
+    cursor: pointer; border: none;
+    transition: all .15s;
+  }
+  .btn-primary {
+    background: var(--green); color: #fff; width: 100%; margin-top: 4px;
+  }
+  .btn-primary:hover { background: #23b888; }
+  .btn-primary:disabled { opacity: .4; cursor: not-allowed; }
+
+  .btn-copy {
+    background: var(--bg3); border: 1.5px solid var(--border2);
+    color: var(--text2); width: 100%; margin-top: 12px;
+  }
+  .btn-copy:hover { border-color: var(--green); color: var(--green-hi); }
+
+  .progress-area { display: none; margin-top: 16px; }
+  .progress-bar-wrap {
+    background: var(--bg3); border-radius: 100px; height: 6px; overflow: hidden; margin-bottom: 12px;
+  }
+  .progress-bar {
+    height: 100%; background: var(--green); border-radius: 100px;
+    width: 0%; transition: width .3s ease;
+  }
+  .progress-label {
+    font-size: 12px; font-family: var(--mono); color: var(--text2);
+    margin-bottom: 10px;
+  }
+
+  .log {
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px 16px;
+    font-size: 11px; font-family: var(--mono); color: var(--text2);
+    max-height: 200px; overflow-y: auto;
+    line-height: 1.7;
+  }
+  .log .ok  { color: var(--green-hi); }
+  .log .err { color: var(--red); }
+  .log .warn { color: var(--amber); }
+
+  .output-area { display: none; margin-top: 16px; }
+  .output-area textarea { min-height: 240px; color: var(--green-hi); }
+
+  .stats {
+    display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;
+  }
+  .stat {
+    flex: 1; min-width: 120px;
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px 16px; text-align: center;
+  }
+  .stat-num { font-size: 28px; font-weight: 800; font-family: var(--sans); }
+  .stat-num.green { color: var(--green-hi); }
+  .stat-num.red { color: var(--red); }
+  .stat-num.amber { color: var(--amber); }
+  .stat-label { font-size: 11px; font-family: var(--mono); color: var(--text3); margin-top: 2px; }
+
+  .tip {
+    background: var(--green-dim); border-left: 3px solid var(--green);
+    border-radius: 0 8px 8px 0; padding: 12px 16px;
+    font-size: 13px; color: var(--green-hi); line-height: 1.6;
+    margin-top: 12px;
+  }
+
+  .step-num {
+    display: inline-flex; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--green-dim); border: 1px solid var(--green);
+    color: var(--green-hi); font-size: 11px; font-family: var(--mono); font-weight: 600;
+    align-items: center; justify-content: center; flex-shrink: 0; margin-right: 8px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="logo">MI GASTRO — UTILIDAD</div>
+    <h1>Geocodificador<br><span>de restaurantes</span></h1>
+    <p class="subtitle">Busca las coordenadas reales de cada restaurante usando Google Places API y genera un JSON corregido listo para subir.</p>
+  </header>
+
+  <!-- PASO 1: API KEY -->
+  <div class="card">
+    <div class="card-title"><span class="step-num">1</span> API Key de Google</div>
+    <label>Tu Google Maps API Key (con Places API habilitada)</label>
+    <input type="password" id="api-key" placeholder="AIzaSy...">
+    <div class="tip">La key solo se usa en tu navegador para llamar a la API de Google. No se envía a ningún servidor externo.</div>
+  </div>
+
+  <!-- PASO 2: JSON -->
+  <div class="card">
+    <div class="card-title"><span class="step-num">2</span> JSON de restaurantes</div>
+    <label>Pega aquí el contenido completo del archivo restaurantes.json</label>
+    <textarea id="json-input" placeholder='[{"id":"bil-001","nombre":"Restaurante Porrue",...}]'></textarea>
+  </div>
+
+  <!-- PASO 3: EJECUTAR -->
+  <div class="card">
+    <div class="card-title"><span class="step-num">3</span> Geocodificar</div>
+    <button class="btn btn-primary" id="run-btn" onclick="runGeocoding()">
+      ◎ Buscar coordenadas reales
+    </button>
+
+    <div class="progress-area" id="progress-area">
+      <div class="progress-label" id="progress-label">Procesando...</div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="log" id="log"></div>
+    </div>
+  </div>
+
+  <!-- RESULTADO -->
+  <div class="card" id="result-card" style="display:none">
+    <div class="card-title">Resultado</div>
+    <div class="stats" id="stats"></div>
+    <div class="output-area" id="output-area">
+      <label>JSON corregido — listo para subir a GitHub</label>
+      <textarea id="json-output" readonly></textarea>
+      <button class="btn btn-copy" onclick="copyOutput()">⎘ Copiar JSON al portapapeles</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let results = [];
+
+async function runGeocoding() {
+  const key = document.getElementById('api-key').value.trim();
+  const raw = document.getElementById('json-input').value.trim();
+
+  if (!key) { alert('Mete tu API Key primero'); return; }
+  if (!raw)  { alert('Pega el JSON de restaurantes'); return; }
+
+  let data;
+  try { data = JSON.parse(raw); }
+  catch(e) { alert('El JSON no es válido: ' + e.message); return; }
+
+  document.getElementById('run-btn').disabled = true;
+  document.getElementById('progress-area').style.display = 'block';
+  document.getElementById('result-card').style.display = 'none';
+
+  const log = document.getElementById('log');
+  const bar = document.getElementById('progress-bar');
+  const label = document.getElementById('progress-label');
+  log.innerHTML = '';
+  results = JSON.parse(JSON.stringify(data)); // deep copy
+
+  let ok = 0, err = 0, unchanged = 0;
+
+  for (let i = 0; i < data.length; i++) {
+    const r = data[i];
+    const pct = Math.round(((i+1) / data.length) * 100);
+    bar.style.width = pct + '%';
+    label.textContent = `Procesando ${i+1} de ${data.length} — ${r.nombre}`;
+
+    try {
+      const coords = await findPlace(r.nombre, r.municipio || 'Bilbao', r.barrio, key);
+      if (coords) {
+        results[i].coordenadas = coords;
+        log.innerHTML += `<div class="ok">✅ ${r.id} ${r.nombre} → ${coords.lat.toFixed(4)}, ${coords.lng.toFixed(4)}</div>`;
+        ok++;
+      } else {
+        log.innerHTML += `<div class="warn">⚠️  ${r.id} ${r.nombre} — no encontrado, coordenadas sin cambiar</div>`;
+        unchanged++;
+      }
+    } catch(e) {
+      log.innerHTML += `<div class="err">❌ ${r.id} ${r.nombre} — error: ${e.message}</div>`;
+      err++;
+    }
+
+    log.scrollTop = log.scrollHeight;
+    // Pausa entre requests para no saturar la API
+    await sleep(300);
+  }
+
+  label.textContent = '✓ Completado';
+  bar.style.width = '100%';
+
+  // Mostrar resultado
+  document.getElementById('result-card').style.display = 'block';
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><div class="stat-num green">${ok}</div><div class="stat-label">Actualizados</div></div>
+    <div class="stat"><div class="stat-num amber">${unchanged}</div><div class="stat-label">Sin cambio</div></div>
+    <div class="stat"><div class="stat-num red">${err}</div><div class="stat-label">Errores</div></div>
+  `;
+  document.getElementById('output-area').style.display = 'block';
+  document.getElementById('json-output').value = JSON.stringify(results, null, 2);
+  document.getElementById('run-btn').disabled = false;
+}
+
+async function findPlace(nombre, ciudad, barrio, key) {
+  // Intentamos primero con nombre + ciudad, luego con nombre + barrio + ciudad
+  const queries = [
+    `${nombre}, ${ciudad}`,
+    `${nombre}, ${barrio || ''}, ${ciudad}`,
+    nombre,
+  ];
+
+  for (const query of queries) {
+    const url = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${encodeURIComponent(query)}&inputtype=textquery&fields=geometry,name&key=${key}`;
+
+    // Usamos un proxy CORS porque el navegador no puede llamar a la API directamente
+    // Alternativa: usamos la versión JS SDK que sí funciona desde browser
+    const coords = await findPlaceJS(nombre, ciudad, barrio, key);
+    return coords; // usamos directamente el SDK
+  }
+}
+
+// Carga el SDK de Maps y usa PlacesService (funciona desde browser sin CORS)
+let sdkLoaded = false;
+let sdkLoadPromise = null;
+
+function loadSDK(key) {
+  if (sdkLoaded) return Promise.resolve();
+  if (sdkLoadPromise) return sdkLoadPromise;
+  sdkLoadPromise = new Promise((resolve, reject) => {
+    window._mapsCallback = () => { sdkLoaded = true; resolve(); };
+    const s = document.createElement('script');
+    s.src = `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=places&callback=_mapsCallback`;
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
+  return sdkLoadPromise;
+}
+
+async function findPlaceJS(nombre, ciudad, barrio, key) {
+  await loadSDK(key);
+
+  const dummy = document.createElement('div');
+  const svc = new google.maps.places.PlacesService(dummy);
+
+  // Centro de la ciudad para sesgar resultados
+  const CENTERS = {
+    'Bilbao':          { lat: 43.2603, lng: -2.9350 },
+    'Río de Janeiro':  { lat: -22.9519, lng: -43.2105 },
+    'Salvador de Bahía': { lat: -13.0117, lng: -38.4782 },
+  };
+  const center = CENTERS[ciudad] || CENTERS['Bilbao'];
+  const locationBias = new google.maps.Circle({
+    center, radius: 8000
+  });
+
+  const queries = [
+    `${nombre} ${ciudad}`,
+    barrio ? `${nombre} ${barrio} ${ciudad}` : null,
+    nombre,
+  ].filter(Boolean);
+
+  for (const query of queries) {
+    const coords = await new Promise(resolve => {
+      svc.findPlaceFromQuery(
+        { query, fields: ['geometry'], locationBias },
+        (results, status) => {
+          if (status === 'OK' && results?.[0]?.geometry?.location) {
+            const loc = results[0].geometry.location;
+            resolve({ lat: loc.lat(), lng: loc.lng() });
+          } else {
+            resolve(null);
+          }
+        }
+      );
+    });
+    if (coords) return coords;
+    await sleep(200);
+  }
+  return null;
+}
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+function copyOutput() {
+  const ta = document.getElementById('json-output');
+  ta.select();
+  document.execCommand('copy');
+  const btn = document.querySelector('.btn-copy');
+  const orig = btn.textContent;
+  btn.textContent = '✓ Copiado!';
+  btn.style.color = 'var(--green-hi)';
+  setTimeout(() => { btn.textContent = orig; btn.style.color = ''; }, 2000);
+}
+</script>
+</body>
+</html>
