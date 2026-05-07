@@ -113,6 +113,14 @@ function formatDist(km) {
   return `${km.toFixed(1)}km`;
 }
 
+// Devuelve array de cocinas — compatible con string antiguo y array nuevo
+function getCocinas(r) {
+  const ov = Overrides.get(r.id);
+  const raw = ov.cocinas !== undefined ? ov.cocinas
+    : (r.cocinas || (r.tipo_cocina ? [r.tipo_cocina] : []));
+  return Array.isArray(raw) ? raw : [raw];
+}
+
 function cyclSort() {
   const idx = SORT_CYCLE.indexOf(State.sort);
   State.sort = SORT_CYCLE[(idx+1) % SORT_CYCLE.length];
@@ -191,6 +199,7 @@ function buildCard(r, i) {
       </div>
       <div class="card-badges">
         <span class="badge">${r.barrio}</span>
+        ${(() => { const cs = getCocinas(r); return cs[0] ? `<span class="badge">${cs[0]}${cs.length>1?` <span class="badge-plus">+${cs.length-1}</span>`:''}</span>` : ''; })()}
         <span class="badge price">${r.precio}</span>
         <span class="badge ${st.open?'open':'closed'}">${st.label}</span>
         ${State.userLat != null && r.coordenadas?.lat ? `<span class="badge dist">${formatDist(dist(State.userLat, State.userLng, r.coordenadas.lat, r.coordenadas.lng))}</span>` : ''}
@@ -257,12 +266,12 @@ function fillFicha(r) {
   $('ficha-wish-btn').className  = `ficha-icon-btn${wish ? ' wish-on' : ''}`;
 
   $('ficha-name').textContent = r.nombre;
+  const rCocinas = getCocinas(r);
   $('ficha-badges').innerHTML = `
     <span class="badge">${r.barrio}</span>
-    <span class="badge">${r.tipo_cocina||''}</span>
+    ${rCocinas.map(c => `<span class="badge">${c}</span>`).join('')}
     <span class="badge price">${r.precio}</span>
     <span class="badge ${st.open?'open':'closed'}">${st.label}</span>
-    
   `;
   $('ficha-rating').textContent = r.rating || '–';
   $('ficha-votes').textContent = r.votos ? `· ${r.votos.toLocaleString()} reseñas en Google` : '';
@@ -305,7 +314,9 @@ function fillFicha(r) {
 function renderEditPanel(r) {
   const ov = Overrides.get(r.id);
   const barrio   = ov.barrio      !== undefined ? ov.barrio      : r.barrio;
-  const cocina   = ov.tipo_cocina !== undefined ? ov.tipo_cocina : r.tipo_cocina;
+  const cocinaArr = ov.cocinas !== undefined ? ov.cocinas
+    : (r.cocinas || (r.tipo_cocina ? [r.tipo_cocina] : []));
+  const cocinaArr2 = Array.isArray(cocinaArr) ? cocinaArr : [cocinaArr];
   const precio   = ov.precio      !== undefined ? ov.precio      : r.precio;
   const tags     = ov.tags        !== undefined ? ov.tags        : (r.tags || []);
   const picar    = ov.picar       !== undefined ? ov.picar       : !!r.picar;
@@ -314,7 +325,10 @@ function renderEditPanel(r) {
   // Opciones de barrio y cocina de la ciudad activa
   const ciudadRests = getCurrent();
   const barrios = [...new Set(ciudadRests.map(x => x.barrio).filter(Boolean))].sort();
-  const cocinas = [...new Set(ciudadRests.map(x => x.tipo_cocina).filter(Boolean))].sort();
+  const cocinas = [...new Set(ciudadRests.flatMap(x => {
+    const c = x.cocinas || (x.tipo_cocina ? [x.tipo_cocina] : []);
+    return Array.isArray(c) ? c : [c];
+  }).filter(Boolean))].sort();
 
   const TOGGLES = [
     { key:'muy local', label:'Muy local' },
@@ -358,17 +372,27 @@ function renderEditPanel(r) {
           ${barrios.map(b => `<div class="ep-select-opt${b===barrio?' selected':''}" data-val="${b}">${b}</div>`).join('')}
           <div class="ep-select-opt ep-select-add" data-val="__nuevo__">+ Añadir barrio</div>
         </div>
-        <input id="ep-barrio-input" class="edit-panel-input" style="display:none;margin-top:8px" placeholder="Nuevo barrio...">
+        <div id="ep-barrio-new-wrap" style="display:none;margin-top:8px">
+          <div style="display:flex;gap:8px;align-items:center">
+            <input id="ep-barrio-input" class="edit-panel-input" placeholder="Nuevo barrio..." style="flex:1">
+            <button id="ep-barrio-confirm" class="ep-confirm-btn">✓</button>
+          </div>
+        </div>
       </div>
 
-      <!-- COCINA -->
+      <!-- COCINA (multi-select) -->
       <div class="edit-panel-field">
-        <label class="edit-panel-label">Tipo de cocina</label>
+        <label class="edit-panel-label">Tipo de cocina <span style="color:var(--text3);font-weight:400">(selecciona una o varias)</span></label>
         <div id="ep-cocina-opts" class="ep-select-opts">
-          ${cocinas.map(c => `<div class="ep-select-opt${c===cocina?' selected':''}" data-val="${c}">${c}</div>`).join('')}
+          ${cocinas.map(c => `<div class="ep-select-opt${cocinaArr2.includes(c)?' selected':''}" data-val="${c}">${c}</div>`).join('')}
           <div class="ep-select-opt ep-select-add" data-val="__nuevo__">+ Añadir cocina</div>
         </div>
-        <input id="ep-cocina-input" class="edit-panel-input" style="display:none;margin-top:8px" placeholder="Nueva cocina...">
+        <div id="ep-cocina-new-wrap" style="display:none;margin-top:8px;display:none">
+          <div style="display:flex;gap:8px;align-items:center">
+            <input id="ep-cocina-input" class="edit-panel-input" placeholder="Nueva cocina..." style="flex:1">
+            <button id="ep-cocina-confirm" class="ep-confirm-btn">✓</button>
+          </div>
+        </div>
       </div>
 
       <!-- PRECIO -->
@@ -457,34 +481,73 @@ function renderEditPanel(r) {
   panel.querySelectorAll('#ep-barrio-opts .ep-select-opt').forEach(el => {
     el.addEventListener('click', () => {
       if (el.dataset.val === '__nuevo__') {
-        $('ep-barrio-input').style.display = 'block';
+        $('ep-barrio-new-wrap').style.display = 'block';
         $('ep-barrio-input').focus();
         return;
       }
       selectedBarrio = el.dataset.val;
       panel.querySelectorAll('#ep-barrio-opts .ep-select-opt').forEach(x => x.classList.remove('selected'));
       el.classList.add('selected');
-      $('ep-barrio-input').style.display = 'none';
+      $('ep-barrio-new-wrap').style.display = 'none';
     });
   });
-  $('ep-barrio-input').addEventListener('input', function() { selectedBarrio = this.value.trim(); });
+  $('ep-barrio-confirm').addEventListener('click', () => {
+    const val = $('ep-barrio-input').value.trim();
+    if (!val) return;
+    selectedBarrio = val;
+    // Añadir como opción seleccionada visualmente
+    panel.querySelectorAll('#ep-barrio-opts .ep-select-opt').forEach(x => x.classList.remove('selected'));
+    const newOpt = document.createElement('div');
+    newOpt.className = 'ep-select-opt selected';
+    newOpt.dataset.val = val;
+    newOpt.textContent = val;
+    const addBtn = panel.querySelector('#ep-barrio-opts .ep-select-add');
+    $('ep-barrio-opts').insertBefore(newOpt, addBtn);
+    $('ep-barrio-new-wrap').style.display = 'none';
+    $('ep-barrio-input').value = '';
+  });
 
-  // ── Cocina select ──
-  let selectedCocina = cocina;
+  // ── Cocina multi-select ──
+  let selectedCocinas = [...cocinaArr2];
   panel.querySelectorAll('#ep-cocina-opts .ep-select-opt').forEach(el => {
     el.addEventListener('click', () => {
       if (el.dataset.val === '__nuevo__') {
-        $('ep-cocina-input').style.display = 'block';
+        $('ep-cocina-new-wrap').style.display = 'block';
         $('ep-cocina-input').focus();
         return;
       }
-      selectedCocina = el.dataset.val;
-      panel.querySelectorAll('#ep-cocina-opts .ep-select-opt').forEach(x => x.classList.remove('selected'));
-      el.classList.add('selected');
-      $('ep-cocina-input').style.display = 'none';
+      // Toggle multi-select
+      el.classList.toggle('selected');
+      const val = el.dataset.val;
+      if (el.classList.contains('selected')) {
+        if (!selectedCocinas.includes(val)) selectedCocinas.push(val);
+      } else {
+        selectedCocinas = selectedCocinas.filter(c => c !== val);
+      }
     });
   });
-  $('ep-cocina-input').addEventListener('input', function() { selectedCocina = this.value.trim(); });
+  $('ep-cocina-confirm').addEventListener('click', () => {
+    const val = $('ep-cocina-input').value.trim();
+    if (!val) return;
+    if (!selectedCocinas.includes(val)) selectedCocinas.push(val);
+    // Añadir como opción seleccionada visualmente
+    const newOpt = document.createElement('div');
+    newOpt.className = 'ep-select-opt selected';
+    newOpt.dataset.val = val;
+    newOpt.textContent = val;
+    const addBtn = panel.querySelector('#ep-cocina-opts .ep-select-add');
+    $('ep-cocina-opts').insertBefore(newOpt, addBtn);
+    newOpt.addEventListener('click', () => {
+      newOpt.classList.toggle('selected');
+      if (newOpt.classList.contains('selected')) {
+        if (!selectedCocinas.includes(val)) selectedCocinas.push(val);
+      } else {
+        selectedCocinas = selectedCocinas.filter(c => c !== val);
+      }
+    });
+    $('ep-cocina-new-wrap').style.display = 'none';
+    $('ep-cocina-input').value = '';
+  });
 
   // ── Precio opts ──
   panel.querySelectorAll('#ep-precio-row .precio-opt').forEach(o => {
@@ -501,8 +564,8 @@ function renderEditPanel(r) {
 
   // ── Guardar ──
   $('ep-save-btn').onclick = () => {
-    const newBarrio  = ($('ep-barrio-input').style.display !== 'none' ? $('ep-barrio-input').value.trim() : '') || selectedBarrio;
-    const newCocina  = ($('ep-cocina-input').style.display !== 'none' ? $('ep-cocina-input').value.trim() : '') || selectedCocina;
+    const newBarrio  = selectedBarrio || r.barrio;
+    const newCocinas = selectedCocinas.length > 0 ? selectedCocinas : getCocinas(r);
     const newPrecio  = panel.querySelector('#ep-precio-row .precio-opt.selected')?.dataset.p;
     const newPicar   = panel.querySelector('[data-toggle="picar"]').classList.contains('active');
     const newMenu    = panel.querySelector('[data-toggle="menu"]').classList.contains('active');
@@ -520,8 +583,9 @@ function renderEditPanel(r) {
     });
 
     Overrides.set(r.id, {
-      barrio:       newBarrio  || r.barrio,
-      tipo_cocina:  newCocina  || r.tipo_cocina,
+      barrio:       newBarrio,
+      cocinas:      newCocinas,
+      tipo_cocina:  newCocinas[0] || r.tipo_cocina,
       precio:       newPrecio  || r.precio,
       picar:        newPicar,
       menu_del_dia: newMenu,
@@ -530,8 +594,9 @@ function renderEditPanel(r) {
 
     const rLive = State.allRests.find(x => x.id === r.id);
     if (rLive) {
-      rLive.barrio       = newBarrio  || r.barrio;
-      rLive.tipo_cocina  = newCocina  || r.tipo_cocina;
+      rLive.barrio       = newBarrio;
+      rLive.cocinas      = newCocinas;
+      rLive.tipo_cocina  = newCocinas[0] || r.tipo_cocina;
       rLive.precio       = newPrecio  || r.precio;
       rLive.picar        = newPicar;
       rLive.menu_del_dia = newMenu;
