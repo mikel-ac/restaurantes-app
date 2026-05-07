@@ -331,6 +331,7 @@ function renderEditPanel(r) {
     { key:'desayuno',  label:'Desayuno' },
     { key:'vistas',    label:'Vistas' },
     { key:'nocturno',  label:'Nocturno' },
+    { key:'bar',       label:'🍺 Bar' },
   ];
 
   // Emoji picker data — categorías de food & drink
