@@ -62,6 +62,30 @@ async function loadData() {
 const getCurrent = () =>
   State.currentCiudad ? (State.ciudades[State.currentCiudad]||[]) : State.allRests;
 
+// ── OVERRIDES DE DATOS (edición inline de fichas) ──
+const Overrides = (() => {
+  const KEY = 'gastro_overrides';
+  const load = () => { try { return JSON.parse(localStorage.getItem(KEY)||'{}'); } catch(e) { return {}; } };
+  const save = (data) => localStorage.setItem(KEY, JSON.stringify(data));
+
+  const get = (id) => load()[id] || {};
+  const set = (id, fields) => {
+    const all = load();
+    all[id] = { ...(all[id]||{}), ...fields };
+    save(all);
+  };
+  return { get, set };
+})();
+
+// Aplica overrides encima del restaurante original
+function applyOverrides(r) {
+  const ov = Overrides.get(r.id);
+  if (!Object.keys(ov).length) return r;
+  return { ...r, ...ov,
+    tags: ov.tags !== undefined ? ov.tags : r.tags,
+  };
+}
+
 // ── SORT ──
 const SORT_CYCLE  = ['proximidad','rating','votos'];
 const SORT_LABELS = { proximidad:'↕ Más cercanos', rating:'↕ Mejor rating', votos:'↕ Más valorados' };
@@ -221,6 +245,7 @@ function closeFicha() {
 }
 
 function fillFicha(r) {
+  r = applyOverrides(r);
   const st  = Filters.getOpenStatus(r);
   const fav = Storage.isFav(r.id), wish = Storage.isWish(r.id), vis = Storage.isVisited(r.id);
   const DAYS = ['domingo','lunes','martes','miercoles','jueves','viernes','sabado'];
@@ -272,6 +297,127 @@ function fillFicha(r) {
   // Mostrar acciones de editar/eliminar solo para restaurantes de usuario
   const isUser = r.origen === 'usuario';
   $('ficha-user-actions').style.display = isUser ? 'block' : 'none';
+
+  // Panel edición inline
+  renderEditPanel(r);
+}
+
+function renderEditPanel(r) {
+  const ov = Overrides.get(r.id);
+  const barrio   = ov.barrio      !== undefined ? ov.barrio      : r.barrio;
+  const cocina   = ov.tipo_cocina !== undefined ? ov.tipo_cocina : r.tipo_cocina;
+  const precio   = ov.precio      !== undefined ? ov.precio      : r.precio;
+  const tags     = ov.tags        !== undefined ? ov.tags        : (r.tags || []);
+  const picar    = ov.picar       !== undefined ? ov.picar       : !!r.picar;
+  const menu     = ov.menu_del_dia!== undefined ? ov.menu_del_dia: !!r.menu_del_dia;
+
+  const TOGGLES = [
+    { key:'muy local', label:'Muy local' },
+    { key:'desayuno',  label:'Desayuno' },
+    { key:'vistas',    label:'Vistas' },
+    { key:'nocturno',  label:'Nocturno' },
+  ];
+
+  const panel = $('ficha-edit-panel');
+  if (!panel) return;
+
+  panel.innerHTML = `
+    <div class="edit-panel-inner" id="edit-panel-inner" style="display:none">
+      <div class="edit-panel-field">
+        <label class="edit-panel-label">Barrio</label>
+        <input id="ep-barrio" class="edit-panel-input" value="${barrio||''}" placeholder="Barrio">
+      </div>
+      <div class="edit-panel-field">
+        <label class="edit-panel-label">Tipo de cocina</label>
+        <input id="ep-cocina" class="edit-panel-input" value="${cocina||''}" placeholder="Tipo de cocina">
+      </div>
+      <div class="edit-panel-field">
+        <label class="edit-panel-label">Precio</label>
+        <div class="precio-row" id="ep-precio-row">
+          ${['€','€€','€€€','€€€€'].map(p =>
+            `<div class="precio-opt${precio===p?' selected':''}" data-p="${p}">${p}</div>`
+          ).join('')}
+        </div>
+      </div>
+      <div class="edit-panel-field">
+        <label class="edit-panel-label">Categorías</label>
+        <div class="ep-toggles">
+          <div class="ep-toggle${picar?' active':''}" data-toggle="picar">🍢 Picar</div>
+          <div class="ep-toggle${menu?' active':''}" data-toggle="menu">📋 Menú</div>
+          ${TOGGLES.map(t =>
+            `<div class="ep-toggle${tags.includes(t.key)?' active':''}" data-toggle="${t.key}">${t.label}</div>`
+          ).join('')}
+        </div>
+      </div>
+      <button class="edit-panel-save" id="ep-save-btn">Guardar cambios ✓</button>
+    </div>
+    <button class="edit-panel-toggle" id="ep-toggle-btn">✎ Editar datos</button>
+  `;
+
+  // Toggle abrir/cerrar
+  $('ep-toggle-btn').onclick = () => {
+    const inner = $('edit-panel-inner');
+    const isOpen = inner.style.display !== 'none';
+    inner.style.display = isOpen ? 'none' : 'block';
+    $('ep-toggle-btn').textContent = isOpen ? '✎ Editar datos' : '✕ Cancelar edición';
+  };
+
+  // Precio opts
+  panel.querySelectorAll('#ep-precio-row .precio-opt').forEach(o => {
+    o.addEventListener('click', () => {
+      panel.querySelectorAll('#ep-precio-row .precio-opt').forEach(x => x.classList.remove('selected'));
+      o.classList.add('selected');
+    });
+  });
+
+  // Toggles
+  panel.querySelectorAll('.ep-toggle').forEach(t => {
+    t.addEventListener('click', () => t.classList.toggle('active'));
+  });
+
+  // Guardar
+  $('ep-save-btn').onclick = () => {
+    const newBarrio  = $('ep-barrio').value.trim();
+    const newCocina  = $('ep-cocina').value.trim();
+    const newPrecio  = panel.querySelector('#ep-precio-row .precio-opt.selected')?.dataset.p;
+    const newPicar   = panel.querySelector('[data-toggle="picar"]').classList.contains('active');
+    const newMenu    = panel.querySelector('[data-toggle="menu"]').classList.contains('active');
+
+    // Tags: partir de los actuales y actualizar los gestionados por toggles
+    let newTags = [...(r.tags||[])];
+    const managedTags = ['muy local','desayuno','vistas','nocturno'];
+    managedTags.forEach(k => {
+      const isActive = panel.querySelector(`[data-toggle="${k}"]`).classList.contains('active');
+      if (isActive && !newTags.includes(k)) newTags.push(k);
+      if (!isActive) newTags = newTags.filter(t => t !== k);
+    });
+
+    Overrides.set(r.id, {
+      barrio:       newBarrio  || r.barrio,
+      tipo_cocina:  newCocina  || r.tipo_cocina,
+      precio:       newPrecio  || r.precio,
+      picar:        newPicar,
+      menu_del_dia: newMenu,
+      tags:         newTags,
+    });
+
+    // Actualizar objeto en memoria
+    const rLive = State.allRests.find(x => x.id === r.id);
+    if (rLive) {
+      rLive.barrio       = newBarrio  || r.barrio;
+      rLive.tipo_cocina  = newCocina  || r.tipo_cocina;
+      rLive.precio       = newPrecio  || r.precio;
+      rLive.picar        = newPicar;
+      rLive.menu_del_dia = newMenu;
+      rLive.tags         = newTags;
+    }
+
+    $('edit-panel-inner').style.display = 'none';
+    $('ep-toggle-btn').textContent = '✎ Editar datos';
+    fillFicha(State.allRests.find(x => x.id === r.id) || r);
+    renderLista();
+    showToast('✓ Datos actualizados');
+  };
 }
 
 // ── FAV / WISH ──
