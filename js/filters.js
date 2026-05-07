@@ -59,6 +59,7 @@ const Filters = (() => {
     'desayuno':   r => r.ambiente?.includes('desayuno') || r.tags?.includes('desayuno'),
     'picar':      r => r.picar === true,
     'menú':       r => r.menu_del_dia === true,
+    'bar':         r => r.tags?.includes('bar'),
   };
 
   // ─── FUNCIÓN PRINCIPAL ───
