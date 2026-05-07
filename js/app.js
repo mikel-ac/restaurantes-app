@@ -303,11 +303,7 @@ function fillFicha(r) {
   $('notes-save-btn').classList.remove('visible');
   $('ficha-wsp-btn').onclick = () => shareWhatsApp(r);
 
-  // Mostrar acciones de editar/eliminar solo para restaurantes de usuario
-  const isUser = r.origen === 'usuario';
-  $('ficha-user-actions').style.display = isUser ? 'block' : 'none';
-
-  // Panel edición inline
+  // Panel edición inline (incluye botón eliminar para restaurantes de usuario)
   renderEditPanel(r);
 }
 
