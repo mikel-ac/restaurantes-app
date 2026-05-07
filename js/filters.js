@@ -70,7 +70,8 @@ const Filters = (() => {
     if (state.query) {
       const q = state.query.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
       result = result.filter(r => {
-        const hay = [r.nombre, r.barrio, r.tipo_cocina, r.descripcion, ...(r.tags||[])]
+        const cocinasArr = r.cocinas || (r.tipo_cocina ? [r.tipo_cocina] : []);
+        const hay = [r.nombre, r.barrio, ...cocinasArr, r.descripcion, ...(r.tags||[])]
           .join(' ').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
         return hay.includes(q);
       });
@@ -89,11 +90,13 @@ const Filters = (() => {
       result = result.filter(r => r.barrio === state.barrio);
     }
 
-    // Filtro cocina
+    // Filtro cocina — busca en array cocinas o en tipo_cocina string
     if (state.cocina) {
-      result = result.filter(r =>
-        r.tipo_cocina?.toLowerCase().includes(state.cocina.toLowerCase())
-      );
+      const q = state.cocina.toLowerCase();
+      result = result.filter(r => {
+        const arr = r.cocinas || (r.tipo_cocina ? [r.tipo_cocina] : []);
+        return arr.some(c => c.toLowerCase().includes(q));
+      });
     }
 
     // Filtro precio
@@ -145,8 +148,13 @@ const Filters = (() => {
   const getBarrios = (restaurantes) =>
     [...new Set(restaurantes.map(r => r.barrio))].sort();
 
-  const getCocinas = (restaurantes) =>
-    [...new Set(restaurantes.map(r => r.tipo_cocina?.split('/')[0].trim()))].sort();
+  const getCocinas = (restaurantes) => {
+    const all = restaurantes.flatMap(r => {
+      const arr = r.cocinas || (r.tipo_cocina ? [r.tipo_cocina] : []);
+      return Array.isArray(arr) ? arr : [arr];
+    }).filter(Boolean);
+    return [...new Set(all)].sort();
+  };
 
   const getPrecios = () => ['€', '€€', '€€€', '€€€€'];
 
