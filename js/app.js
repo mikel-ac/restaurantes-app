@@ -418,6 +418,9 @@ function renderEditPanel(r) {
       </div>
 
       <button class="edit-panel-save" id="ep-save-btn">Guardar cambios ✓</button>
+      ${r.origen === 'usuario' ? `
+        <button class="edit-panel-delete" id="ep-delete-btn">✕ Eliminar restaurante</button>
+      ` : ''}
     </div>
     <button class="edit-panel-toggle" id="ep-toggle-btn">✎ Editar datos</button>
   `;
@@ -563,6 +566,14 @@ function renderEditPanel(r) {
   });
 
   // ── Guardar ──
+  // Eliminar (solo restaurantes de usuario)
+  const epDeleteBtn = $('ep-delete-btn');
+  if (epDeleteBtn) {
+    epDeleteBtn.onclick = () => {
+      if (State.fichaId) deleteRestaurant(State.fichaId);
+    };
+  }
+
   $('ep-save-btn').onclick = () => {
     const newBarrio  = selectedBarrio || r.barrio;
     const newCocinas = selectedCocinas.length > 0 ? selectedCocinas : getCocinas(r);
@@ -766,6 +777,18 @@ function saveRestaurant() {
   closeSheet();
   renderLista();
   showToast('✓ Restaurante añadido');
+  // Abrir ficha del nuevo restaurante con panel editar datos abierto
+  setTimeout(() => {
+    openFicha(nuevo.id);
+    setTimeout(() => {
+      const toggleBtn = $('ep-toggle-btn');
+      if (toggleBtn) {
+        const inner = $('edit-panel-inner');
+        if (inner) inner.style.display = 'block';
+        toggleBtn.textContent = '✕ Cancelar edición';
+      }
+    }, 150);
+  }, 100);
 }
 
 // ── EDITAR RESTAURANTE ──
@@ -1193,8 +1216,7 @@ async function init() {
   // ── Ficha ──
   $('ficha-back').addEventListener('click', closeFicha);
   $('ficha-close-btn').addEventListener('click', closeFicha);
-  $('ficha-edit-btn').addEventListener('click', () => { if (State.fichaId) openEditSheet(State.fichaId); });
-  $('ficha-delete-btn').addEventListener('click', () => { if (State.fichaId) deleteRestaurant(State.fichaId); });
+  // ficha-edit-btn y ficha-delete-btn eliminados — gestión unificada en panel Editar datos
   $('edit-cancel-btn').addEventListener('click', closeSheet);
   $('edit-save-btn').addEventListener('click', saveEdit);
   $$('#edit-precio-row .precio-opt').forEach(o => o.addEventListener('click', () => {
