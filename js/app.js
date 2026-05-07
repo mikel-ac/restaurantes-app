@@ -311,6 +311,11 @@ function renderEditPanel(r) {
   const picar    = ov.picar       !== undefined ? ov.picar       : !!r.picar;
   const menu     = ov.menu_del_dia!== undefined ? ov.menu_del_dia: !!r.menu_del_dia;
 
+  // Opciones de barrio y cocina de la ciudad activa
+  const ciudadRests = getCurrent();
+  const barrios = [...new Set(ciudadRests.map(x => x.barrio).filter(Boolean))].sort();
+  const cocinas = [...new Set(ciudadRests.map(x => x.tipo_cocina).filter(Boolean))].sort();
+
   const TOGGLES = [
     { key:'muy local', label:'Muy local' },
     { key:'desayuno',  label:'Desayuno' },
@@ -318,19 +323,55 @@ function renderEditPanel(r) {
     { key:'nocturno',  label:'Nocturno' },
   ];
 
+  // Emoji picker data — categorías de food & drink
+  const EMOJI_CATS = {
+    'comida': ['🍽️','🥘','🍲','🥗','🥙','🌮','🌯','🥪','🍱','🍛','🍜','🍝','🍠','🥫','🧆','🧇','🥞','🧈','🍳','🥚','🧀','🥩','🍗','🍖','🥓','🌭','🍔','🍟','🍕'],
+    'mariscos': ['🦞','🦐','🦑','🦀','🦪','🐟','🐠','🐡','🎣','🍣','🍤','🍙','🍚','🍘','🍥'],
+    'dulces': ['🍰','🎂','🧁','🍮','🍭','🍬','🍫','🍩','🍪','🥧','🍡','🍧','🍨','🍦','🥮'],
+    'bebidas': ['☕','🍵','🧃','🥤','🧋','🍺','🍻','🥂','🍷','🍸','🍹','🍾','🥃','🍶'],
+    'frutas': ['🍎','🍊','🍋','🍇','🍓','🫐','🍈','🍑','🍒','🥭','🍍','🥥','🥝','🍅','🫒','🥑'],
+    'otros': ['🌮','🥨','🥐','🍞','🥖','🫓','🧂','🫕','🥣','🥗','🫔','🌶️','🫑','🥦','🧄','🧅','🥔','🌽'],
+  };
+
   const panel = $('ficha-edit-panel');
   if (!panel) return;
 
   panel.innerHTML = `
     <div class="edit-panel-inner" id="edit-panel-inner" style="display:none">
+
+      <!-- EMOJI PICKER -->
+      <div class="edit-panel-field">
+        <label class="edit-panel-label">Emoji</label>
+        <div class="ep-emoji-row">
+          <div id="ep-emoji-current" class="ep-emoji-current">${Storage.getEmoji(r.id) || r.emoji || '🍽️'}</div>
+          <input id="ep-emoji-search" class="edit-panel-input" placeholder="Buscar: pizza, café, sushi..." style="flex:1">
+        </div>
+        <div id="ep-emoji-grid" class="ep-emoji-grid">
+          ${EMOJI_CATS['comida'].map(e => `<span class="ep-emoji-opt" data-emoji="${e}">${e}</span>`).join('')}
+        </div>
+      </div>
+
+      <!-- BARRIO -->
       <div class="edit-panel-field">
         <label class="edit-panel-label">Barrio</label>
-        <input id="ep-barrio" class="edit-panel-input" value="${barrio||''}" placeholder="Barrio">
+        <div id="ep-barrio-opts" class="ep-select-opts">
+          ${barrios.map(b => `<div class="ep-select-opt${b===barrio?' selected':''}" data-val="${b}">${b}</div>`).join('')}
+          <div class="ep-select-opt ep-select-add" data-val="__nuevo__">+ Añadir barrio</div>
+        </div>
+        <input id="ep-barrio-input" class="edit-panel-input" style="display:none;margin-top:8px" placeholder="Nuevo barrio...">
       </div>
+
+      <!-- COCINA -->
       <div class="edit-panel-field">
         <label class="edit-panel-label">Tipo de cocina</label>
-        <input id="ep-cocina" class="edit-panel-input" value="${cocina||''}" placeholder="Tipo de cocina">
+        <div id="ep-cocina-opts" class="ep-select-opts">
+          ${cocinas.map(c => `<div class="ep-select-opt${c===cocina?' selected':''}" data-val="${c}">${c}</div>`).join('')}
+          <div class="ep-select-opt ep-select-add" data-val="__nuevo__">+ Añadir cocina</div>
+        </div>
+        <input id="ep-cocina-input" class="edit-panel-input" style="display:none;margin-top:8px" placeholder="Nueva cocina...">
       </div>
+
+      <!-- PRECIO -->
       <div class="edit-panel-field">
         <label class="edit-panel-label">Precio</label>
         <div class="precio-row" id="ep-precio-row">
@@ -339,22 +380,25 @@ function renderEditPanel(r) {
           ).join('')}
         </div>
       </div>
+
+      <!-- ETIQUETAS -->
       <div class="edit-panel-field">
-        <label class="edit-panel-label">Categorías</label>
+        <label class="edit-panel-label">Etiquetas</label>
         <div class="ep-toggles">
           <div class="ep-toggle${picar?' active':''}" data-toggle="picar">🍢 Picar</div>
-          <div class="ep-toggle${menu?' active':''}" data-toggle="menu">📋 Menú</div>
+          <div class="ep-toggle${menu?' active':''}" data-toggle="menu">📋 Menú del día</div>
           ${TOGGLES.map(t =>
             `<div class="ep-toggle${tags.includes(t.key)?' active':''}" data-toggle="${t.key}">${t.label}</div>`
           ).join('')}
         </div>
       </div>
+
       <button class="edit-panel-save" id="ep-save-btn">Guardar cambios ✓</button>
     </div>
     <button class="edit-panel-toggle" id="ep-toggle-btn">✎ Editar datos</button>
   `;
 
-  // Toggle abrir/cerrar
+  // ── Toggle abrir/cerrar ──
   $('ep-toggle-btn').onclick = () => {
     const inner = $('edit-panel-inner');
     const isOpen = inner.style.display !== 'none';
@@ -362,7 +406,87 @@ function renderEditPanel(r) {
     $('ep-toggle-btn').textContent = isOpen ? '✎ Editar datos' : '✕ Cancelar edición';
   };
 
-  // Precio opts
+  // ── Emoji picker ──
+  const EMOJI_SEARCH = {
+    'pizza': '🍕', 'cafe': '☕', 'café': '☕', 'sushi': '🍣', 'hamburguesa': '🍔',
+    'pasta': '🍝', 'ensalada': '🥗', 'carne': '🥩', 'pollo': '🍗', 'pescado': '🐟',
+    'marisco': '🦞', 'cerveza': '🍺', 'vino': '🍷', 'coctel': '🍸', 'taco': '🌮',
+    'ramen': '🍜', 'curry': '🍛', 'helado': '🍦', 'tarta': '🍰', 'pan': '🥖',
+    'desayuno': '🍳', 'brunch': '🧇', 'bocadillo': '🥪', 'wrap': '🌯', 'arroz': '🍚',
+    'mariscos': '🦐', 'ostras': '🦪', 'pulpo': '🦑', 'gambas': '🦐', 'atun': '🐟',
+    'chocolate': '🍫', 'postre': '🍮', 'copa': '🥂', 'whisky': '🥃', 'te': '🍵',
+    'vegano': '🥗', 'verduras': '🥦', 'fruta': '🍎', 'japonés': '🍣', 'chino': '🥡',
+    'indio': '🍛', 'mexicano': '🌮', 'italiano': '🍝', 'griego': '🥙', 'pintxos': '🍢',
+    'bar': '🍺', 'tapas': '🍢', 'asador': '🥩', 'parrilla': '🥩',
+  };
+
+  let selectedEmoji = Storage.getEmoji(r.id) || r.emoji || '🍽️';
+
+  const updateEmojiGrid = (emojis) => {
+    $('ep-emoji-grid').innerHTML = emojis.map(e =>
+      `<span class="ep-emoji-opt${e===selectedEmoji?' sel':''}" data-emoji="${e}">${e}</span>`
+    ).join('');
+    $('ep-emoji-grid').querySelectorAll('.ep-emoji-opt').forEach(el => {
+      el.addEventListener('click', () => {
+        selectedEmoji = el.dataset.emoji;
+        $('ep-emoji-current').textContent = selectedEmoji;
+        $('ep-emoji-grid').querySelectorAll('.ep-emoji-opt').forEach(x => x.classList.remove('sel'));
+        el.classList.add('sel');
+      });
+    });
+  };
+  updateEmojiGrid(EMOJI_CATS['comida']);
+
+  $('ep-emoji-search').addEventListener('input', function() {
+    const q = this.value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+    if (!q) { updateEmojiGrid(EMOJI_CATS['comida']); return; }
+    // Buscar en keywords
+    const matches = new Set();
+    Object.entries(EMOJI_SEARCH).forEach(([k, v]) => {
+      if (k.normalize('NFD').replace(/[̀-ͯ]/g,'').includes(q)) matches.add(v);
+    });
+    // Buscar en todas las categorías también
+    Object.values(EMOJI_CATS).flat().forEach(e => {
+      if (matches.size < 30) matches.add(e); // fallback: mostrar todos si sin resultados
+    });
+    updateEmojiGrid(matches.size > 0 ? [...matches] : Object.values(EMOJI_CATS).flat().slice(0,30));
+  });
+
+  // ── Barrio select ──
+  let selectedBarrio = barrio;
+  panel.querySelectorAll('#ep-barrio-opts .ep-select-opt').forEach(el => {
+    el.addEventListener('click', () => {
+      if (el.dataset.val === '__nuevo__') {
+        $('ep-barrio-input').style.display = 'block';
+        $('ep-barrio-input').focus();
+        return;
+      }
+      selectedBarrio = el.dataset.val;
+      panel.querySelectorAll('#ep-barrio-opts .ep-select-opt').forEach(x => x.classList.remove('selected'));
+      el.classList.add('selected');
+      $('ep-barrio-input').style.display = 'none';
+    });
+  });
+  $('ep-barrio-input').addEventListener('input', function() { selectedBarrio = this.value.trim(); });
+
+  // ── Cocina select ──
+  let selectedCocina = cocina;
+  panel.querySelectorAll('#ep-cocina-opts .ep-select-opt').forEach(el => {
+    el.addEventListener('click', () => {
+      if (el.dataset.val === '__nuevo__') {
+        $('ep-cocina-input').style.display = 'block';
+        $('ep-cocina-input').focus();
+        return;
+      }
+      selectedCocina = el.dataset.val;
+      panel.querySelectorAll('#ep-cocina-opts .ep-select-opt').forEach(x => x.classList.remove('selected'));
+      el.classList.add('selected');
+      $('ep-cocina-input').style.display = 'none';
+    });
+  });
+  $('ep-cocina-input').addEventListener('input', function() { selectedCocina = this.value.trim(); });
+
+  // ── Precio opts ──
   panel.querySelectorAll('#ep-precio-row .precio-opt').forEach(o => {
     o.addEventListener('click', () => {
       panel.querySelectorAll('#ep-precio-row .precio-opt').forEach(x => x.classList.remove('selected'));
@@ -370,20 +494,23 @@ function renderEditPanel(r) {
     });
   });
 
-  // Toggles
+  // ── Toggles ──
   panel.querySelectorAll('.ep-toggle').forEach(t => {
     t.addEventListener('click', () => t.classList.toggle('active'));
   });
 
-  // Guardar
+  // ── Guardar ──
   $('ep-save-btn').onclick = () => {
-    const newBarrio  = $('ep-barrio').value.trim();
-    const newCocina  = $('ep-cocina').value.trim();
+    const newBarrio  = ($('ep-barrio-input').style.display !== 'none' ? $('ep-barrio-input').value.trim() : '') || selectedBarrio;
+    const newCocina  = ($('ep-cocina-input').style.display !== 'none' ? $('ep-cocina-input').value.trim() : '') || selectedCocina;
     const newPrecio  = panel.querySelector('#ep-precio-row .precio-opt.selected')?.dataset.p;
     const newPicar   = panel.querySelector('[data-toggle="picar"]').classList.contains('active');
     const newMenu    = panel.querySelector('[data-toggle="menu"]').classList.contains('active');
 
-    // Tags: partir de los actuales y actualizar los gestionados por toggles
+    // Guardar emoji
+    if (selectedEmoji) Storage.saveEmoji(r.id, selectedEmoji);
+
+    // Tags
     let newTags = [...(r.tags||[])];
     const managedTags = ['muy local','desayuno','vistas','nocturno'];
     managedTags.forEach(k => {
@@ -401,7 +528,6 @@ function renderEditPanel(r) {
       tags:         newTags,
     });
 
-    // Actualizar objeto en memoria
     const rLive = State.allRests.find(x => x.id === r.id);
     if (rLive) {
       rLive.barrio       = newBarrio  || r.barrio;
