@@ -1587,8 +1587,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -23.5685289,
-      "lng": -46.6630763
+      "lat": -23.5418588,
+      "lng": -46.6578704
     },
     "horario": {
       "lunes": {
@@ -3297,8 +3297,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -22.9647438,
-      "lng": -43.1769441
+      "lat": -22.9589431,
+      "lng": -43.35129209999999
     },
     "horario": {
       "lunes": null,
@@ -4591,6 +4591,1487 @@
     ],
     "tip_local": "No vengas a comer — vengas a beber y escuchar música carioca en directo. Los domingos y jueves hay choro, los miércoles y sábados samba. El espacio se derrama a la acera — lleva efectivo. Una de las experiencias más auténticas de la ciudad.",
     "resena_destacada": "Esto es el alma de Río. Un bar diminuto de donde sale la samba más auténtica que hayas escuchado. La cerveza está fría, la música es perfecta y la gente del barrio que viene cada semana completa el cuadro. Imprescindible.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-063",
+    "nombre": "Bar do Mineiro",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Santa Teresa",
+    "tipo_cocina": "Bar / Boteco / Mineiro",
+    "precio": "€",
+    "precio_medio_brl": 40,
+    "ambiente": [
+      "muy local",
+      "bohemio",
+      "bar",
+      "animado"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "santa teresa",
+      "boteco",
+      "bohemio",
+      "clásico"
+    ],
+    "emoji": "🍺",
+    "rating": 4.6,
+    "votos": 3450,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9210655,
+      "lng": -43.1869033
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "11:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Institución de Santa Teresa desde 1952. Bar mineiro con ambiente bohemio, mucha historia y la mejor cachaça de la zona. Frecuentado por artistas, músicos y vecinos del barrio desde hace décadas. Los pastéis y la feijão tropeiro son legendarios.",
+    "platos_destacados": [
+      "pastel de angu",
+      "tutu de feijão",
+      "torresmo",
+      "cachaça seleção"
+    ],
+    "tip_local": "Uno de los bares más auténticos de Río. Los sábados se llena de músicos que improvisan. El pastel de angu es único en la ciudad. Santa Teresa es el barrio más bohemio de Río — llega andando desde el centro en bonde.",
+    "resena_destacada": "El Bar do Mineiro es una institución de Río. Décadas de historia, ambiente bohemio, cachaça buenísima y pastéis de angu que no encuentras en ningún otro sitio. Santa Teresa en su mejor versión.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-064",
+    "nombre": "Bracarense",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Leblon",
+    "tipo_cocina": "Bar / Boteco tradicional",
+    "precio": "€",
+    "precio_medio_brl": 45,
+    "ambiente": [
+      "muy local",
+      "clásico",
+      "bar",
+      "animado"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "leblon",
+      "boteco",
+      "clásico",
+      "imprescindible"
+    ],
+    "emoji": "🍻",
+    "rating": 4.7,
+    "votos": 5670,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9838357,
+      "lng": -43.2216907
+    },
+    "horario": {
+      "lunes": {
+        "abre": "09:00",
+        "cierra": "00:00"
+      },
+      "martes": {
+        "abre": "09:00",
+        "cierra": "00:00"
+      },
+      "miercoles": {
+        "abre": "09:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "09:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "09:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "09:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "09:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "El boteco más famoso de Leblon y uno de los más queridos de Río. Desde 1948, Bracarense es el punto de encuentro del barrio — surfistas, executivos, artistas y vecinos de toda la vida comparten mesa. El bolinho de bacalhau es patrimonio de la ciudad.",
+    "platos_destacados": [
+      "bolinho de bacalhau",
+      "isca de peixe",
+      "chopp bem tirado",
+      "linguiça acebolada"
+    ],
+    "tip_local": "El bolinho de bacalhau aquí es el mejor de Río — sin discusión. La barra es el sitio más democrático de Leblon. Los domingos por la tarde es especialmente bonito ver el ambiente del barrio.",
+    "resena_destacada": "Bracarense es Río de Janeiro en su esencia más pura. El bolinho de bacalhau que sirven aquí lleva 70 años siendo el mejor de la ciudad. Un boteco que es patrimonio cultural.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-065",
+    "nombre": "Devassa Botafogo",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Bar / Cerveja artesanal",
+    "precio": "€€",
+    "precio_medio_brl": 55,
+    "ambiente": [
+      "animado",
+      "local",
+      "bar",
+      "terraza"
+    ],
+    "tags": [
+      "bar",
+      "cerveza artesanal",
+      "botafogo",
+      "animado",
+      "terraza"
+    ],
+    "emoji": "🍺",
+    "rating": 4.4,
+    "votos": 2890,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9547924,
+      "lng": -43.1867378
+    },
+    "horario": {
+      "lunes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "martes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "02:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "02:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "Cervejaria Devassa en Botafogo, uno de los bares más frecuentados del barrio. Cerveza artesanal propia — pilsen, red lager, weiss — con terraza en la acera muy animada. Ambiente de jóvenes cariocas, muy social y sin pretensiones.",
+    "platos_destacados": [
+      "Devassa Bem Loura",
+      "Devassa Negra",
+      "porcão de frios",
+      "sanduíche artesanal"
+    ],
+    "tip_local": "La Devassa Negra es sorprendentemente buena. Los jueves y viernes la terraza se llena de cariocas después del trabajo. Botafogo es uno de los barrios más auténticos y animados de Río.",
+    "resena_destacada": "El punto de referencia cervecero de Botafogo. La Devassa Negra convierte a cualquiera que no le gustaba la cerveza oscura. Ambiente muy carioca, muy social.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-066",
+    "nombre": "Bar Urca",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Urca",
+    "tipo_cocina": "Bar / Vistas / Boteco",
+    "precio": "€",
+    "precio_medio_brl": 35,
+    "ambiente": [
+      "muy local",
+      "vistas",
+      "bar",
+      "tranquilo",
+      "tarde"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "urca",
+      "vistas",
+      "pão de açúcar",
+      "tarde",
+      "imprescindible"
+    ],
+    "emoji": "⛰️",
+    "rating": 4.7,
+    "votos": 4320,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9436155,
+      "lng": -43.1602357
+    },
+    "horario": {
+      "lunes": {
+        "abre": "09:00",
+        "cierra": "22:00"
+      },
+      "martes": {
+        "abre": "09:00",
+        "cierra": "22:00"
+      },
+      "miercoles": {
+        "abre": "09:00",
+        "cierra": "22:00"
+      },
+      "jueves": {
+        "abre": "09:00",
+        "cierra": "22:00"
+      },
+      "viernes": {
+        "abre": "09:00",
+        "cierra": "23:00"
+      },
+      "sabado": {
+        "abre": "09:00",
+        "cierra": "23:00"
+      },
+      "domingo": {
+        "abre": "09:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "El boteco más bonito de Río — sentado en el murito frente al mar con vista directa al Pão de Açúcar. Los cariocas vienen aquí a tomar cerveza al atardecer con una de las vistas más espectaculares del mundo. Precios de boteco, experiencia de lujo.",
+    "platos_destacados": [
+      "chopp gelado",
+      "bolinho de bacalhau",
+      "isca de cação",
+      "pastel da hora"
+    ],
+    "tip_local": "El secreto es el murito frente al mar — compra tu cerveja en el bar y siéntate en la orilla. Al atardecer con el Pão de Açúcar al fondo es una de las experiencias más cariocas que existen. Gratis, sin reserva, sin pretensiones.",
+    "resena_destacada": "Cerveja fría en el murito de Urca con el Pão de Açúcar al fondo al atardecer. Uno de los placeres más sencillos y más especiales que puedes vivir en Río. Imprescindible.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-067",
+    "nombre": "Bip Bip",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Copacabana",
+    "tipo_cocina": "Bar / Samba / Choro",
+    "precio": "€",
+    "precio_medio_brl": 25,
+    "ambiente": [
+      "muy local",
+      "cultural",
+      "música en directo",
+      "bar",
+      "bohemio"
+    ],
+    "tags": [
+      "bar",
+      "samba",
+      "choro",
+      "música en directo",
+      "muy local",
+      "copacabana",
+      "bohemio",
+      "imprescindible"
+    ],
+    "emoji": "🎵",
+    "rating": 4.8,
+    "votos": 3210,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9798321,
+      "lng": -43.1903734
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "19:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "19:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "19:00",
+        "cierra": "01:00"
+      },
+      "sabado": null,
+      "domingo": null
+    },
+    "descripcion": "Leyenda de Copacabana. Bip Bip es un bar diminuto donde los mejores músicos de choro y samba de Río se reúnen a tocar de manera espontánea los miércoles, jueves y viernes. Sin escenario, sin entrada, sin amplificación — los músicos sentados entre la gente. Único en el mundo.",
+    "platos_destacados": [
+      "cerveja gelada",
+      "água mineral"
+    ],
+    "tip_local": "Llega antes de las 20h para encontrar sitio — el bar es tiny y se llena hasta la calle. No hay escenario: los músicos tocan entre las mesas. Miércoles y jueves son las noches más íntimas. Absolutamente imprescindible.",
+    "resena_destacada": "Bip Bip es uno de esos lugares que existen solo en Río. Samba y choro en vivo en un bar diminuto donde los músicos tocan a 50cm de tu cara. No hay nada igual en el mundo.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-068",
+    "nombre": "Jobi",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Leblon",
+    "tipo_cocina": "Bar / Boteco clásico",
+    "precio": "€",
+    "precio_medio_brl": 40,
+    "ambiente": [
+      "muy local",
+      "clásico",
+      "bar",
+      "nocturno"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "leblon",
+      "boteco",
+      "clásico",
+      "nocturno"
+    ],
+    "emoji": "🌙",
+    "rating": 4.5,
+    "votos": 2980,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9853492,
+      "lng": -43.22692139999999
+    },
+    "horario": {
+      "lunes": {
+        "abre": "15:00",
+        "cierra": "04:00"
+      },
+      "martes": {
+        "abre": "15:00",
+        "cierra": "04:00"
+      },
+      "miercoles": {
+        "abre": "15:00",
+        "cierra": "04:00"
+      },
+      "jueves": {
+        "abre": "15:00",
+        "cierra": "04:00"
+      },
+      "viernes": {
+        "abre": "15:00",
+        "cierra": "05:00"
+      },
+      "sabado": {
+        "abre": "15:00",
+        "cierra": "05:00"
+      },
+      "domingo": {
+        "abre": "15:00",
+        "cierra": "04:00"
+      }
+    },
+    "descripcion": "El boteco de las madrugadas de Leblon. Jobi abre hasta las 4-5h de la mañana y es el punto de encuentro de los noctámbulos del barrio desde 1956. Ambiente muy carioca, clientela fiel de toda la vida. La mejor opción en Leblon para alargar la noche.",
+    "platos_destacados": [
+      "chopp gelado",
+      "bolinho de carne",
+      "isca de frango",
+      "porcão de calabresa"
+    ],
+    "tip_local": "El bar de las madrugadas de Leblon. Si salís de fiesta por Ipanema o Leblon, Jobi es el punto de aterrizaje a las 2h de la mañana con el barrio entero. Abierto prácticamente 24h los fines de semana.",
+    "resena_destacada": "Jobi a las 3 de la mañana con el chopp bien tirado y los bolinhos calientes es una de las experiencias más cariocas que existen. Leblon nocturno en estado puro desde 1956.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-069",
+    "nombre": "Bar Luiz",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Centro",
+    "tipo_cocina": "Bar / Histórico / Alemán",
+    "precio": "€€",
+    "precio_medio_brl": 55,
+    "ambiente": [
+      "histórico",
+      "clásico",
+      "bar",
+      "cultural"
+    ],
+    "tags": [
+      "bar",
+      "histórico",
+      "centro",
+      "alemán",
+      "clásico",
+      "imprescindible"
+    ],
+    "emoji": "🏛️",
+    "rating": 4.6,
+    "votos": 2340,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9891569,
+      "lng": -43.25160289999999
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "18:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "Bar alemán fundado en 1887 en el Centro histórico de Río. Uno de los bares más antiguos de Brasil, con los azulejos originales y el ambiente intacto. Chope bem tirado, pratos alemanes y una historia que pocas ciudades pueden igualar. El Centro de Río a las 13h es una experiencia en sí misma.",
+    "platos_destacados": [
+      "chope bem tirado",
+      "joelho de porco",
+      "eisbein",
+      "salsicha alemã"
+    ],
+    "tip_local": "Abre solo entre semana y el sábado cierra pronto. El chope aquí tiene fama de ser el mejor tirado de Río. El ambiente del Centro histórico a la hora del almuerzo — con los trabajadores de los edificios de alrededor — es inigualable.",
+    "resena_destacada": "Bar Luiz es historia viva de Río. Los azulejos originales de 1887, el chope perfecto y el joelho de porco hacen de este lugar algo único. Una visita obligatoria en cualquier día que pasés por el Centro.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-070",
+    "nombre": "Adega Perola",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Copacabana",
+    "tipo_cocina": "Bar / Bodega portuguesa",
+    "precio": "€",
+    "precio_medio_brl": 35,
+    "ambiente": [
+      "muy local",
+      "clásico",
+      "bar",
+      "portugués"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "copacabana",
+      "portugués",
+      "clásico",
+      "vinho"
+    ],
+    "emoji": "🍷",
+    "rating": 4.5,
+    "votos": 1890,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9661506,
+      "lng": -43.1873241
+    },
+    "horario": {
+      "lunes": {
+        "abre": "10:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "10:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "10:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "10:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "10:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "10:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "10:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Bodega portuguesa de toda la vida en Copacabana, frequentada por los descendientes de la comunidad portuguesa del barrio. Vinho verde, bacalhau de aperitivo y ambiente de tasca lisboeta trasplantada a Río. Uno de esos sitios que el tiempo no ha cambiado.",
+    "platos_destacados": [
+      "vinho verde",
+      "bacalhau à brás",
+      "pastéis de bacalhau",
+      "chouriço assado"
+    ],
+    "tip_local": "El vinho verde aquí es de los mejores de Copacabana — importación directa de Portugal. Los sábados hay bacalhau fresco. Un rincón de Portugal en Copacabana que pocos turistas conocen.",
+    "resena_destacada": "Una tasca portuguesa auténtica en el corazón de Copacabana. El vinho verde fresquinho y el bacalhau à brás son razón suficiente para venir. La comunidad portuguesa del barrio lleva aquí toda la vida.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-071",
+    "nombre": "Cervantes",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Copacabana",
+    "tipo_cocina": "Bar / Sandwiches / Nocturno",
+    "precio": "€",
+    "precio_medio_brl": 35,
+    "ambiente": [
+      "muy local",
+      "animado",
+      "bar",
+      "nocturno",
+      "clásico"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "copacabana",
+      "nocturno",
+      "sándwiches",
+      "clásico",
+      "madrugada"
+    ],
+    "emoji": "🥪",
+    "rating": 4.6,
+    "votos": 4120,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9624868,
+      "lng": -43.1759615
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "12:00",
+        "cierra": "04:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "04:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "04:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "05:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "05:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "04:00"
+      }
+    },
+    "descripcion": "Leyenda de Copacabana. Cervantes es el bar de los sándwiches monumentales y las madrugadas cariocas desde 1969. El sandwich de pernil con abacaxi es patrimonio de la ciudad. Abre hasta las 4-5h, se llena de noctámbulos de toda condición.",
+    "platos_destacados": [
+      "sándwich de pernil com abacaxi",
+      "sándwich de filé",
+      "chopp gelado",
+      "batata frita"
+    ],
+    "tip_local": "El sandwich de pernil con abacaxi (piña) es la razón de existir de Cervantes. A las 2 de la mañana hay cola en la puerta y vale la pena esperar. Copacabana nocturna en su máxima expresión.",
+    "resena_destacada": "Cervantes a las 2 de la mañana con el sándwich de pernil com abacaxi es una experiencia de Río que no se puede describir. Desde 1969 alimentando las noches de Copacabana.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-072",
+    "nombre": "Academia da Cachaça",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Leblon",
+    "tipo_cocina": "Bar / Cachaça / Caipirinhas",
+    "precio": "€€",
+    "precio_medio_brl": 60,
+    "ambiente": [
+      "animado",
+      "local",
+      "bar",
+      "cachaça"
+    ],
+    "tags": [
+      "bar",
+      "cachaça",
+      "caipirinha",
+      "leblon",
+      "animado",
+      "local"
+    ],
+    "emoji": "🥃",
+    "rating": 4.5,
+    "votos": 3450,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9805843,
+      "lng": -43.2225329
+    },
+    "horario": {
+      "lunes": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "martes": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "02:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "02:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      }
+    },
+    "descripcion": "La referencia de la cachaça artesanal en Río. Más de 100 tipos de cachaça de diferentes regiones de Brasil, caipirinhas elaboradas con frutas de temporada y ambiente muy animado. El sitio donde los cariocas van a descubrir la cachaça de calidad.",
+    "platos_destacados": [
+      "caipirinha de maracujá",
+      "caipirinha de morango",
+      "cachaça premium",
+      "petiscos da casa"
+    ],
+    "tip_local": "Pide la caipirinha de maracujá con cachaça artesanal — es la mejor de Río. Los viernes y sábados hay cola, vale la pena llegar a las 19h. La carta de cachaças es un viaje por Brasil entero.",
+    "resena_destacada": "El templo de la cachaça artesanal en Río. Más de 100 opciones, conocimiento profundo y caipirinhas que cambian tu percepción de la bebida nacional. Un imprescindible.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-073",
+    "nombre": "Canastra Bar",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Botafogo",
+    "tipo_cocina": "Bar / Craft beer / Petiscos",
+    "precio": "€€",
+    "precio_medio_brl": 55,
+    "ambiente": [
+      "animado",
+      "joven",
+      "bar",
+      "cerveza artesanal"
+    ],
+    "tags": [
+      "bar",
+      "cerveza artesanal",
+      "botafogo",
+      "joven",
+      "animado"
+    ],
+    "emoji": "🍻",
+    "rating": 4.5,
+    "votos": 1890,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9841546,
+      "lng": -43.1966921
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "17:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "17:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "16:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "14:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "14:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "Bar de cerveza artesanal en Botafogo con las mejores cervezas craft de Brasil — rotación constante de breweries de todo el país. Ambiente joven y animado, petiscos de calidad y una selección de más de 20 torneiras. El bar de los entendidos de cerveza en Botafogo.",
+    "platos_destacados": [
+      "IPA do mês",
+      "Sour local",
+      "tábua de frios mineira",
+      "calabresa artesanal"
+    ],
+    "tip_local": "Pregunta al bartender por las novedades de la semana — la rotación es constante. Los miércoles hay precio especial en ciertas torneiras. Botafogo tiene uno de los mejores ambientes de bar de Río.",
+    "resena_destacada": "El mejor bar de craft beer de Botafogo. La rotación de cervezas es impresionante — siempre hay algo nuevo de alguna microbrewery que no conocías. La tábua de frios mineira es perfecta para acompañar.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-074",
+    "nombre": "Maze Bar",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Santa Teresa",
+    "tipo_cocina": "Bar / Vistas / Cocktails",
+    "precio": "€€",
+    "precio_medio_brl": 65,
+    "ambiente": [
+      "bohemio",
+      "vistas",
+      "bar",
+      "cócteles",
+      "nocturno"
+    ],
+    "tags": [
+      "bar",
+      "vistas",
+      "santa teresa",
+      "cócteles",
+      "bohemio",
+      "nocturno"
+    ],
+    "emoji": "🌆",
+    "rating": 4.6,
+    "votos": 1230,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.927684,
+      "lng": -43.1837278
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": null,
+      "jueves": {
+        "abre": "20:00",
+        "cierra": "01:00"
+      },
+      "viernes": {
+        "abre": "20:00",
+        "cierra": "02:00"
+      },
+      "sabado": {
+        "abre": "20:00",
+        "cierra": "02:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "Bar en una mansión art déco en Santa Teresa con vistas panorámicas a Río. Los jueves hay jazz en directo desde las 22h — una de las noches más especiales de la ciudad. Cócteles de autor, vista al skyline y el ambiente bohemio de Santa Teresa.",
+    "platos_destacados": [
+      "drinques de autor",
+      "gin tônica premium",
+      "tábua de frios",
+      "petiscos criativos"
+    ],
+    "tip_local": "Los jueves de jazz son lo mejor del bar — llega a las 21h para pillar sitio en la terraza con vistas. Santa Teresa de noche es otro mundo. Imprescindible si estás en Río un jueves.",
+    "resena_destacada": "Jazz en directo en una terraza con vistas panorámicas a Río de Janeiro desde Santa Teresa. No existe una noche de jueves mejor en la ciudad.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-075",
+    "nombre": "Bar do Gomes",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Santa Teresa",
+    "tipo_cocina": "Bar / Armazém / Bodega",
+    "precio": "€",
+    "precio_medio_brl": 35,
+    "ambiente": [
+      "muy local",
+      "histórico",
+      "bar",
+      "clásico"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "santa teresa",
+      "histórico",
+      "clásico",
+      "armazém"
+    ],
+    "emoji": "🛒",
+    "rating": 4.5,
+    "votos": 1670,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9140398,
+      "lng": -43.1826637
+    },
+    "horario": {
+      "lunes": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "martes": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "miercoles": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "jueves": {
+        "abre": "08:00",
+        "cierra": "22:00"
+      },
+      "viernes": {
+        "abre": "08:00",
+        "cierra": "23:00"
+      },
+      "sabado": {
+        "abre": "08:00",
+        "cierra": "23:00"
+      },
+      "domingo": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      }
+    },
+    "descripcion": "Armazém-bar histórico de Santa Teresa, funcionando desde 1919. Vende de todo — vinho, cachaça, queijo, embutidos — y tiene una barra donde los vecinos del barrio toman su cerveja de la mañana o de la tarde. El tiempo se ha detenido aquí.",
+    "platos_destacados": [
+      "chopp",
+      "queijo mineiro",
+      "linguiça defumada",
+      "vinho da casa"
+    ],
+    "tip_local": "Una de las experiencias más auténticas de Santa Teresa — el armazém donde el barrio compra y bebe desde 1919. Los sábados por la mañana el ambiente es muy especial. A dos pasos del Bar do Mineiro.",
+    "resena_destacada": "El armazém de Santa Teresa que lleva abierto desde 1919. Entras a comprar algo y te quedas tomando una cerveja con los vecinos del barrio. Auténtico Río antiguo.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-076",
+    "nombre": "Carioca da Gema",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Centro / Lapa",
+    "tipo_cocina": "Bar / Samba / Lapa",
+    "precio": "€€",
+    "precio_medio_brl": 50,
+    "ambiente": [
+      "animado",
+      "cultural",
+      "música en directo",
+      "bar",
+      "nocturno"
+    ],
+    "tags": [
+      "bar",
+      "samba",
+      "música en directo",
+      "lapa",
+      "nocturno",
+      "imprescindible",
+      "cultural"
+    ],
+    "emoji": "🎶",
+    "rating": 4.7,
+    "votos": 6780,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9131914,
+      "lng": -43.1819932
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "20:00",
+        "cierra": "02:00"
+      },
+      "miercoles": {
+        "abre": "20:00",
+        "cierra": "02:00"
+      },
+      "jueves": {
+        "abre": "20:00",
+        "cierra": "03:00"
+      },
+      "viernes": {
+        "abre": "20:00",
+        "cierra": "04:00"
+      },
+      "sabado": {
+        "abre": "20:00",
+        "cierra": "04:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "El bar de samba más auténtico y reconocido de Lapa. Samba ao vivo todas las noches que abre, con los mejores músicos de Río. El Carioca da Gema es a la vez bar, restaurante y templo de la samba — sin trampa turística, con el nivel musical más alto de la ciudad.",
+    "platos_destacados": [
+      "caipirinha de limão",
+      "chopp gelado",
+      "feijoada completa",
+      "petiscos da casa"
+    ],
+    "tip_local": "Reserva con antelación los fines de semana — se llena completamente. Los martes y miércoles hay samba más íntima y sin cola. Lapa es el barrio nocturno de Río — combinalo con una vuelta por los Arcos.",
+    "resena_destacada": "La mejor samba en directo de Río, sin discusión. Músicos de primer nivel en un espacio íntimo donde puedes estar a metros del batería y del pandeiro. Lapa en estado puro.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-077",
+    "nombre": "Mangue Seco Cachaçaria",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Centro / Lapa",
+    "tipo_cocina": "Bar / Cachaça / Lapa",
+    "precio": "€",
+    "precio_medio_brl": 35,
+    "ambiente": [
+      "muy local",
+      "animado",
+      "bar",
+      "nocturno",
+      "lapa"
+    ],
+    "tags": [
+      "bar",
+      "cachaça",
+      "lapa",
+      "muy local",
+      "nocturno",
+      "samba"
+    ],
+    "emoji": "🥃",
+    "rating": 4.5,
+    "votos": 3240,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9083978,
+      "lng": -43.18362399999999
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "18:00",
+        "cierra": "02:00"
+      },
+      "jueves": {
+        "abre": "18:00",
+        "cierra": "02:00"
+      },
+      "viernes": {
+        "abre": "18:00",
+        "cierra": "04:00"
+      },
+      "sabado": {
+        "abre": "18:00",
+        "cierra": "04:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "Bar de cachaça y petiscos en plena Lapa, el corazón de la noche de Río. Ambiente muy carioca, samba que se cuela desde los bares de alrededor y la mejor selección de cachaças artesanales del barrio. El punto de partida perfecto para la noche en Lapa.",
+    "platos_destacados": [
+      "cachaça artesanal",
+      "caipirinha de maracujá",
+      "bolinho de feijão",
+      "torresmo"
+    ],
+    "tip_local": "Empieza la noche aquí antes de ir al Carioca da Gema. La Lapa de noche es una experiencia única — los Arcos iluminados, la samba que sale de cada bar, la gente en la calle. Llega antes de las 22h.",
+    "resena_destacada": "El bar de arranque de la noche en Lapa. Cachaça artesanal de calidad, petiscos honrados y el ambiente de la Lapa carioca que te pone de buen humor para lo que viene después.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-078",
+    "nombre": "Bar Scenarium",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Centro / Lapa",
+    "tipo_cocina": "Bar / Samba / Antigüedades",
+    "precio": "€€",
+    "precio_medio_brl": 60,
+    "ambiente": [
+      "animado",
+      "cultural",
+      "música en directo",
+      "bar",
+      "único",
+      "nocturno"
+    ],
+    "tags": [
+      "bar",
+      "samba",
+      "música en directo",
+      "lapa",
+      "nocturno",
+      "cultural",
+      "único"
+    ],
+    "emoji": "🎭",
+    "rating": 4.6,
+    "votos": 5430,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9082902,
+      "lng": -43.1841372
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "19:00",
+        "cierra": "02:00"
+      },
+      "jueves": {
+        "abre": "19:00",
+        "cierra": "02:00"
+      },
+      "viernes": {
+        "abre": "19:00",
+        "cierra": "04:00"
+      },
+      "sabado": {
+        "abre": "19:00",
+        "cierra": "04:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "Bar de samba en un edificio de tres plantas lleno de antigüedades — muebles, cuadros, esculturas y objetos de colección colgados en cada rincón. La samba ao vivo suena entre las antigüedades creando una atmósfera única en el mundo. Uno de los espacios más especiales de Río.",
+    "platos_destacados": [
+      "caipirinha",
+      "chopp gelado",
+      "feijoada do bar",
+      "petiscos variados"
+    ],
+    "tip_local": "Reserva con antelación — el espacio es espectacular y todo el mundo quiere verlo. Sube a los pisos superiores para ver las antigüedades y busca una mesa cerca del escenario. Único en Brasil.",
+    "resena_destacada": "Samba en directo entre antigüedades en un edificio histórico de Lapa. Es imposible describir la atmósfera de este sitio — tienes que verlo. Uno de los espacios más únicos que he visitado en mi vida.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-079",
+    "nombre": "Pavão Azul",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Copacabana",
+    "tipo_cocina": "Bar / Boteco histórico",
+    "precio": "€",
+    "precio_medio_brl": 35,
+    "ambiente": [
+      "muy local",
+      "histórico",
+      "bar",
+      "clásico"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "copacabana",
+      "histórico",
+      "clásico",
+      "boteco"
+    ],
+    "emoji": "🦚",
+    "rating": 4.5,
+    "votos": 2120,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9676586,
+      "lng": -43.1846008
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "11:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Boteco clásico de Copacabana con décadas de historia. El Pavão Azul es el bar donde los vecinos de Copacabana de toda la vida llevan generaciones tomando su chope. Sin glamour, sin show, solo la esencia del boteco carioca.",
+    "platos_destacados": [
+      "chope gelado",
+      "bolinho de bacalhau",
+      "isca de frango",
+      "porcão de frios"
+    ],
+    "tip_local": "El boteco de los vecinos de Copacabana, no de los turistas. Los mediodías entre semana es cuando mejor se ve el ambiente auténtico del barrio. Precios imbatibles para Copacabana.",
+    "resena_destacada": "Copacabana sin filtros. El Pavão Azul es donde vive el barrio de verdad, lejos de los hoteles y los restaurantes para turistas. Chope frío y la gente del barrio.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-080",
+    "nombre": "Bar do Arnaudo",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Santa Teresa",
+    "tipo_cocina": "Bar / Nordestino / Cultural",
+    "precio": "€",
+    "precio_medio_brl": 40,
+    "ambiente": [
+      "muy local",
+      "cultural",
+      "bar",
+      "bohemio",
+      "nordestino"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "santa teresa",
+      "nordestino",
+      "cultural",
+      "bohemio"
+    ],
+    "emoji": "🌵",
+    "rating": 4.6,
+    "votos": 1340,
+    "picar": true,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.9546384,
+      "lng": -43.1813189
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "11:30",
+        "cierra": "22:00"
+      },
+      "miercoles": {
+        "abre": "11:30",
+        "cierra": "22:00"
+      },
+      "jueves": {
+        "abre": "11:30",
+        "cierra": "22:00"
+      },
+      "viernes": {
+        "abre": "11:30",
+        "cierra": "22:00"
+      },
+      "sabado": {
+        "abre": "11:30",
+        "cierra": "22:00"
+      },
+      "domingo": {
+        "abre": "11:30",
+        "cierra": "18:00"
+      }
+    },
+    "descripcion": "Bar y restaurante nordestino en Santa Teresa, con comida del Nordeste brasileño y ambiente bohemio. Carne de sol, baião de dois, paçoca de pilão y otros clásicos nordestinos en el barrio más bohemio de Río. Frequentado por artistas y vecinos desde hace décadas.",
+    "platos_destacados": [
+      "carne de sol na manteiga",
+      "baião de dois",
+      "paçoca de pilão",
+      "cachaça nordestina"
+    ],
+    "tip_local": "El almuerzo aquí es tan bueno como el aperitivo. La carne de sol con manteiga de garrafa es un plato que no encuentras igual en Río. Santa Teresa de día es también muy bonita para pasear.",
+    "resena_destacada": "El nordeste dentro de Santa Teresa. La carne de sol y el baião de dois aquí tienen el sabor de las recetas de siempre. Bar y restaurante en uno, sin pretensiones y con mucha alma.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-081",
+    "nombre": "Empório Jardim",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Jardim Botânico",
+    "tipo_cocina": "Bar / Vinos / Aperitivo",
+    "precio": "€€",
+    "precio_medio_brl": 65,
+    "ambiente": [
+      "tranquilo",
+      "sofisticado",
+      "bar",
+      "vinos",
+      "tarde"
+    ],
+    "tags": [
+      "bar",
+      "vinos",
+      "jardim botânico",
+      "tranquilo",
+      "sofisticado",
+      "aperitivo"
+    ],
+    "emoji": "🍷",
+    "rating": 4.6,
+    "votos": 1120,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -22.9639203,
+      "lng": -43.2180009
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Bar de vinos y deli en Jardim Botânico — el barrio más tranquilo y verde de la zona sul. Selección de vinos brasileños y portugueses, tabla de quesos y embutidos, ambiente muy relajado. El sitio donde el Jardim Botânico va a tomarse una copa con tranquilidad.",
+    "platos_destacados": [
+      "vinho natural brasileiro",
+      "tábua de queijos premium",
+      "presunto ibérico",
+      "burrata da casa"
+    ],
+    "tip_local": "El vino natural brasileño aquí es una revelación — la industria vinícola gaúcha produce cosas muy buenas. El jardim botânico de fondo y el ambiente tranquilo hacen de este un lugar muy especial para una tarde.",
+    "resena_destacada": "El bar de vinos perfecto del Jardim Botânico. La selección de vinos brasileños es excelente y la tabla de quesos es de las mejores de la ciudad. Ambiente muy relajado para alejarse del ruido de Ipanema.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "rio-082",
+    "nombre": "Bar do David",
+    "pais": "Brasil",
+    "region": "Río de Janeiro",
+    "municipio": "Río de Janeiro",
+    "barrio": "Chapéu Mangueira / Babilônia",
+    "tipo_cocina": "Bar / Comida de morro",
+    "precio": "€",
+    "precio_medio_brl": 30,
+    "ambiente": [
+      "muy local",
+      "auténtico",
+      "bar",
+      "favela",
+      "cultural"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "morro",
+      "auténtico",
+      "cultural",
+      "experiencia única"
+    ],
+    "emoji": "⛺",
+    "rating": 4.8,
+    "votos": 2340,
+    "picar": true,
+    "menu_del_dia": true,
+    "coordenadas": {
+      "lat": -22.9607337,
+      "lng": -43.16883300000001
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "20:00"
+      }
+    },
+    "descripcion": "Bar y restaurante en la comunidad de Chapéu Mangueira — la favela entre Leme y Copacabana. David lleva décadas cocinando la mejor comida de morro de Río: feijoada, moqueca, tutu de feijão. Frequentado por gente del barrio y por los cariocas que lo conocen. Una experiencia única.",
+    "platos_destacados": [
+      "feijoada completa",
+      "moqueca de camarão",
+      "tutu de feijão",
+      "arroz de coco"
+    ],
+    "tip_local": "Reserva con antelación — el espacio es pequeño. David es una leyenda en Río. La feijoada del sábado es la razón principal para venir, pero todo está buenísimo. Se sube andando desde Leme en 15 minutos.",
+    "resena_destacada": "Bar do David es uno de los secretos mejor guardados de Río. La feijoada más auténtica de la ciudad, en una favela con vistas a Copacabana. Una experiencia humana y gastronómica que no olvidarás.",
     "google_place_id": "",
     "web": "",
     "telefono": "",
