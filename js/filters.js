@@ -8,13 +8,17 @@ const Filters = (() => {
 
   // ─── TIMEZONE POR CIUDAD ───
   const TIMEZONES = {
-    'Río de Janeiro': 'America/Sao_Paulo',
-    'Salvador':       'America/Bahia',
-    'São Paulo':      'America/Sao_Paulo',
+    'Río de Janeiro':   'America/Sao_Paulo',
+    'Salvador de Bahía':'America/Bahia',
+    'Salvador':         'America/Bahia',
+    'São Paulo':        'America/Sao_Paulo',
+    'Bilbao':           'Europe/Madrid',
+    'Madrid':           'Europe/Madrid',
+    'Barcelona':        'Europe/Madrid',
   };
 
   const getLocalTime = (municipio) => {
-    const tz = TIMEZONES[municipio] || 'America/Sao_Paulo';
+    const tz = TIMEZONES[municipio] || Intl.DateTimeFormat().resolvedOptions().timeZone || 'Europe/Madrid';
     return new Date(new Date().toLocaleString('en-US', { timeZone: tz }));
   };
 
