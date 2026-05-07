@@ -687,4 +687,22 @@ input, textarea { font-family:var(--font); }
 }
 .ep-select-add:active { border-color:var(--green); color:var(--green-hi); }
 
-/* v19 */
+
+/* Botón confirmar nuevo barrio/cocina */
+.ep-confirm-btn {
+  width:44px; height:44px; border-radius:10px; flex-shrink:0;
+  background:var(--green); border:none; color:#fff;
+  font-size:18px; font-weight:700; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  -webkit-tap-highlight-color:transparent; transition:background .15s;
+}
+.ep-confirm-btn:active { background:#23b888; }
+
+/* Badge +N para cocinas extra */
+.badge-plus {
+  display:inline-block; font-size:10px; font-weight:700;
+  background:var(--bg3); border-radius:4px; padding:1px 4px;
+  margin-left:2px; vertical-align:middle; color:var(--text3);
+}
+
+/* v20 */
