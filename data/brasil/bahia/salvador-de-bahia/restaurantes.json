@@ -984,8 +984,8 @@
     "picar": false,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -12.9730507,
-      "lng": -38.5086064
+      "lat": -12.9730556,
+      "lng": -38.5086111
     },
     "horario": {
       "lunes": {
@@ -2180,8 +2180,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -12.8950155,
-      "lng": -38.6637067
+      "lat": 38.717267,
+      "lng": -9.14531
     },
     "horario": {
       "lunes": {
@@ -2404,8 +2404,8 @@
     "picar": true,
     "menu_del_dia": false,
     "coordenadas": {
-      "lat": -12.9751516,
-      "lng": -38.512866
+      "lat": -13.0096701,
+      "lng": -38.4948431
     },
     "horario": {
       "lunes": null,
@@ -2743,6 +2743,1456 @@
     ],
     "tip_local": "La fila puede ser larga los fines de semana — llega a las 17h cuando abre para evitarla. Es comida de calle: comes en la plaza frente al mar. El acarajé completo (vatapá + caruru + camarão) es el pedido obligatorio. Lunes cerrado.",
     "resena_destacada": "El acarajé de Dinha es una institución de Salvador. La fila no miente — todo el mundo en Rio Vermelho ha estado aquí alguna vez. El vatapá tiene una textura y sabor que no encuentras en ningún otro sitio. Patrimonio cultural vivo.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-038",
+    "nombre": "Bar Cravinho",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Rio Vermelho",
+    "tipo_cocina": "Bar / Petiscos",
+    "precio": "€",
+    "precio_medio_brl": 35,
+    "ambiente": [
+      "muy local",
+      "animado",
+      "nocturno",
+      "bar"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "nocturno",
+      "cerveja",
+      "rio vermelho"
+    ],
+    "emoji": "🍺",
+    "rating": 4.5,
+    "votos": 1820,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.9731406,
+      "lng": -38.5103061
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "17:00",
+        "cierra": "00:00"
+      },
+      "miercoles": {
+        "abre": "17:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "17:00",
+        "cierra": "01:00"
+      },
+      "viernes": {
+        "abre": "17:00",
+        "cierra": "02:00"
+      },
+      "sabado": {
+        "abre": "14:00",
+        "cierra": "02:00"
+      },
+      "domingo": {
+        "abre": "14:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "Bar de referencia en Rio Vermelho para los locales. Cerveja gelada, petiscos sencillos y ambiente desenfadado. La terraza en la acera es el punto de encuentro del barrio al caer la tarde. Sin pretensiones, sin trampa.",
+    "platos_destacados": [
+      "chopp gelado",
+      "isca de peixe",
+      "calabresa acebolada",
+      "amendoim torrado"
+    ],
+    "tip_local": "Llega antes de las 19h para pillar sitio en la terraza. El chopp aquí está siempre bien tirado. A dos cuadras del hotel.",
+    "resena_destacada": "El bar de Rio Vermelho donde va la gente del barrio de verdad. Cerveza fría, petiscos honrados y precio justo. Sin turistas.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-039",
+    "nombre": "Beco dos Artistas",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Rio Vermelho",
+    "tipo_cocina": "Bar / Música ao vivo",
+    "precio": "€",
+    "precio_medio_brl": 40,
+    "ambiente": [
+      "bohemio",
+      "animado",
+      "nocturno",
+      "música en directo",
+      "bar"
+    ],
+    "tags": [
+      "bar",
+      "música en directo",
+      "bohemio",
+      "nocturno",
+      "rio vermelho"
+    ],
+    "emoji": "🎶",
+    "rating": 4.6,
+    "votos": 2340,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.9903533,
+      "lng": -38.5190035
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "18:00",
+        "cierra": "01:00"
+      },
+      "jueves": {
+        "abre": "18:00",
+        "cierra": "01:00"
+      },
+      "viernes": {
+        "abre": "18:00",
+        "cierra": "02:00"
+      },
+      "sabado": {
+        "abre": "15:00",
+        "cierra": "02:00"
+      },
+      "domingo": {
+        "abre": "15:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "Bar bohemio en un callejón de Rio Vermelho con música ao vivo casi todos los fines de semana. MPB, samba y axé en vivo, artistas locales, ambiente muy auténtico. El punto de la noche de los artistas y músicos del barrio.",
+    "platos_destacados": [
+      "caipirinha da casa",
+      "chopp",
+      "tira de costela",
+      "queijo coalho grelhado"
+    ],
+    "tip_local": "Los viernes y sábados hay música ao vivo desde las 21h. Llega antes para pillar mesa. Ambiente muy baiano y muy auténtico.",
+    "resena_destacada": "Uno de esos bares que descubres por casualidad y vuelves cada vez que vas a Salvador. Música en directo, ambiente de barrio y caipirinha de maracujá que no te puedes perder.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-040",
+    "nombre": "Toca do Bode",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Barra",
+    "tipo_cocina": "Bar / Boteco",
+    "precio": "€",
+    "precio_medio_brl": 30,
+    "ambiente": [
+      "muy local",
+      "casual",
+      "bar",
+      "terraza"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "barra",
+      "boteco",
+      "barato"
+    ],
+    "emoji": "🍻",
+    "rating": 4.4,
+    "votos": 1560,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -13.0055553,
+      "lng": -38.4558107
+    },
+    "horario": {
+      "lunes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "11:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "11:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "11:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "11:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "11:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Boteco clásico de Barra, a dos pasos del Farol. Cerveja gelada, aperitivo de mediodía y ambiente de barrio playero. El sitio donde los baianos de Barra llevan décadas tomando una cerveza después de la playa.",
+    "platos_destacados": [
+      "chopp gelado",
+      "pastel de camarão",
+      "bolinho de bacalhau",
+      "porcão de frios"
+    ],
+    "tip_local": "El boteco más auténtico de Barra. Los domingos al mediodía es el punto de encuentro del barrio después de la playa. Precios imbatibles.",
+    "resena_destacada": "Boteco sin pretensiones pero con todo lo que necesitas: cerveza bien fría, petiscos decentes y gente del barrio de verdad. El Barra de toda la vida.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-041",
+    "nombre": "Bar do Reggae",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Pelourinho",
+    "tipo_cocina": "Bar / Música",
+    "precio": "€",
+    "precio_medio_brl": 25,
+    "ambiente": [
+      "animado",
+      "nocturno",
+      "música en directo",
+      "cultural",
+      "bar"
+    ],
+    "tags": [
+      "bar",
+      "reggae",
+      "música en directo",
+      "pelourinho",
+      "nocturno",
+      "cultural"
+    ],
+    "emoji": "🎵",
+    "rating": 4.5,
+    "votos": 3120,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.970239,
+      "lng": -38.508476
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "20:00",
+        "cierra": "02:00"
+      },
+      "jueves": {
+        "abre": "20:00",
+        "cierra": "02:00"
+      },
+      "viernes": {
+        "abre": "18:00",
+        "cierra": "03:00"
+      },
+      "sabado": {
+        "abre": "18:00",
+        "cierra": "03:00"
+      },
+      "domingo": {
+        "abre": "18:00",
+        "cierra": "01:00"
+      }
+    },
+    "descripcion": "Institución del Pelourinho. El Bar do Reggae lleva décadas siendo el epicentro de la cultura reggae en Salvador — una de las ciudades con más tradición reggae de Brasil. Música en directo casi todas las noches, ambiente muy baiano y precios populares.",
+    "platos_destacados": [
+      "caipirinha",
+      "cerveja gelada",
+      "água de coco",
+      "petiscos da casa"
+    ],
+    "tip_local": "Llega después de las 21h cuando la música arranca de verdad. El ambiente del Pelourinho de noche con reggae en directo es una experiencia única. Entrada libre o con consumación mínima.",
+    "resena_destacada": "Si quieres entender el alma de Salvador, ven aquí un viernes por la noche. Reggae en directo, gente de todos los colores y una energía que no encuentras en ningún otro sitio.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-042",
+    "nombre": "Zé Pereira",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Garcia",
+    "tipo_cocina": "Bar / Boteco local",
+    "precio": "€",
+    "precio_medio_brl": 28,
+    "ambiente": [
+      "muy local",
+      "casual",
+      "bar",
+      "vecinal"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "garcia",
+      "boteco",
+      "auténtico"
+    ],
+    "emoji": "🍺",
+    "rating": 4.6,
+    "votos": 980,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -13.00557,
+      "lng": -38.5326421
+    },
+    "horario": {
+      "lunes": {
+        "abre": "15:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "15:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "15:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "15:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "15:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Boteco de barrio en Garcia, lejos del circuito turístico. Frecuentado por vecinos del barrio, profesores de la UFBA y gente de toda la vida. Cerveja gelada, conversación y petiscos caseiros. El Salvador más auténtico.",
+    "platos_destacados": [
+      "chopp",
+      "carne de sol na manteiga",
+      "macaxeira frita",
+      "feijão tropeiro"
+    ],
+    "tip_local": "Uno de esos bares que los turistas nunca encuentran. Pregunta por el feijão tropeiro del día — es caseiro y cambia según lo que haya. Garcia es un barrio de universitarios y bohemios muy auténtico.",
+    "resena_destacada": "El bar donde vas a entender cómo vive Salvador de verdad. Sin turistas, sin show, solo gente del barrio tomando una cerveza fría y hablando de la vida.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-043",
+    "nombre": "Harém Bar",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Rio Vermelho",
+    "tipo_cocina": "Bar / Cócteles",
+    "precio": "€€",
+    "precio_medio_brl": 55,
+    "ambiente": [
+      "bohemio",
+      "animado",
+      "nocturno",
+      "bar",
+      "cócteles"
+    ],
+    "tags": [
+      "bar",
+      "cócteles",
+      "bohemio",
+      "nocturno",
+      "rio vermelho"
+    ],
+    "emoji": "🍸",
+    "rating": 4.4,
+    "votos": 1240,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -23.6679913,
+      "lng": -46.459819
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "18:00",
+        "cierra": "01:00"
+      },
+      "jueves": {
+        "abre": "18:00",
+        "cierra": "01:00"
+      },
+      "viernes": {
+        "abre": "18:00",
+        "cierra": "02:00"
+      },
+      "sabado": {
+        "abre": "16:00",
+        "cierra": "02:00"
+      },
+      "domingo": {
+        "abre": "16:00",
+        "cierra": "00:00"
+      }
+    },
+    "descripcion": "Bar de cócteles con identidad propia en Rio Vermelho. Drinques creativos con ingredientes baianos — maracujá, dendê, cachaça artesanal — en un ambiente bohemio y ecléctico. Muy popular entre los veinte y treintañeros del barrio.",
+    "platos_destacados": [
+      "caipirinha de maracujá",
+      "drinque de dendê",
+      "gin tônica da casa",
+      "petiscos criativos"
+    ],
+    "tip_local": "Los miércoles tienen noche de cócteles con 2x1 hasta las 21h. La carta cambia según temporada y productos locales disponibles. Ambiente muy agradable para una primera copa de la noche.",
+    "resena_destacada": "El mejor bar de cócteles de Rio Vermelho sin duda. La caipirinha de maracujá con cachaça artesanal es adictiva. Personal muy atento y ambiente muy relajado para empezar la noche.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-044",
+    "nombre": "Bar Tempero da Dinha",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Rio Vermelho",
+    "tipo_cocina": "Bar / Comida baiana",
+    "precio": "€",
+    "precio_medio_brl": 35,
+    "ambiente": [
+      "muy local",
+      "animado",
+      "bar",
+      "terraza"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "rio vermelho",
+      "terraza",
+      "tarde"
+    ],
+    "emoji": "🌴",
+    "rating": 4.3,
+    "votos": 870,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.912587,
+      "lng": -38.4301909
+    },
+    "horario": {
+      "lunes": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      },
+      "martes": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      },
+      "miercoles": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "12:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Bar con terraza en Rio Vermelho, bueno para la tarde. Comida baiana sencilla, cerveja gelada y un ambiente tranquilo que se anima al caer el sol. Sin pretensiones, muy de barrio.",
+    "platos_destacados": [
+      "chopp",
+      "moquequinha de camarão",
+      "vatapá",
+      "paçoca de pilão"
+    ],
+    "tip_local": "Ideal para la tarde antes de cenar. La terraza da a la calle y en las tardes de entre semana está muy tranquila. A dos pasos del hotel.",
+    "resena_destacada": "Bar sin pretensiones pero con mucho ambiente de barrio. La tarde aquí con una cerveza fría viendo pasar la vida de Rio Vermelho es un placer sencillo que vale mucho.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-045",
+    "nombre": "Coisa de Nada",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Cidade Baixa / Comércio",
+    "tipo_cocina": "Bar / Alternativo",
+    "precio": "€",
+    "precio_medio_brl": 30,
+    "ambiente": [
+      "alternativo",
+      "bohemio",
+      "nocturno",
+      "bar",
+      "música en directo"
+    ],
+    "tags": [
+      "bar",
+      "alternativo",
+      "bohemio",
+      "música en directo",
+      "nocturno",
+      "cidade baixa"
+    ],
+    "emoji": "🎸",
+    "rating": 4.5,
+    "votos": 1450,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.9404878,
+      "lng": -38.4507426
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "19:00",
+        "cierra": "01:00"
+      },
+      "jueves": {
+        "abre": "19:00",
+        "cierra": "01:00"
+      },
+      "viernes": {
+        "abre": "19:00",
+        "cierra": "03:00"
+      },
+      "sabado": {
+        "abre": "17:00",
+        "cierra": "03:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "Bar alternativo en la Cidade Baixa con música en directo — rock, indie, jazz y electrónica alternando según la noche. El punto de encuentro de la escena cultural y alternativa de Salvador. Ambiente muy auténtico, lejos del circuito turístico.",
+    "platos_destacados": [
+      "cerveja artesanal",
+      "caipirinha",
+      "sanduíche da casa",
+      "petiscos do dia"
+    ],
+    "tip_local": "Consulta la programación en Instagram antes de ir — la música varía mucho. Los viernes y sábados se llena rápido. El bar de la escena alternativa de Salvador.",
+    "resena_destacada": "El bar que necesitabas encontrar en Salvador. Sin show para turistas, sin axé comercial — solo buena música, gente interesante y cerveza artesanal. Un hallazgo.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-046",
+    "nombre": "Mercadão de São Miguel — Área de Bares",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Comércio / Beira Mar",
+    "tipo_cocina": "Bar / Mercado",
+    "precio": "€",
+    "precio_medio_brl": 30,
+    "ambiente": [
+      "animado",
+      "cultural",
+      "bar",
+      "muy local",
+      "histórico"
+    ],
+    "tags": [
+      "bar",
+      "muy local",
+      "histórico",
+      "mercado",
+      "comércio",
+      "tarde"
+    ],
+    "emoji": "🏛️",
+    "rating": 4.4,
+    "votos": 2100,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.9750486,
+      "lng": -38.5073499
+    },
+    "horario": {
+      "lunes": {
+        "abre": "07:00",
+        "cierra": "18:00"
+      },
+      "martes": {
+        "abre": "07:00",
+        "cierra": "18:00"
+      },
+      "miercoles": {
+        "abre": "07:00",
+        "cierra": "18:00"
+      },
+      "jueves": {
+        "abre": "07:00",
+        "cierra": "18:00"
+      },
+      "viernes": {
+        "abre": "07:00",
+        "cierra": "18:00"
+      },
+      "sabado": {
+        "abre": "07:00",
+        "cierra": "14:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "El mercado central de Salvador con su zona de bares y botecos en el interior. Un espacio histórico donde conviven puestos de comida baiana, bares de cerveja gelada y la vida cotidiana de los trabajadores del Comércio. Muy auténtico, muy local.",
+    "platos_destacados": [
+      "chopp",
+      "acarajé",
+      "moqueca express",
+      "suco natural"
+    ],
+    "tip_local": "Ideal para la mañana o el mediodía — cierra pronto. Los bares del interior son frecuentados por trabajadores del barrio, no turistas. Una experiencia muy auténtica del Salvador de a pie.",
+    "resena_destacada": "El mercado de São Miguel es Salvador sin filtros. Los bares del interior sirven la mejor cerveza fría de la ciudad a las 10 de la mañana para los trabajadores del puerto. Muy auténtico.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-047",
+    "nombre": "Bar do Pirata",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Barra",
+    "tipo_cocina": "Bar / Música / Fiesta",
+    "precio": "€€",
+    "precio_medio_brl": 45,
+    "ambiente": [
+      "animado",
+      "nocturno",
+      "música en directo",
+      "fiesta",
+      "bar"
+    ],
+    "tags": [
+      "bar",
+      "música en directo",
+      "nocturno",
+      "barra",
+      "fiesta",
+      "axé"
+    ],
+    "emoji": "🏴‍☠️",
+    "rating": 4.3,
+    "votos": 4560,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -3.7192021,
+      "lng": -38.5166905
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": null,
+      "jueves": {
+        "abre": "22:00",
+        "cierra": "04:00"
+      },
+      "viernes": {
+        "abre": "22:00",
+        "cierra": "05:00"
+      },
+      "sabado": {
+        "abre": "22:00",
+        "cierra": "05:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "La discoteca-bar de referencia de Barra para los jóvenes locales. Axé, pagode y música baiana en directo los fines de semana. No es un sitio tranquilo — es el lugar donde Salvador va a bailar. Mucho ambiente local, precios razonables para lo que ofrece.",
+    "platos_destacados": [
+      "cerveja gelada",
+      "caipirinha",
+      "shot da casa"
+    ],
+    "tip_local": "No vayas antes de las 23h — no hay nadie. El jueves es noche de pagode, muy auténtica. Los fines de semana es la discoteca del barrio — ambiente local, sin trampa turística.",
+    "resena_destacada": "Si quieres bailar axé con los baianos de verdad, este es el sitio. Sin filtros, sin show para turistas — solo música baiana y gente que sabe bailar. Una experiencia.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-048",
+    "nombre": "Cafofo Bar",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Dois de Julho",
+    "tipo_cocina": "Bar / Cultural",
+    "precio": "€",
+    "precio_medio_brl": 28,
+    "ambiente": [
+      "bohemio",
+      "cultural",
+      "alternativo",
+      "bar",
+      "muy local"
+    ],
+    "tags": [
+      "bar",
+      "cultural",
+      "bohemio",
+      "dois de julho",
+      "alternativo",
+      "muy local"
+    ],
+    "emoji": "🎭",
+    "rating": 4.6,
+    "votos": 780,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -10.9373052,
+      "lng": -37.0620808
+    },
+    "horario": {
+      "lunes": null,
+      "martes": {
+        "abre": "17:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "17:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "17:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "17:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "15:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "15:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Bar cultural en el barrio de Dois de Julho, uno de los barrios más bohemios y auténticos de Salvador. Cerveja artesanal, exposiciones de arte local, música independiente y conversación. El punto de encuentro de artistas, intelectuales y gente del barrio.",
+    "platos_destacados": [
+      "cerveja artesanal",
+      "caipirinha",
+      "tábua de frios",
+      "pão de queijo da hora"
+    ],
+    "tip_local": "Dois de Julho es el barrio más bohemio de Salvador — pasea por sus calles antes de entrar al bar. Los sábados hay programación cultural: música, spoken word o exposiciones.",
+    "resena_destacada": "El bar que representa el Salvador que no sale en las guías turísticas. Arte, cerveza artesanal y conversación interesante. Un hallazgo en un barrio que vale mucho la pena explorar.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-049",
+    "nombre": "Pereira Bar",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Horto Florestal",
+    "tipo_cocina": "Bar / Cervejaria",
+    "precio": "€€",
+    "precio_medio_brl": 50,
+    "ambiente": [
+      "tranquilo",
+      "local",
+      "bar",
+      "cerveza artesanal"
+    ],
+    "tags": [
+      "bar",
+      "cerveza artesanal",
+      "horto florestal",
+      "tranquilo",
+      "local"
+    ],
+    "emoji": "🍻",
+    "rating": 4.5,
+    "votos": 650,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -13.00557,
+      "lng": -38.5326421
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "17:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "17:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "16:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "14:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "14:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Cervejaria artesanal en Horto Florestal con las mejores cervezas artesanales de Salvador. Ambiente tranquilo y familiar, buenas tábuas de frios y petiscos para acompañar. El sitio donde los soteropolitanos que saben van a tomar una cerveza de calidad.",
+    "platos_destacados": [
+      "IPA da casa",
+      "weiss local",
+      "tábua de frios",
+      "linguiça artesanal"
+    ],
+    "tip_local": "Pide la IPA de producción propia — es la mejor cerveza artesanal de Salvador. El ambiente es mucho más tranquilo que los bares de Rio Vermelho, ideal para una tarde relajada.",
+    "resena_destacada": "La mejor cerveza artesanal de Salvador sin discusión. El espacio es cómodo, el servicio es atento y la IPA de producción propia es un motivo más que suficiente para venir hasta Horto Florestal.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-050",
+    "nombre": "Jambalaya",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Rio Vermelho",
+    "tipo_cocina": "Bar / Jazz / Blues",
+    "precio": "€€",
+    "precio_medio_brl": 55,
+    "ambiente": [
+      "bohemio",
+      "sofisticado",
+      "música en directo",
+      "bar",
+      "nocturno"
+    ],
+    "tags": [
+      "bar",
+      "jazz",
+      "blues",
+      "música en directo",
+      "bohemio",
+      "rio vermelho",
+      "nocturno"
+    ],
+    "emoji": "🎺",
+    "rating": 4.7,
+    "votos": 1120,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -13.0130615,
+      "lng": -38.4904228
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "20:00",
+        "cierra": "01:00"
+      },
+      "jueves": {
+        "abre": "20:00",
+        "cierra": "01:00"
+      },
+      "viernes": {
+        "abre": "20:00",
+        "cierra": "02:00"
+      },
+      "sabado": {
+        "abre": "20:00",
+        "cierra": "02:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "El bar de jazz y blues de referencia de Salvador. Música en directo todas las noches que abre — jazz, blues, soul y funk de artistas locales e invitados. Ambiente cuidado, cócteles bien hechos y una programación musical que es de las mejores de la ciudad.",
+    "platos_destacados": [
+      "drinques de autor",
+      "whisky selección",
+      "tábua de frios",
+      "petiscos da casa"
+    ],
+    "tip_local": "La programación musical cambia cada semana — sigue en Instagram para saber quién toca. Los miércoles y jueves son las noches más íntimas. Reserva si vas en fin de semana.",
+    "resena_destacada": "El jazz en directo aquí tiene un nivel que no esperabas encontrar en Salvador. Músicos locales increíbles, ambiente muy cuidado y cócteles a la altura. Un descubrimiento.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-051",
+    "nombre": "Bar Quilombo",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Pelourinho",
+    "tipo_cocina": "Bar / Cultural / Samba",
+    "precio": "€",
+    "precio_medio_brl": 25,
+    "ambiente": [
+      "muy local",
+      "cultural",
+      "animado",
+      "bar",
+      "música en directo"
+    ],
+    "tags": [
+      "bar",
+      "samba",
+      "música en directo",
+      "pelourinho",
+      "cultural",
+      "muy local"
+    ],
+    "emoji": "🥁",
+    "rating": 4.5,
+    "votos": 1890,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.9707108,
+      "lng": -38.5103826
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "19:00",
+        "cierra": "01:00"
+      },
+      "jueves": {
+        "abre": "19:00",
+        "cierra": "01:00"
+      },
+      "viernes": {
+        "abre": "18:00",
+        "cierra": "02:00"
+      },
+      "sabado": {
+        "abre": "18:00",
+        "cierra": "02:00"
+      },
+      "domingo": {
+        "abre": "18:00",
+        "cierra": "00:00"
+      }
+    },
+    "descripcion": "Bar cultural en el Pelourinho con samba y música afrobrasileña en directo. Muy frecuentado por locales y artistas del barrio histórico. El contrapunto auténtico a los bares turísticos del Pelô — aquí va la gente que vive y trabaja en el casco histórico.",
+    "platos_destacados": [
+      "cerveja gelada",
+      "caipirinha de limão",
+      "pastéis da hora",
+      "amendoim"
+    ],
+    "tip_local": "Los miércoles hay roda de samba que empieza espontáneamente — es lo más auténtico que puedes ver en el Pelourinho. No lo busques en TripAdvisor.",
+    "resena_destacada": "La roda de samba de los miércoles aquí es de las experiencias más auténticas que puedes tener en Salvador. Músicos del barrio, sin show para turistas, solo samba de verdad.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-052",
+    "nombre": "Trapiche Adelaide",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Comércio / Beira Mar",
+    "tipo_cocina": "Bar / Vistas / Histórico",
+    "precio": "€€",
+    "precio_medio_brl": 60,
+    "ambiente": [
+      "histórico",
+      "vistas",
+      "bar",
+      "animado",
+      "nocturno"
+    ],
+    "tags": [
+      "bar",
+      "vistas bahía",
+      "histórico",
+      "comércio",
+      "nocturno",
+      "sunset"
+    ],
+    "emoji": "⚓",
+    "rating": 4.6,
+    "votos": 2340,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.9773402,
+      "lng": -38.5166613
+    },
+    "horario": {
+      "lunes": {
+        "abre": "18:00",
+        "cierra": "00:00"
+      },
+      "martes": {
+        "abre": "18:00",
+        "cierra": "00:00"
+      },
+      "miercoles": {
+        "abre": "18:00",
+        "cierra": "00:00"
+      },
+      "jueves": {
+        "abre": "18:00",
+        "cierra": "01:00"
+      },
+      "viernes": {
+        "abre": "18:00",
+        "cierra": "02:00"
+      },
+      "sabado": {
+        "abre": "16:00",
+        "cierra": "02:00"
+      },
+      "domingo": {
+        "abre": "16:00",
+        "cierra": "23:00"
+      }
+    },
+    "descripcion": "Bar en un antiguo trapiche (almacén portuario) del siglo XIX en el Comércio, con vistas panorámicas a la Baía de Todos os Santos. Ambiente histórico y muy especial, cócteles bien hechos y un atardecer que es de los más bonitos de la ciudad.",
+    "platos_destacados": [
+      "caipirinha de maracujá",
+      "gin tônica",
+      "tábua de frios",
+      "ostras frescas"
+    ],
+    "tip_local": "Ven a las 17h para el atardecer sobre la bahía — la vista desde el interior del trapiche es espectacular. Uno de los bares más especiales de Salvador por el espacio histórico.",
+    "resena_destacada": "El espacio es impresionante — un trapiche del siglo XIX convertido en bar con vistas a la bahía. La caipirinha al atardecer aquí es una de esas experiencias que recuerdas para siempre.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-053",
+    "nombre": "O Cravinho",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Barra",
+    "tipo_cocina": "Bar / Aperitivo",
+    "precio": "€€",
+    "precio_medio_brl": 45,
+    "ambiente": [
+      "tranquilo",
+      "local",
+      "bar",
+      "tarde",
+      "aperitivo"
+    ],
+    "tags": [
+      "bar",
+      "aperitivo",
+      "barra",
+      "tarde",
+      "tranquilo"
+    ],
+    "emoji": "🍋",
+    "rating": 4.4,
+    "votos": 890,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.9731406,
+      "lng": -38.5103061
+    },
+    "horario": {
+      "lunes": {
+        "abre": "15:00",
+        "cierra": "23:00"
+      },
+      "martes": {
+        "abre": "15:00",
+        "cierra": "23:00"
+      },
+      "miercoles": {
+        "abre": "15:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "15:00",
+        "cierra": "00:00"
+      },
+      "viernes": {
+        "abre": "14:00",
+        "cierra": "01:00"
+      },
+      "sabado": {
+        "abre": "12:00",
+        "cierra": "01:00"
+      },
+      "domingo": {
+        "abre": "12:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Bar de aperitivo en Barra con una carta de drinques bien construida y ambiente para la tarde. Frequentado por los vecinos del barrio que salen a tomar algo antes de cenar. Buenas opciones de vino, gin y cachaças premium.",
+    "platos_destacados": [
+      "gin tônica premium",
+      "aperol spritz",
+      "vinho do dia",
+      "tábua de queijos"
+    ],
+    "tip_local": "Ideal para el aperitivo de 17h a 20h antes de cenar. El gin tônica con botânicas locales es muy bueno. Ambiente mucho más tranquilo que los bares de Rio Vermelho.",
+    "resena_destacada": "El bar de Barra para cuando quieres algo más que cerveza — buena carta de drinques, ambiente tranquilo y gente del barrio. Para la tarde antes de cenar.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-054",
+    "nombre": "Subúrbia Brew",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Pituba",
+    "tipo_cocina": "Bar / Cerveza artesanal",
+    "precio": "€€",
+    "precio_medio_brl": 50,
+    "ambiente": [
+      "moderno",
+      "local",
+      "bar",
+      "cerveza artesanal"
+    ],
+    "tags": [
+      "bar",
+      "cerveza artesanal",
+      "pituba",
+      "moderno",
+      "local"
+    ],
+    "emoji": "🍺",
+    "rating": 4.6,
+    "votos": 1230,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.9923059,
+      "lng": -38.4551925
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "17:00",
+        "cierra": "23:00"
+      },
+      "jueves": {
+        "abre": "17:00",
+        "cierra": "23:00"
+      },
+      "viernes": {
+        "abre": "16:00",
+        "cierra": "00:00"
+      },
+      "sabado": {
+        "abre": "14:00",
+        "cierra": "00:00"
+      },
+      "domingo": {
+        "abre": "14:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Cervejaria artesanal en Pituba con producción propia. Varias líneas de cerveza — IPA, weiss, stout y pilsen artesanal — acompañadas de petiscos bien elaborados. El bar de cerveza artesanal de referencia en la zona de Pituba y Caminho das Árvores.",
+    "platos_destacados": [
+      "IPA Subúrbia",
+      "Weiss do mês",
+      "stout da casa",
+      "nachos artesanais"
+    ],
+    "tip_local": "Pide la cerveza del mes — siempre es una edición especial. Los sábados hay degustación de nuevas recetas a las 16h. Ambiente muy agradable y mucho más tranquilo que Rio Vermelho.",
+    "resena_destacada": "La cerveza artesanal de Pituba que no sabías que existía. La IPA tiene un equilibrio perfecto y la stout de la casa es sorprendentemente buena para el calor de Salvador. Vale el viaje hasta Pituba.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-055",
+    "nombre": "Bar do Porto",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Comércio / Beira Mar",
+    "tipo_cocina": "Bar / Frente al mar",
+    "precio": "€",
+    "precio_medio_brl": 30,
+    "ambiente": [
+      "muy local",
+      "vistas",
+      "bar",
+      "animado",
+      "tarde"
+    ],
+    "tags": [
+      "bar",
+      "vistas bahía",
+      "muy local",
+      "comércio",
+      "tarde",
+      "frente al mar"
+    ],
+    "emoji": "⛵",
+    "rating": 4.3,
+    "votos": 1670,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -13.0045353,
+      "lng": -38.5329653
+    },
+    "horario": {
+      "lunes": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      },
+      "martes": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      },
+      "miercoles": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      },
+      "jueves": {
+        "abre": "08:00",
+        "cierra": "20:00"
+      },
+      "viernes": {
+        "abre": "08:00",
+        "cierra": "21:00"
+      },
+      "sabado": {
+        "abre": "08:00",
+        "cierra": "18:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "Bar de trabajadores del puerto frente a la bahía. Sin pretensiones, muy local, frequentado por los estibadores y empleados del área portuaria. Cerveja fría, moqueca express y vistas directas a la Baía de Todos os Santos. Una experiencia muy auténtica.",
+    "platos_destacados": [
+      "chopp",
+      "moqueca express",
+      "camarão cozido",
+      "água de coco"
+    ],
+    "tip_local": "Abre solo hasta las 20h entre semana. El mediodía aquí es la experiencia más auténtica que puedes tener en el área del puerto — trabajadores locales, sin turistas, vistas a la bahía.",
+    "resena_destacada": "El bar más auténtico del área portuaria de Salvador. Los trabajadores del puerto llevan décadas aquí. Sin show, sin turistas, solo cerveza fría y vistas a la bahía más bonita de Brasil.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-056",
+    "nombre": "Nação Reggae Bar",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Pelourinho",
+    "tipo_cocina": "Bar / Reggae / Cultural",
+    "precio": "€",
+    "precio_medio_brl": 22,
+    "ambiente": [
+      "animado",
+      "cultural",
+      "nocturno",
+      "bar",
+      "música en directo"
+    ],
+    "tags": [
+      "bar",
+      "reggae",
+      "música en directo",
+      "pelourinho",
+      "nocturno",
+      "cultural",
+      "muy local"
+    ],
+    "emoji": "🌿",
+    "rating": 4.4,
+    "votos": 2780,
+    "picar": false,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -12.970239,
+      "lng": -38.508476
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": {
+        "abre": "21:00",
+        "cierra": "02:00"
+      },
+      "jueves": {
+        "abre": "21:00",
+        "cierra": "02:00"
+      },
+      "viernes": {
+        "abre": "20:00",
+        "cierra": "03:00"
+      },
+      "sabado": {
+        "abre": "20:00",
+        "cierra": "03:00"
+      },
+      "domingo": null
+    },
+    "descripcion": "Bar reggae en el Pelourinho, complementario al Bar do Reggae. Más pequeño e íntimo, con música reggae roots y dancehall. El ambiente es muy baiano — gente joven del barrio, mucho baile y energía. Precios muy populares.",
+    "platos_destacados": [
+      "cerveja gelada",
+      "caipirinha",
+      "água de coco"
+    ],
+    "tip_local": "No vayas antes de las 22h — el ambiente tarda en calentarse. Entrada libre con consumación mínima. Los jueves son las noches más auténticas, menos masificadas que el fin de semana.",
+    "resena_destacada": "El reggae roots en Salvador tiene su templo aquí. Gente joven del barrio bailando, precios populares y una energía muy especial. Auténtico Pelourinho nocturno.",
+    "google_place_id": "",
+    "web": "",
+    "telefono": "",
+    "origen": "curado"
+  },
+  {
+    "id": "ssa-057",
+    "nombre": "Botequim do Sertão",
+    "pais": "Brasil",
+    "region": "Bahía",
+    "municipio": "Salvador de Bahía",
+    "barrio": "Liberdade",
+    "tipo_cocina": "Bar / Forró / Nordestino",
+    "precio": "€",
+    "precio_medio_brl": 25,
+    "ambiente": [
+      "muy local",
+      "animado",
+      "música en directo",
+      "bar",
+      "auténtico"
+    ],
+    "tags": [
+      "bar",
+      "forró",
+      "música en directo",
+      "muy local",
+      "liberdade",
+      "nordestino",
+      "auténtico"
+    ],
+    "emoji": "🪗",
+    "rating": 4.7,
+    "votos": 890,
+    "picar": true,
+    "menu_del_dia": false,
+    "coordenadas": {
+      "lat": -13.0105027,
+      "lng": -38.465941
+    },
+    "horario": {
+      "lunes": null,
+      "martes": null,
+      "miercoles": null,
+      "jueves": {
+        "abre": "19:00",
+        "cierra": "01:00"
+      },
+      "viernes": {
+        "abre": "18:00",
+        "cierra": "02:00"
+      },
+      "sabado": {
+        "abre": "16:00",
+        "cierra": "02:00"
+      },
+      "domingo": {
+        "abre": "14:00",
+        "cierra": "22:00"
+      }
+    },
+    "descripcion": "Bar de forró en el barrio de Liberdade — el barrio afrobrasileño más grande del mundo. Música nordestina en directo: forró, xote y baião tocados con acordeón, zabumba y triângulo. Muy auténtico, muy popular, precio imbatible. La cultura nordestina en Salvador.",
+    "platos_destacados": [
+      "cachaça do sertão",
+      "cerveja gelada",
+      "baião de dois",
+      "carne de sol na chapa"
+    ],
+    "tip_local": "Liberdade es el barrio más afrobrasileño de Salvador — merece la pena explorar antes o después del bar. El forró ao vivo aquí los viernes y sábados es de las experiencias más auténticas de la ciudad.",
+    "resena_destacada": "El bar de forró más auténtico de Salvador. Gente del barrio de Liberdade bailando como si no hubiera mañana, acordeón en directo y carne de sol. Una experiencia que no encuentras en ninguna guía turística.",
     "google_place_id": "",
     "web": "",
     "telefono": "",
